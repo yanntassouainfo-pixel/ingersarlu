@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Pages utilitaires (non destinées à l'indexation)
+Disallow: /GUIDE-images.html
+Disallow: /404.html
+Disallow: /500.html
+Disallow: /503.html
+
+Sitemap: https://www.inger.tg/sitemap.xml
