@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, follow" />
+<title>500 — Erreur serveur · INGER Sarlu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+<style>
+  .e404{min-height:100vh;display:flex;flex-direction:column;background:var(--paper)}
+  .e404-nav{display:flex;align-items:center;justify-content:space-between;padding:22px clamp(20px,5vw,60px);
+    position:relative;z-index:3}
+  .e404-logo{line-height:1.1;text-decoration:none}
+  .e404-logo b{font-family:var(--serif);font-style:italic;font-weight:600;font-size:21px;color:var(--ink)}
+  .e404-logo span{display:block;font-family:var(--mono);font-size:8.5px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--concrete);margin-top:3px}
+  .e404-main{flex:1;position:relative;display:flex;align-items:center;justify-content:center;
+    text-align:center;overflow:hidden;padding:40px 24px}
+  .e404-bg{position:absolute;inset:0;z-index:0;overflow:hidden}
+  .e404-bg .bp{position:absolute;inset:0;opacity:.5;
+    background-image:linear-gradient(var(--line-d) 1px,transparent 1px),linear-gradient(90deg,var(--line-d) 1px,transparent 1px);
+    background-size:64px 64px;mask-image:radial-gradient(circle at 50% 42%,#000,transparent 74%);
+    -webkit-mask-image:radial-gradient(circle at 50% 42%,#000,transparent 74%)}
+  .e404-bg .glow{position:absolute;width:56vw;height:56vw;top:-16%;left:50%;transform:translateX(-50%);
+    border-radius:50%;background:radial-gradient(circle,rgba(62,92,110,.13),transparent 64%);filter:blur(40px)}
+  .e404-fil{position:absolute;inset:0;width:100%;height:100%;stroke:var(--steel);fill:none;opacity:.06;
+    pointer-events:none;mask-image:radial-gradient(120% 100% at 50% 45%,#000 55%,transparent 100%);
+    -webkit-mask-image:radial-gradient(120% 100% at 50% 45%,#000 55%,transparent 100%)}
+  .e404-fil text{font-family:var(--mono);font-size:9px;fill:var(--steel);stroke:none}
+  .e404-inner{position:relative;z-index:1;max-width:560px}
+  .e404-kick{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:10.5px;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--steel-l);border:1px solid var(--line-d);
+    background:rgba(248,246,240,.7);padding:8px 15px;border-radius:30px}
+  .e404-kick .d{width:6px;height:6px;border-radius:50%;background:#C0552F}
+  .e404-num{font-family:var(--serif);font-weight:400;color:var(--ink);font-size:clamp(96px,20vw,150px);
+    line-height:.9;letter-spacing:-.03em;margin:18px 0 0}
+  .e404-num em{font-style:italic;color:var(--steel-l)}
+  .e404-h{margin:10px 0 0;font-family:var(--serif);font-weight:400;font-size:clamp(1.4rem,4vw,1.9rem);
+    color:var(--ink);letter-spacing:-.01em}
+  .e404-p{margin:14px auto 0;max-width:440px;color:rgba(24,26,31,.62);font-size:1rem;line-height:1.65;font-weight:300}
+  .e404-cta{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+  .e404-cta .btn{cursor:pointer}
+  .e404-links{margin-top:30px;display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+  .e404-links a{font-family:var(--mono);font-size:11.5px;letter-spacing:.04em;color:var(--steel-glow);
+    text-decoration:none;border:1px solid var(--line-d);padding:8px 14px;border-radius:30px;transition:all .3s var(--ease)}
+  .e404-links a:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .e404-foot{position:relative;z-index:2;text-align:center;font-family:var(--mono);font-size:9.5px;
+    letter-spacing:.08em;text-transform:uppercase;color:var(--concrete);padding:18px;border-top:1px solid var(--line-d)}
+  .e404-foot a{color:inherit;text-decoration:none}
+</style>
+</head>
+<body>
+<main class="e404">
+  <header class="e404-nav">
+    <a href="index.html" class="e404-logo"><b>inger</b><span>Ingénieurs &amp; Experts Réunis</span></a>
+    <a href="index.html#contact" class="btn btn-primary">Discuter d'un projet <span class="arr">→</span></a>
+  </header>
+
+  <section class="e404-main">
+    <div class="e404-bg">
+      <div class="glow"></div>
+      <div class="bp"></div>
+      <svg class="e404-fil" viewBox="0 0 680 452" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <g id="e404Dyn"></g>
+        <text x="44" y="412">φ = (1+√5)/2 ≈ 1.6180339887</text>
+        <text x="470" y="44">Fₙ = Fₙ₋₁ + Fₙ₋₂</text>
+        <text x="556" y="412">a/b = (a+b)/a</text>
+      </svg>
+    </div>
+
+    <div class="e404-inner">
+      <span class="e404-kick"><span class="d"></span> Erreur 500 · Erreur serveur</span>
+      <div class="e404-num">5<em>0</em>0</div>
+      <h1 class="e404-h">Une erreur est survenue de notre côté.</h1>
+      <p class="e404-p">Un incident technique empêche l'affichage de cette page. Nos équipes en sont informées — réessayez dans un instant ou revenez à l'accueil.</p>
+      <div class="e404-cta">
+        <a href="#" class="btn btn-primary" onclick="location.reload();return false;"><span class="arr">↻</span> Réessayer</a>
+        <a href="index.html" class="btn btn-ghost">Retour à l'accueil</a>
+      </div>
+      <nav class="e404-links" aria-label="Liens rapides">
+        <a href="index.html#about">À propos</a>
+        <a href="index.html#portfolio">Références</a>
+        <a href="index.html#domains">Domaines</a>
+        <a href="index.html#contact">Nous contacter</a>
+      </nav>
+    </div>
+  </section>
+
+  <footer class="e404-foot">
+    INGER SARLU · Lomé, Togo · <a href="tel:+22822501730">+228 22 50 17 30</a> · <a href="mailto:ingersarlu@inger.tg">ingersarlu@inger.tg</a>
+  </footer>
+</main>
+
+<script>
+(function(){
+  var dyn=document.getElementById("e404Dyn"); if(!dyn) return;
+  var NS="http://www.w3.org/2000/svg";
+  function E(p,a){var e=document.createElementNS(NS,p);for(var k in a)e.setAttribute(k,a[k]);return e;}
+  function golden(gx,gy,gw,gh){
+    dyn.appendChild(E("rect",{x:gx,y:gy,width:gw,height:gh,"stroke-width":.6}));
+    for(var i=0;i<8;i++){
+      if(gw>=gh){var s=gh;dyn.appendChild(E("line",{x1:gx+s,y1:gy,x2:gx+s,y2:gy+gh,"stroke-width":.5}));gx+=s;gw-=s;}
+      else{var s=gw;dyn.appendChild(E("line",{x1:gx,y1:gy+s,x2:gx+gw,y2:gy+s,"stroke-width":.5}));gy+=s;gh-=s;}
+      if(gw<2||gh<2)break;
+    }
+  }
+  function spiral(cx,cy,a,phase,turns,sw){
+    var b=Math.log(1.618)/(Math.PI/2),d="";
+    for(var t=0;t<=turns;t+=.15){var r=a*Math.exp(b*t);d+=(t===0?"M":"L")+(cx+r*Math.cos(t+phase)).toFixed(1)+" "+(cy+r*Math.sin(t+phase)).toFixed(1);}
+    dyn.appendChild(E("path",{d:d,"stroke-width":sw}));
+  }
+  function poly(cx,cy,r){
+    var pts=[];for(var k=0;k<5;k++){var a=-Math.PI/2+k*2*Math.PI/5;pts.push((cx+r*Math.cos(a)).toFixed(1)+","+(cy+r*Math.sin(a)).toFixed(1));}
+    dyn.appendChild(E("circle",{cx:cx,cy:cy,r:r,"stroke-width":.6}));
+    var o=[0,2,4,1,3],st=[];for(var k=0;k<5;k++)st.push(pts[o[k]]);
+    dyn.appendChild(E("polygon",{points:st.join(" "),"stroke-width":.5}));
+  }
+  golden(150,150,246,152);
+  spiral(340,226,3.4,2.4,15.2,1.1);
+  spiral(560,330,1.6,0.6,12,.7);
+  poly(120,360,44); poly(596,118,40);
+  dyn.appendChild(E("circle",{cx:340,cy:226,r:168,"stroke-width":.5}));
+})();
+</script>
+</body>
+</html>
