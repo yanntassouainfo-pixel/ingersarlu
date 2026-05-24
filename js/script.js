@@ -79,42 +79,65 @@
     });
   });
 
-  /* ---------- Onglets références dynamiques + Voir tout ---------- */
+  /* ---------- Onglets références + affichage progressif (10 par 10) ---------- */
   (function(){
     var tabs = document.querySelectorAll('.ref-tab');
     var panels = document.querySelectorAll('.ref-panel');
     if(!tabs.length || !panels.length) return;
-    function activate(name){
-      tabs.forEach(function(t){
-        var on = t.getAttribute('data-panel') === name;
-        t.classList.toggle('active', on);
-        t.setAttribute('aria-selected', on ? 'true' : 'false');
-      });
-      panels.forEach(function(p){
-        var on = (p.id === 'rp-' + name);
-        p.classList.toggle('active', on);
-        if(!on){
-          p.classList.remove('open');
-          var b = p.querySelector('.ref-more');
-          if(b) b.setAttribute('aria-expanded','false');
-        }
-      });
+    var STEP = 10;
+    var L = { fr:{more:'Voir plus', less:'Réduire la liste'}, en:{more:'Show more', less:'Show less'} };
+    function lang(){ var l=''; try{ l=localStorage.getItem('inger_lang')||''; }catch(e){} l=l||document.documentElement.lang||'fr'; return l.slice(0,2)==='en'?'en':'fr'; }
+
+    function update(c){
+      var collapse = (c.mode === 'collapse');
+      c.btn.classList.toggle('full', collapse);
+      c.btn.setAttribute('aria-expanded', c.shown>0 ? 'true' : 'false');
+      if(c.label) c.label.textContent = L[lang()][collapse ? 'less' : 'more'];
     }
-    tabs.forEach(function(t){
-      t.addEventListener('click', function(){ activate(t.getAttribute('data-panel')); });
+    function more(c){
+      var n = Math.min(c.shown + STEP, c.extras.length);
+      for(var i=c.shown;i<n;i++){ c.extras[i].classList.remove('ref-out'); c.extras[i].classList.add('ref-shown'); }
+      c.shown = n;
+    }
+    function collapseAll(c){
+      var rows = c.extras.slice(0, c.shown);
+      c.mode = 'expand'; c.shown = 0;
+      if(reduce){ rows.forEach(function(r){ r.classList.remove('ref-shown'); }); }
+      else {
+        rows.forEach(function(r){ r.classList.add('ref-out'); });
+        setTimeout(function(){ rows.forEach(function(r){ r.classList.remove('ref-shown','ref-out'); }); }, 300);
+      }
+    }
+    function resetCtx(c){ c.extras.forEach(function(r){ r.classList.remove('ref-shown','ref-out'); }); c.shown = 0; c.mode = 'expand'; update(c); }
+    function scrollTopOf(c){ var y = c.panel.getBoundingClientRect().top + window.scrollY - 90; window.scrollTo({top:y, behavior: reduce ? 'auto' : 'smooth'}); }
+
+    var ctxs = {};
+    panels.forEach(function(p){
+      var btn = p.querySelector('.ref-more'); if(!btn) return;
+      ctxs[p.id] = { panel:p, btn:btn, label:btn.querySelector('.rm-show'),
+        extras: Array.prototype.slice.call(p.querySelectorAll('.ref-extra')), shown:0, mode:'expand' };
+      update(ctxs[p.id]);
     });
+
+    function activate(name){
+      tabs.forEach(function(t){ var on = t.getAttribute('data-panel')===name; t.classList.toggle('active',on); t.setAttribute('aria-selected', on?'true':'false'); });
+      panels.forEach(function(p){ var on = (p.id==='rp-'+name); p.classList.toggle('active',on); if(!on && ctxs[p.id]) resetCtx(ctxs[p.id]); });
+    }
+    tabs.forEach(function(t){ t.addEventListener('click', function(){ activate(t.getAttribute('data-panel')); }); });
+
     document.querySelectorAll('.ref-more').forEach(function(btn){
       btn.addEventListener('click', function(){
-        var panel = btn.closest('.ref-panel');
-        if(!panel) return;
-        var open = panel.classList.toggle('open');
-        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-        if(!open){
-          var top = panel.getBoundingClientRect().top + window.scrollY - 90;
-          window.scrollTo({top: top, behavior: reduce ? 'auto' : 'smooth'});
+        var p = btn.closest('.ref-panel'); if(!p) return; var c = ctxs[p.id]; if(!c) return;
+        if(c.mode === 'collapse'){
+          collapseAll(c); scrollTopOf(c); update(c);
+        } else {
+          more(c);
+          if(c.shown >= c.extras.length){ c.mode = 'collapse'; }
+          update(c);
         }
       });
     });
+    document.querySelectorAll('.lang-opt').forEach(function(b){ b.addEventListener('click', function(){ setTimeout(function(){ for(var k in ctxs) update(ctxs[k]); }, 30); }); });
   })();
 
   /* ---------- Curseur custom + magnetic ---------- */

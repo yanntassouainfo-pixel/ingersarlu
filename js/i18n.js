@@ -256,7 +256,7 @@
     "Conférence · Lomé": "Conference · Lomé",
     "Palais des Congrès": "Congress Palace",
     "Des réalisations triées sur le volet qui illustrent le champ riche en diversités de l'expérience active de": "A carefully curated selection of projects illustrating the rich diversity of the hands-on experience of",
-    "Vos données sont traitées de manière confidentielle et uniquement dans le cadre professionnel de votre demande. Nous mettons en œuvre les mesures techniques et organisationnelles nécessaires pour garantir leur sécurité.": "Your data is processed confidentially and solely in the professional context of your request. We implement the necessary technical and organisational measures to ensure its security.",
+    "En soumettant ce formulaire, je consens au traitement de mes données personnelles pour la gestion de ma demande de contact. Je peux révoquer mon consentement à tout moment en envoyant un email à ingersarlu@inger.tg. Vos données sont traitées de manière confidentielle et uniquement dans le cadre professionnel de votre demande. Nous mettons en œuvre les mesures techniques et organisationnelles nécessaires pour garantir leur sécurité et leur confidentialité.": "By submitting this form, I consent to the processing of my personal data to handle my contact request. I can withdraw my consent at any time by emailing ingersarlu@inger.tg. Your data is processed confidentially and solely in the professional context of your request. We implement the necessary technical and organisational measures to ensure its security and confidentiality.",
     "En savoir plus": "Learn more",
     "Politique de confidentialité": "Privacy policy"
   };
