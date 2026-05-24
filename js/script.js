@@ -381,3 +381,32 @@
     setInit();
   })();
 })();
+
+/* ============================================================
+   Formulaire de contact — envoi Web3Forms (AJAX) + confirmation
+   ============================================================ */
+(function(){
+  "use strict";
+  var f = document.getElementById('cform'); if(!f) return;
+  var status = document.getElementById('cform-status');
+  var btn = f.querySelector('button[type="submit"]');
+  function lang(){ var l=''; try{ l=localStorage.getItem('inger_lang')||''; }catch(e){} l=l||document.documentElement.lang||'fr'; return l.slice(0,2)==='en'?'en':'fr'; }
+  var MSG = {
+    fr:{ sending:'Envoi en cours…', ok:'Merci ! Votre demande a bien été envoyée. Nous revenons vers vous sous 24 h.', err:'Une erreur est survenue. Réessayez ou écrivez-nous à ingersarlu@inger.tg.' },
+    en:{ sending:'Sending…', ok:'Thank you! Your request has been sent. We will get back to you within 24h.', err:'Something went wrong. Please retry or email ingersarlu@inger.tg.' }
+  };
+  f.addEventListener('submit', function(e){
+    e.preventDefault();
+    var L = MSG[lang()];
+    status.className = 'cform-note sending'; status.textContent = L.sending;
+    if(btn){ btn.disabled = true; btn.style.opacity = '.7'; }
+    fetch('https://api.web3forms.com/submit', { method:'POST', body:new FormData(f), headers:{'Accept':'application/json'} })
+      .then(function(r){ return r.json(); })
+      .then(function(j){
+        if(j && j.success){ status.className='cform-note ok'; status.textContent=L.ok; f.reset(); }
+        else { status.className='cform-note err'; status.textContent=L.err; }
+      })
+      .catch(function(){ status.className='cform-note err'; status.textContent=L.err; })
+      .then(function(){ if(btn){ btn.disabled=false; btn.style.opacity=''; } });
+  });
+})();

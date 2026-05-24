@@ -573,6 +573,11 @@ section{position:relative;z-index:2}
 .cform-privacy a{color:var(--steel-glow);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .3s var(--ease);white-space:nowrap}
 .cform-privacy a:hover{border-color:var(--steel-glow)}
 .cform-note{font-family:var(--mono);font-size:10px;color:var(--concrete);text-align:center;margin-top:14px;letter-spacing:.04em}
+.cform-note:empty{margin-top:0}
+.cform-note.sending{color:var(--concrete-d)}
+.cform-note.ok{color:#1a8a45;font-size:12px}
+.cform-note.err{color:#a32d2d;font-size:12px}
+.cform-hp{position:absolute!important;left:-9999px;width:1px;height:1px;opacity:0;overflow:hidden}
 
 /* ============================================================
    FOOTER

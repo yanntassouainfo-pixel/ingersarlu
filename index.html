@@ -1292,21 +1292,25 @@ Kara, Sokodé et Lomé Baguida</h4><span class="ref-client">Caisse Nationale de 
       </div>
 
       <!-- Formulaire -->
-      <form class="cform glass reveal" data-d="1" onsubmit="return false">
+      <form class="cform glass reveal" id="cform" data-d="1" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="3647dc77-36b9-41ee-82b0-a2917547a707">
+        <input type="hidden" name="subject" value="Nouvelle demande — site INGER">
+        <input type="hidden" name="from_name" value="Site INGER Sarlu">
+        <input type="checkbox" name="botcheck" class="cform-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
         <h3>Soumettre une demande</h3>
         <p class="csub">Décrivez votre besoin, nous revenons vers vous rapidement.</p>
         <div class="frow">
-          <div class="field"><label>Prénom</label><input type="text" placeholder="Votre prénom"></div>
-          <div class="field"><label>Nom</label><input type="text" placeholder="Votre nom"></div>
+          <div class="field"><label>Prénom</label><input type="text" name="Prénom" placeholder="Votre prénom"></div>
+          <div class="field"><label>Nom</label><input type="text" name="Nom" placeholder="Votre nom"></div>
         </div>
-        <div class="field"><label>Organisation &amp; rôle</label><input type="text" placeholder="Société · fonction"></div>
+        <div class="field"><label>Organisation &amp; rôle</label><input type="text" name="Organisation &amp; rôle" placeholder="Société · fonction"></div>
         <div class="frow">
-          <div class="field"><label>Email</label><input type="email" placeholder="vous@organisation.com"></div>
-          <div class="field"><label>Téléphone</label><input type="tel" placeholder="+228 ..."></div>
+          <div class="field"><label>Email</label><input type="email" name="email" placeholder="vous@organisation.com" required></div>
+          <div class="field"><label>Téléphone</label><input type="tel" name="Téléphone" placeholder="+228 ..."></div>
         </div>
         <div class="frow">
           <div class="field"><label>Prestation recherchée</label>
-            <select>
+            <select name="Prestation recherchée">
               <option>Sélectionner une prestation</option>
               <option>Conseils</option>
               <option>Conception / Planification</option>
@@ -1318,7 +1322,7 @@ Kara, Sokodé et Lomé Baguida</h4><span class="ref-client">Caisse Nationale de 
             </select>
           </div>
           <div class="field"><label>Domaine</label>
-            <select>
+            <select name="Domaine">
               <option>Sélectionner un domaine</option>
               <option>Bâtiments</option>
               <option>Infrastructures routières</option>
@@ -1327,13 +1331,13 @@ Kara, Sokodé et Lomé Baguida</h4><span class="ref-client">Caisse Nationale de 
             </select>
           </div>
         </div>
-        <div class="field"><label>Description de votre projet</label><textarea placeholder="Quelques lignes sur votre projet, sa localisation et son calendrier..."></textarea></div>
+        <div class="field"><label>Description de votre projet</label><textarea name="Message" placeholder="Quelques lignes sur votre projet, sa localisation et son calendrier..."></textarea></div>
         <div class="cform-privacy">
           <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
           <span style="text-align: justify;">En soumettant ce formulaire, je consens au traitement de mes données personnelles pour la gestion de ma demande de contact. Je peux révoquer mon consentement à tout moment en envoyant un email à ingersarlu@inger.tg. Vos données sont traitées de manière confidentielle et uniquement dans le cadre professionnel de votre demande. Nous mettons en œuvre les mesures techniques et organisationnelles nécessaires pour garantir leur sécurité et leur confidentialité.<a href="politique-confidentialite.html"> En savoir plus</a></span>
         </div>
-        <button class="btn btn-primary" data-cursor>Envoyer la demande <span class="arr">→</span></button>
-        <div class="cform-note">Prototype de démonstration — formulaire non connecté.</div>
+        <button class="btn btn-primary" type="submit" data-cursor>Envoyer la demande <span class="arr">→</span></button>
+        <div class="cform-note" id="cform-status" role="status" aria-live="polite"></div>
       </form>
     </div>
   </div>
