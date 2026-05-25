@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Carrière · INGER Sarlu — Rejoindre nos équipes</title>
+<meta name="description" content="Rejoignez INGER Sarlu — ingénieurs-conseils à Lomé. Découvrez notre vision, notre culture et nos opportunités, puis déposez votre candidature." />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#15171C" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+<style>
+  .cr{background:var(--paper);min-height:100vh;display:flex;flex-direction:column}
+  .cr-nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px clamp(20px,5vw,60px);
+    border-bottom:1px solid var(--line-d);position:sticky;top:0;z-index:20;
+    background:rgba(248,246,240,.82);backdrop-filter:blur(14px) saturate(150%);-webkit-backdrop-filter:blur(14px) saturate(150%)}
+  .cr-logo{line-height:1.1;text-decoration:none}
+  .cr-logo b{font-family:var(--serif);font-style:italic;font-weight:600;font-size:21px;color:var(--ink)}
+  .cr-logo span{display:block;font-family:var(--mono);font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--concrete);margin-top:3px}
+  .cr-wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 clamp(20px,5vw,60px)}
+
+  /* Hero */
+  .cr-hero{position:relative;overflow:hidden;padding:clamp(60px,9vw,120px) 0 clamp(50px,7vw,90px)}
+  .cr-hero .bp{position:absolute;inset:0;opacity:.5;z-index:0;
+    background-image:linear-gradient(var(--line-d) 1px,transparent 1px),linear-gradient(90deg,var(--line-d) 1px,transparent 1px);
+    background-size:64px 64px;mask-image:radial-gradient(circle at 72% 30%,#000,transparent 72%);-webkit-mask-image:radial-gradient(circle at 72% 30%,#000,transparent 72%)}
+  .cr-hero .glow{position:absolute;width:52vw;height:52vw;top:-18%;right:-10%;border-radius:50%;z-index:0;
+    background:radial-gradient(circle,rgba(62,92,110,.14),transparent 64%);filter:blur(40px)}
+  .cr-hero .cr-wrap{position:relative;z-index:1}
+  .cr-kick{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--steel-l);border:1px solid var(--line-d);background:rgba(248,246,240,.7);padding:8px 15px;border-radius:30px}
+  .cr-kick .d{width:6px;height:6px;border-radius:50%;background:var(--steel-l)}
+  .cr-h1{font-family:var(--serif);font-weight:400;font-size:clamp(2.4rem,6vw,4.6rem);line-height:.98;letter-spacing:-.025em;color:var(--ink);margin:22px 0 0;max-width:14ch}
+  .cr-h1 em{font-style:italic;color:var(--steel-l)}
+  .cr-lead{margin:22px 0 0;max-width:54ch;font-size:clamp(1rem,1.5vw,1.18rem);line-height:1.7;color:rgba(24,26,31,.7);font-weight:300}
+  .cr-cta{margin-top:30px;display:flex;gap:12px;flex-wrap:wrap}
+
+  /* Sections */
+  .cr-sec{padding:clamp(50px,7vw,90px) 0;border-top:1px solid var(--line-d)}
+  .cr-head{margin-bottom:clamp(30px,4vw,50px)}
+  .cr-sk{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--steel-l)}
+  .cr-h2{font-family:var(--serif);font-weight:400;font-size:clamp(1.7rem,3.4vw,2.7rem);letter-spacing:-.02em;color:var(--ink);margin:10px 0 0;line-height:1.08}
+  .cr-h2 em{font-style:italic;color:var(--steel-l)}
+
+  .cr-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+  .cr-cardx{background:var(--paper-2);border:1px solid var(--line-d);border-radius:var(--r-lg);padding:clamp(22px,3vw,30px);
+    transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
+  .cr-cardx:hover{transform:translateY(-4px);box-shadow:0 24px 50px -30px rgba(36,52,68,.32)}
+  .cr-cardx .ic{width:30px;height:30px;color:var(--steel-l);margin-bottom:14px}
+  .cr-cardx h3{font-family:var(--serif);font-weight:400;font-size:1.28rem;color:var(--ink);margin:0 0 8px;letter-spacing:-.01em}
+  .cr-cardx p{font-size:.95rem;line-height:1.6;color:rgba(24,26,31,.66);font-weight:300;margin:0}
+
+  /* Valeurs */
+  .cr-vals{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;border:1px solid var(--line-d);border-radius:var(--r-lg);overflow:hidden;background:var(--paper-2)}
+  .cr-val{padding:clamp(22px,3vw,30px);border-right:1px solid var(--line-d);border-bottom:1px solid var(--line-d)}
+  .cr-val .n{font-family:var(--mono);font-size:11px;color:var(--steel-l);letter-spacing:.08em}
+  .cr-val h4{font-family:var(--serif);font-weight:400;font-size:1.25rem;color:var(--ink);margin:8px 0 6px}
+  .cr-val p{font-size:.9rem;line-height:1.55;color:rgba(24,26,31,.62);font-weight:300;margin:0}
+
+  /* Opportunités */
+  .cr-roles{display:grid;gap:0;border-top:1px solid var(--line-d)}
+  .cr-role{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 6px;border-bottom:1px solid var(--line-d);
+    transition:padding-left .5s var(--ease),background .5s}
+  .cr-role:hover{padding-left:18px;background:linear-gradient(90deg,rgba(62,92,110,.08),transparent)}
+  .cr-role h4{font-family:var(--serif);font-weight:400;font-size:clamp(1.1rem,2vw,1.45rem);color:var(--ink);margin:0;letter-spacing:-.01em}
+  .cr-role .tag{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--concrete);border:1px solid var(--line-d);padding:7px 13px;border-radius:30px;white-space:nowrap}
+  .cr-roles-note{margin-top:18px;font-size:.92rem;color:rgba(24,26,31,.6);font-weight:300}
+
+  /* Formulaire */
+  .cr-apply{background:var(--ink-2)}
+  .cr-form-wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(30px,5vw,60px);align-items:start}
+  @media(max-width:880px){.cr-form-wrap{grid-template-columns:1fr;gap:34px}}
+  .cr-form-intro h2{margin-top:6px}
+  .cr-form-intro p{margin:16px 0 0;color:rgba(24,26,31,.66);font-weight:300;line-height:1.7;max-width:40ch}
+  .cr-form-intro .meta{margin-top:22px;display:grid;gap:10px;font-size:.92rem;color:rgba(24,26,31,.7)}
+  .cr-form-intro .meta a{color:var(--steel-glow);text-decoration:none}
+  .cr-form{background:var(--paper-2);border:1px solid var(--line-d);border-radius:var(--r-lg);padding:clamp(26px,4vw,44px);
+    box-shadow:0 2px 6px rgba(36,52,68,.05),0 30px 60px -40px rgba(36,52,68,.3)}
+  .cr-frow{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:520px){.cr-frow{grid-template-columns:1fr}}
+  .cr-field{margin-bottom:16px}
+  .cr-field label{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--concrete);margin-bottom:7px}
+  .cr-field input,.cr-field select,.cr-field textarea{width:100%;box-sizing:border-box;font-family:var(--sans,'Inter',sans-serif);font-size:15px;
+    padding:13px 15px;border-radius:12px;border:1px solid var(--line-d);background:var(--paper);color:var(--ink);outline:none;transition:border .3s}
+  .cr-field input:focus,.cr-field select:focus,.cr-field textarea:focus{border-color:var(--steel-l)}
+  .cr-field textarea{min-height:120px;resize:vertical}
+  .cr-file input{padding:11px 12px;font-family:var(--mono);font-size:12px}
+  .cr-hp{position:absolute!important;left:-9999px;width:1px;height:1px;opacity:0;overflow:hidden}
+  .cr-privacy{display:flex;gap:9px;align-items:flex-start;margin:6px 0 18px;color:rgba(24,26,31,.56);font-size:12px;line-height:1.55;font-weight:300}
+  .cr-privacy svg{flex:none;margin-top:2px;color:var(--steel-l)}
+  .cr-privacy a{color:var(--steel-glow);text-decoration:underline;text-underline-offset:2px}
+  .cr-status{font-family:var(--mono);font-size:11px;letter-spacing:.04em;text-align:center;margin-top:14px;min-height:1em}
+  .cr-status.sending{color:var(--concrete-d)} .cr-status.ok{color:#1a8a45;font-size:12.5px} .cr-status.err{color:#a32d2d;font-size:12.5px}
+  .cr-btn-full{width:100%;justify-content:center}
+
+  /* Visuels */
+  .cr-hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(30px,5vw,64px);align-items:center}
+  .cr-hero-img{margin:0;border-radius:var(--r-lg);overflow:hidden;aspect-ratio:4/5;position:relative;background:var(--ink-2);
+    border:1px solid var(--glass-border-d);box-shadow:0 2px 6px rgba(36,52,68,.05),0 34px 72px -38px rgba(36,52,68,.34)}
+  .cr-hero-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.4s var(--ease)}
+  .cr-hero-img:hover img{transform:scale(1.04)}
+  .cr-hero-img figcaption{position:absolute;left:14px;bottom:14px;z-index:2;display:inline-flex;align-items:center;gap:8px;
+    font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#fff;
+    background:rgba(18,23,28,.32);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:7px 12px;border-radius:30px;border:1px solid rgba(255,255,255,.2)}
+  @media(max-width:880px){.cr-hero-grid{grid-template-columns:1fr}.cr-hero-img{aspect-ratio:16/10;margin-top:30px;max-height:48vh}}
+  .cr-band{position:relative;height:clamp(220px,32vw,400px);overflow:hidden;border-top:1px solid var(--line-d);border-bottom:1px solid var(--line-d)}
+  .cr-band img{width:100%;height:100%;object-fit:cover;display:block}
+  .cr-band .cap{position:absolute;left:0;right:0;bottom:0;padding:clamp(20px,4vw,44px);color:#fff;
+    background:linear-gradient(to top,rgba(18,23,28,.62),transparent)}
+  .cr-band .cap .k{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.85}
+  .cr-band .cap h3{font-family:var(--serif);font-weight:400;font-size:clamp(1.3rem,2.6vw,2rem);margin:6px 0 0;letter-spacing:-.01em}
+  .cr-foot{margin-top:auto;text-align:center;font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--concrete);padding:24px;border-top:1px solid var(--line-d)}
+  .cr-foot a{color:inherit;text-decoration:none}
+</style>
+</head>
+<body>
+<main class="cr">
+  <header class="cr-nav">
+    <a href="index.html" class="cr-logo"><b>inger</b><span>Ingénieurs &amp; Experts Réunis</span></a>
+    <div style="display:flex;gap:10px;align-items:center">
+      <a href="index.html" class="btn btn-ghost"><span class="arr">←</span> Retour au site</a>
+      <a href="#postuler" class="btn btn-primary">Postuler <span class="arr">→</span></a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="cr-hero">
+    <div class="bp"></div><div class="glow"></div>
+    <div class="cr-wrap cr-hero-grid">
+      <div class="cr-hero-copy">
+        <span class="cr-kick"><span class="d"></span> Carrière · INGER Sarlu</span>
+        <h1 class="cr-h1">Construire l'avenir, <em>ensemble</em></h1>
+        <p class="cr-lead">Depuis 2000, <strong style="font-weight:500;color:var(--ink)"><i>inger</i></strong> réunit ingénieurs et experts autour de projets qui transforment le Togo et l'espace UEMOA. Rejoignez une équipe où l'exigence technique rime avec impact concret.</p>
+        <div class="cr-cta">
+          <a href="#postuler" class="btn btn-primary">Déposer ma candidature <span class="arr">→</span></a>
+          <a href="#decouvrir" class="btn btn-ghost">Découvrir l'environnement</a>
+        </div>
+      </div>
+      <figure class="cr-hero-img">
+        <img src="images/03-hero-carriere.jpg" alt="Réalisation INGER — bâtiment à Lomé, Togo" loading="lazy">
+        <figcaption>INGER · Lomé, Togo</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- POURQUOI NOUS REJOINDRE -->
+  <section class="cr-sec" id="decouvrir">
+    <div class="cr-wrap">
+      <div class="cr-head">
+        <span class="cr-sk">01 · Pourquoi nous rejoindre</span>
+        <h2 class="cr-h2">Un cadre pour <em>grandir</em></h2>
+      </div>
+      <div class="cr-grid">
+        <div class="cr-cardx">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M6 21V8l6-4 6 4v13M10 21v-5h4v5"/></svg>
+          <h3>Projets d'envergure</h3>
+          <p>Bâtiments IGH, routes nationales, ouvrages hydrauliques : des chantiers structurants à fort impact.</p>
+        </div>
+        <div class="cr-cardx">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4-8 4-8-4 8-4ZM4 11l8 4 8-4M4 15l8 4 8-4"/></svg>
+          <h3>Expertise &amp; mentorat</h3>
+          <p>Progressez aux côtés d'ingénieurs seniors, sur un plateau technique moderne et exigeant.</p>
+        </div>
+        <div class="cr-cardx">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+          <h3>Rayonnement régional</h3>
+          <p>Des missions au Togo, dans l'UEMOA et à l'international (Bénin, Burkina Faso, et au-delà).</p>
+        </div>
+        <div class="cr-cardx">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 5-3.5 7.5-7 9-3.5-1.5-7-4-7-9V6l7-3Z"/><path d="M9 12l2 2 4-4"/></svg>
+          <h3>Exigence reconnue</h3>
+          <p>Bureau agréé par l'État (Cat. A2), au service de maîtres d'ouvrage publics et de bailleurs internationaux.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALEURS -->
+  <section class="cr-sec">
+    <div class="cr-wrap">
+      <div class="cr-head">
+        <span class="cr-sk">02 · Notre culture</span>
+        <h2 class="cr-h2">Les valeurs qui nous <em>rassemblent</em></h2>
+      </div>
+      <div class="cr-vals">
+        <div class="cr-val"><div class="n">01</div><h4>Exigence</h4><p>La qualité technique avant tout, sur chaque détail et chaque livrable.</p></div>
+        <div class="cr-val"><div class="n">02</div><h4>Précision</h4><p>Rigueur des études, du contrôle et du suivi, jusqu'à la réception.</p></div>
+        <div class="cr-val"><div class="n">03</div><h4>Esprit d'équipe</h4><p>Un réseau pluridisciplinaire d'ingénieurs et de firmes partenaires.</p></div>
+        <div class="cr-val"><div class="n">04</div><h4>Durabilité</h4><p>Des ouvrages pensés pour durer, intégrés à leur environnement.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BANDE VISUELLE -->
+  <section class="cr-band" aria-hidden="true">
+    <img src="images/03-hero-route.jpg" alt="" loading="lazy">
+    <div class="cap">
+      <div class="k">Sur le terrain</div>
+      <h3>Des chantiers qui façonnent la région</h3>
+    </div>
+  </section>
+
+  <!-- OPPORTUNITÉS -->
+  <section class="cr-sec">
+    <div class="cr-wrap">
+      <div class="cr-head">
+        <span class="cr-sk">03 · Opportunités</span>
+        <h2 class="cr-h2">Les profils que nous <em>recherchons</em></h2>
+      </div>
+      <div class="cr-roles">
+        <div class="cr-role"><h4>Ingénieur structures / bâtiment</h4><span class="tag">Bâtiments</span></div>
+        <div class="cr-role"><h4>Ingénieur routes &amp; VRD</h4><span class="tag">Infrastructures</span></div>
+        <div class="cr-role"><h4>Ingénieur hydraulique &amp; assainissement</h4><span class="tag">Hydraulique</span></div>
+        <div class="cr-role"><h4>Conducteur / contrôleur de travaux</h4><span class="tag">Chantier</span></div>
+        <div class="cr-role"><h4>Projeteur · Dessinateur (DAO / BIM)</h4><span class="tag">Études</span></div>
+        <div class="cr-role"><h4>Stage &amp; alternance</h4><span class="tag">Formation</span></div>
+      </div>
+      <p class="cr-roles-note">Vous ne trouvez pas votre poste ? La <strong style="font-weight:500;color:var(--ink)">candidature spontanée</strong> est la bienvenue — présentez-nous votre profil ci-dessous.</p>
+    </div>
+  </section>
+
+  <!-- CANDIDATURE -->
+  <section class="cr-sec cr-apply" id="postuler">
+    <div class="cr-wrap">
+      <div class="cr-form-wrap">
+        <div class="cr-form-intro">
+          <span class="cr-sk">04 · Candidature</span>
+          <h2 class="cr-h2">Parlez-nous de <em>vous</em></h2>
+          <p>Quelques informations suffisent. Notre équipe étudie chaque candidature avec attention et revient vers vous.</p>
+          <div class="meta">
+            <span>📍 Immeuble inger, Lomé, Togo</span>
+            <span><a href="mailto:ingersarlu@inger.tg">ingersarlu@inger.tg</a></span>
+            <span><a href="tel:+22822501730">+228 22 50 17 30</a></span>
+          </div>
+        </div>
+
+        <form class="cr-form" id="cr-form" action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="access_key" value="3647dc77-36b9-41ee-82b0-a2917547a707">
+          <input type="hidden" name="subject" value="Nouvelle candidature — site INGER">
+          <input type="hidden" name="from_name" value="Carrière INGER Sarlu">
+          <input type="checkbox" name="botcheck" class="cr-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="cr-frow">
+            <div class="cr-field"><label>Prénom</label><input type="text" name="Prénom" placeholder="Votre prénom" required></div>
+            <div class="cr-field"><label>Nom</label><input type="text" name="Nom" placeholder="Votre nom" required></div>
+          </div>
+          <div class="cr-frow">
+            <div class="cr-field"><label>Email</label><input type="email" name="email" placeholder="vous@email.com" required></div>
+            <div class="cr-field"><label>Téléphone</label><input type="tel" name="Téléphone" placeholder="+228 ..."></div>
+          </div>
+          <div class="cr-field"><label>Poste visé</label>
+            <select name="Poste visé">
+              <option>Candidature spontanée</option>
+              <option>Ingénieur structures / bâtiment</option>
+              <option>Ingénieur routes &amp; VRD</option>
+              <option>Ingénieur hydraulique &amp; assainissement</option>
+              <option>Conducteur / contrôleur de travaux</option>
+              <option>Projeteur · Dessinateur (DAO / BIM)</option>
+              <option>Stage &amp; alternance</option>
+            </select>
+          </div>
+          <div class="cr-field"><label>Lien portfolio / LinkedIn (optionnel)</label><input type="url" name="Portfolio / LinkedIn" placeholder="https://..."></div>
+          <div class="cr-field cr-file"><label>CV (PDF ou Word)</label><input type="file" name="CV" accept=".pdf,.doc,.docx"></div>
+          <div class="cr-field"><label>Message / motivation</label><textarea name="Message" placeholder="Présentez-vous en quelques lignes : parcours, motivation, disponibilité..."></textarea></div>
+
+          <div class="cr-privacy">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+            <span>Vos données et documents sont traités de manière confidentielle, uniquement dans le cadre du recrutement. <a href="politique-confidentialite.html">En savoir plus</a></span>
+          </div>
+          <button class="btn btn-primary cr-btn-full" type="submit">Envoyer ma candidature <span class="arr">→</span></button>
+          <div class="cr-status" id="cr-status" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="cr-foot">
+    © 2026 INGER Sarlu — Ingénieurs et Experts Réunis · Lomé, Togo · <a href="mailto:ingersarlu@inger.tg">ingersarlu@inger.tg</a>
+  </footer>
+</main>
+
+<script>
+(function(){
+  "use strict";
+  var f = document.getElementById('cr-form'); if(!f) return;
+  var status = document.getElementById('cr-status');
+  var btn = f.querySelector('button[type="submit"]');
+  f.addEventListener('submit', function(e){
+    e.preventDefault();
+    status.className = 'cr-status sending'; status.textContent = 'Envoi en cours…';
+    if(btn){ btn.disabled = true; btn.style.opacity = '.7'; }
+    fetch('https://api.web3forms.com/submit', { method:'POST', body:new FormData(f), headers:{'Accept':'application/json'} })
+      .then(function(r){ return r.json(); })
+      .then(function(j){
+        if(j && j.success){ status.className='cr-status ok'; status.textContent='Merci ! Votre candidature a bien été envoyée. Nous revenons vers vous rapidement.'; f.reset(); }
+        else { status.className='cr-status err'; status.textContent='Une erreur est survenue. Réessayez ou écrivez-nous à ingersarlu@inger.tg.'; }
+      })
+      .catch(function(){ status.className='cr-status err'; status.textContent='Une erreur est survenue. Réessayez ou écrivez-nous à ingersarlu@inger.tg.'; })
+      .then(function(){ if(btn){ btn.disabled=false; btn.style.opacity=''; } });
+  });
+})();
+</script>
+</body>
+</html>
