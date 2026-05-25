@@ -259,7 +259,12 @@
     "En soumettant ce formulaire, je consens au traitement de mes données personnelles pour la gestion de ma demande de contact. Je peux révoquer mon consentement à tout moment en envoyant un email à ingersarlu@inger.tg. Vos données sont traitées de manière confidentielle et uniquement dans le cadre professionnel de votre demande. Nous mettons en œuvre les mesures techniques et organisationnelles nécessaires pour garantir leur sécurité et leur confidentialité.": "By submitting this form, I consent to the processing of my personal data to handle my contact request. I can withdraw my consent at any time by emailing ingersarlu@inger.tg. Your data is processed confidentially and solely in the professional context of your request. We implement the necessary technical and organisational measures to ensure its security and confidentiality.",
     "En savoir plus": "Learn more",
     "Politique de confidentialité": "Privacy policy",
-    "Mentions légales": "Legal notice"
+    "Mentions légales": "Legal notice",
+    "Carrière · INGER": "Careers · INGER",
+    "Construire l'avenir,": "Building the future,",
+    "Ingénieurs, projeteurs, conducteurs de travaux : rejoignez un bureau agréé qui façonne les infrastructures du Togo et de l'espace UEMOA.": "Engineers, designers, site managers: join an accredited firm shaping the infrastructure of Togo and the WAEMU region.",
+    "Découvrir nos opportunités": "Explore our opportunities",
+    "Carrière": "Careers"
   };
 
   /* ---------- Collecte des nœuds traduisibles ---------- */

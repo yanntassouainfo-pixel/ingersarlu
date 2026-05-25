@@ -578,6 +578,16 @@ section{position:relative;z-index:2}
 .cform-note.ok{color:#1a8a45;font-size:12px}
 .cform-note.err{color:#a32d2d;font-size:12px}
 .cform-hp{position:absolute!important;left:-9999px;width:1px;height:1px;opacity:0;overflow:hidden}
+/* Bloc CTA Carrière (accueil) */
+.career-cta{padding:0 0 clamp(60px,9vw,110px)}
+.cc-card{display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;
+  padding:clamp(30px,5vw,56px);border-radius:var(--r-lg)}
+.cc-title{font-family:var(--serif);font-weight:400;font-size:clamp(1.6rem,3.4vw,2.6rem);letter-spacing:-.02em;
+  color:var(--ink);margin:10px 0 0;line-height:1.06}
+.cc-title em{font-style:italic;color:var(--steel-l)}
+.cc-sub{margin:14px 0 0;max-width:46em;color:rgba(24,26,31,.66);font-weight:300;line-height:1.7}
+.cc-card .btn{flex:none}
+@media(max-width:760px){.cc-card{flex-direction:column;align-items:flex-start}.cc-card .btn{width:100%;justify-content:center}}
 
 /* ============================================================
    FOOTER
