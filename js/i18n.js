@@ -296,12 +296,19 @@
         if (DICT[t]) nodes.push({ node: e, fr: t, en: DICT[t], isAttr: true, attr: attr, lead: "", trail: "" });
       });
     });
+    // Elements with explicit data-fr/data-en attributes (e.g. modal Politique Qualité)
+    root.querySelectorAll("[data-fr][data-en]").forEach(function (e) {
+      var fr = e.getAttribute("data-fr"), en = e.getAttribute("data-en");
+      if (!fr || !en) return;
+      nodes.push({ node: e, fr: fr, en: en, isAttr: false, isHTML: true, lead: "", trail: "" });
+    });
   }
 
   function apply(lang) {
     nodes.forEach(function (o) {
       var val = (lang === "en") ? o.en : o.fr;
       if (o.isAttr) o.node.setAttribute(o.attr, val);
+      else if (o.isHTML) o.node.innerHTML = val;
       else o.node.nodeValue = o.lead + val + o.trail;
     });
     document.documentElement.setAttribute("lang", lang);

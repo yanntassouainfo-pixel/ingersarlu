@@ -410,3 +410,49 @@
       .then(function(){ if(btn){ btn.disabled=false; btn.style.opacity=''; } });
   });
 })();
+
+/* ===== MODAL : POLITIQUE QUALITÉ ===== */
+(function(){
+  var modal = document.getElementById('pqModal');
+  var trigger = document.getElementById('pqOpen');
+  if(!modal || !trigger) return;
+  var lastFocus = null;
+
+  function open(e){
+    if(e) e.preventDefault();
+    lastFocus = document.activeElement;
+    modal.classList.add('show');
+    modal.setAttribute('aria-hidden','false');
+    document.body.classList.add('pq-locked');
+    setTimeout(function(){
+      var c = modal.querySelector('.pq-close');
+      if(c) c.focus();
+    }, 60);
+  }
+  function close(){
+    modal.classList.remove('show');
+    modal.setAttribute('aria-hidden','true');
+    document.body.classList.remove('pq-locked');
+    if(lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+
+  trigger.addEventListener('click', open);
+
+  modal.addEventListener('click', function(e){
+    if(e.target.closest('[data-pq-close]')) close();
+  });
+
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && modal.classList.contains('show')) close();
+  });
+
+  // Focus trap minimal
+  modal.addEventListener('keydown', function(e){
+    if(e.key !== 'Tab' || !modal.classList.contains('show')) return;
+    var f = modal.querySelectorAll('button, [href], input, [tabindex]:not([tabindex="-1"])');
+    if(!f.length) return;
+    var first = f[0], last = f[f.length-1];
+    if(e.shiftKey && document.activeElement === first){ last.focus(); e.preventDefault(); }
+    else if(!e.shiftKey && document.activeElement === last){ first.focus(); e.preventDefault(); }
+  });
+})();

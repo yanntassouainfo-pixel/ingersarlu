@@ -917,3 +917,106 @@ section{position:relative;z-index:2}
 .lightbox.show .lb-close{opacity:1;transform:none}
 .lb-close:hover{transform:rotate(90deg);background:rgba(18,20,25,.6)}
 @media(max-width:560px){.lb-cap{padding:22px 18px 18px}.lb-close{top:12px;right:12px;width:44px;height:44px}}
+
+/* ==========================================================
+   MODAL — POLITIQUE QUALITÉ
+   ========================================================== */
+.pq-modal{position:fixed;inset:0;z-index:1200;display:none;align-items:flex-start;justify-content:center;
+  padding:clamp(16px,3vw,40px);overflow-y:auto;
+  -webkit-overflow-scrolling:touch}
+.pq-modal.show{display:flex}
+.pq-backdrop{position:fixed;inset:0;background:rgba(18,20,25,.62);
+  backdrop-filter:blur(14px) saturate(130%);-webkit-backdrop-filter:blur(14px) saturate(130%);
+  opacity:0;transition:opacity .45s var(--ease);cursor:pointer}
+.pq-modal.show .pq-backdrop{opacity:1}
+.pq-dialog{position:relative;z-index:2;width:min(820px,100%);margin:auto;
+  background:var(--paper);border-radius:var(--r-lg);overflow:hidden;
+  border:1px solid var(--line-d);
+  box-shadow:0 60px 160px -60px rgba(18,28,38,.55),0 0 0 1px rgba(255,255,255,.5) inset;
+  opacity:0;transform:translateY(18px) scale(.985);
+  transition:opacity .5s var(--ease) .05s,transform .5s var(--ease) .05s;
+  display:flex;flex-direction:column;max-height:calc(100vh - clamp(32px,6vw,80px))}
+.pq-modal.show .pq-dialog{opacity:1;transform:none}
+
+.pq-head{position:relative;padding:clamp(28px,4vw,40px) clamp(28px,4vw,48px) clamp(20px,3vw,28px);
+  border-bottom:1px solid var(--line-d);
+  background:linear-gradient(180deg,rgba(255,255,255,.6),transparent)}
+.pq-kicker{display:inline-flex;align-items:center;gap:10px;
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--concrete)}
+.pq-kicker .pq-dot{width:7px;height:7px;border-radius:50%;background:var(--steel-l);
+  box-shadow:0 0 0 4px rgba(62,92,110,.12)}
+.pq-kicker .pq-sep{opacity:.5}
+.pq-title{font-family:var(--serif);font-weight:400;font-size:clamp(1.85rem,4.4vw,2.85rem);
+  line-height:1.05;letter-spacing:-.02em;color:var(--ink);margin:14px 0 0;max-width:18ch}
+.pq-title em{font-style:italic;color:var(--steel-l)}
+.pq-close{position:absolute;top:18px;right:18px;width:42px;height:42px;border-radius:50%;
+  border:1px solid var(--line-d);background:rgba(255,255,255,.7);color:var(--ink);
+  display:flex;align-items:center;justify-content:center;cursor:pointer;
+  transition:all .35s var(--ease);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.pq-close:hover{background:var(--ink);color:var(--paper);border-color:var(--ink);transform:rotate(90deg)}
+
+.pq-body{padding:clamp(24px,3.4vw,36px) clamp(28px,4vw,48px) clamp(28px,4vw,40px);
+  overflow-y:auto;flex:1;
+  display:flex;flex-direction:column;gap:18px;
+  scrollbar-width:thin;scrollbar-color:rgba(24,26,31,.18) transparent}
+.pq-body::-webkit-scrollbar{width:8px}
+.pq-body::-webkit-scrollbar-thumb{background:rgba(24,26,31,.16);border-radius:8px}
+.pq-body::-webkit-scrollbar-track{background:transparent}
+
+.pq-intro{font-size:clamp(.98rem,1.4vw,1.08rem);line-height:1.65;color:rgba(24,26,31,.72);
+  font-weight:300;max-width:62ch;margin-bottom:8px}
+
+.pq-card{display:flex;gap:clamp(18px,2.6vw,28px);align-items:flex-start;
+  padding:clamp(20px,2.6vw,26px);background:var(--paper-2);
+  border:1px solid var(--line-d);border-radius:var(--r);
+  transition:border-color .35s var(--ease),transform .35s var(--ease)}
+.pq-card:hover{border-color:rgba(62,92,110,.32);transform:translateY(-2px)}
+.pq-num{flex:0 0 auto;font-family:var(--mono);font-size:11px;letter-spacing:.14em;
+  color:var(--steel-l);border:1px solid var(--line-d);border-radius:30px;
+  padding:6px 11px;background:rgba(62,92,110,.05)}
+.pq-card-body{flex:1;min-width:0}
+.pq-card-body h3{font-family:var(--serif);font-weight:500;font-size:clamp(1.2rem,2vw,1.45rem);
+  line-height:1.2;color:var(--ink);margin:0 0 10px;letter-spacing:-.01em}
+.pq-card-body p{font-size:.96rem;line-height:1.65;color:rgba(24,26,31,.72);font-weight:300;margin:0}
+.pq-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:9px}
+.pq-list li{position:relative;padding-left:18px;font-size:.96rem;line-height:1.6;
+  color:rgba(24,26,31,.74);font-weight:300}
+.pq-list li::before{content:"";position:absolute;left:0;top:.7em;width:8px;height:1px;
+  background:var(--steel-l)}
+
+.pq-banner{margin-top:8px;padding:clamp(22px,3vw,28px) clamp(22px,3vw,30px);
+  background:linear-gradient(135deg,var(--ink),var(--steel-glow));color:var(--paper);
+  border-radius:var(--r);display:flex;flex-direction:column;gap:6px;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.05)}
+.pq-banner-label{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;
+  text-transform:uppercase;color:rgba(248,246,240,.55)}
+.pq-banner-text{font-family:var(--serif);font-weight:400;font-style:italic;
+  font-size:clamp(1.15rem,2.2vw,1.55rem);line-height:1.3;color:#fff}
+
+.pq-foot{display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:18px clamp(28px,4vw,48px);border-top:1px solid var(--line-d);
+  background:linear-gradient(0deg,rgba(255,255,255,.6),transparent)}
+.pq-meta{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--concrete)}
+.pq-foot-close{appearance:none;border:1px solid var(--ink);background:var(--ink);color:var(--paper);
+  font-family:var(--sans);font-size:13px;font-weight:400;cursor:pointer;
+  padding:11px 22px;border-radius:30px;transition:all .35s var(--ease)}
+.pq-foot-close:hover{background:var(--steel-glow);border-color:var(--steel-glow);transform:translateY(-1px)}
+
+@media(max-width:640px){
+  .pq-modal{padding:0;align-items:stretch}
+  .pq-dialog{border-radius:0;max-height:100vh;width:100%}
+  .pq-head{padding:24px 22px 18px}
+  .pq-close{top:14px;right:14px;width:40px;height:40px}
+  .pq-body{padding:20px 22px 26px}
+  .pq-card{flex-direction:column;gap:12px;padding:18px}
+  .pq-foot{padding:16px 22px;flex-direction:column;align-items:stretch;text-align:center}
+  .pq-foot-close{width:100%}
+}
+
+body.pq-locked{overflow:hidden}
+@media(prefers-reduced-motion:reduce){
+  .pq-backdrop,.pq-dialog,.pq-close,.pq-card,.pq-foot-close{transition:none!important}
+  .pq-dialog{transform:none!important}
+}
