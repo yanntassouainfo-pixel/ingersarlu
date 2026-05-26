@@ -42,7 +42,7 @@
 }
 
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
 body{
   font-family:var(--sans);
   background:var(--paper);
@@ -877,7 +877,7 @@ section{position:relative;z-index:2}
   .hstat .n{font-size:1.85rem}
   .hstat .lab{font-size:10px}
   .nav-logo .lt span{display:none}
-  .sec-idx{font-size:11px}
+  .sec-idx{font-size:11px;white-space:normal;border-radius:18px;padding:8px 14px;line-height:1.5;max-width:100%;word-break:break-word}
   .foot-grid{grid-template-columns:1fr 1fr}
   .foot-brand{grid-column:span 2}
   .foot-col ul a{font-size:.9rem}
