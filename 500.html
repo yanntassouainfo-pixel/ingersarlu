@@ -55,8 +55,14 @@
 <body>
 <main class="e404">
   <header class="e404-nav">
-    <a href="index.html" class="e404-logo"><b>inger</b><span>Ingénieurs &amp; Experts Réunis</span></a>
-    <a href="index.html#contact" class="btn btn-primary">Discuter d'un projet <span class="arr">→</span></a>
+    <a href="index.html" class="e404-logo"><b>inger</b><span data-fr="Ingénieurs &amp; Experts Réunis" data-en="Engineers &amp; Experts United">Ingénieurs &amp; Experts Réunis</span></a>
+    <div style="display:flex;gap:10px;align-items:center">
+      <div class="lang-switch" role="group" aria-label="Langue / Language" style="display:inline-flex;align-items:center;border:1px solid var(--line-d);border-radius:30px;padding:3px;background:rgba(248,246,240,.7)">
+        <button class="lang-opt active" type="button" data-lang="fr" aria-pressed="true" style="font-family:var(--mono);font-size:11px;border:none;background:transparent;color:var(--concrete);padding:6px 11px;border-radius:30px;cursor:pointer">FR</button>
+        <button class="lang-opt" type="button" data-lang="en" aria-pressed="false" style="font-family:var(--mono);font-size:11px;border:none;background:transparent;color:var(--concrete);padding:6px 11px;border-radius:30px;cursor:pointer">EN</button>
+      </div>
+      <a href="index.html#contact" class="btn btn-primary"><span data-fr="Discuter d'un projet" data-en="Discuss a project">Discuter d'un projet</span> <span class="arr">→</span></a>
+    </div>
   </header>
 
   <section class="e404-main">
@@ -72,19 +78,19 @@
     </div>
 
     <div class="e404-inner">
-      <span class="e404-kick"><span class="d"></span> Erreur 500 · Erreur serveur</span>
+      <span class="e404-kick"><span class="d"></span> <span data-fr="Erreur 500 · Erreur serveur" data-en="Error 500 · Server error">Erreur 500 · Erreur serveur</span></span>
       <div class="e404-num">5<em>0</em>0</div>
-      <h1 class="e404-h">Une erreur est survenue de notre côté.</h1>
-      <p class="e404-p">Un incident technique empêche l'affichage de cette page. Nos équipes en sont informées — réessayez dans un instant ou revenez à l'accueil.</p>
+      <h1 class="e404-h" data-fr="Une erreur est survenue de notre côté." data-en="Something went wrong on our side.">Une erreur est survenue de notre côté.</h1>
+      <p class="e404-p" data-fr="Un incident technique empêche l'affichage de cette page. Nos équipes en sont informées — réessayez dans un instant ou revenez à l'accueil." data-en="A technical issue is preventing this page from loading. Our team has been notified — please try again in a moment or return to the homepage.">Un incident technique empêche l'affichage de cette page. Nos équipes en sont informées — réessayez dans un instant ou revenez à l'accueil.</p>
       <div class="e404-cta">
-        <a href="#" class="btn btn-primary" onclick="location.reload();return false;"><span class="arr">↻</span> Réessayer</a>
-        <a href="index.html" class="btn btn-ghost">Retour à l'accueil</a>
+        <a href="#" class="btn btn-primary" onclick="location.reload();return false;"><span class="arr">↻</span> <span data-fr="Réessayer" data-en="Retry">Réessayer</span></a>
+        <a href="index.html" class="btn btn-ghost" data-fr="Retour à l'accueil" data-en="Back to home">Retour à l'accueil</a>
       </div>
       <nav class="e404-links" aria-label="Liens rapides">
-        <a href="index.html#about">À propos</a>
-        <a href="index.html#portfolio">Références</a>
-        <a href="index.html#domains">Domaines</a>
-        <a href="index.html#contact">Nous contacter</a>
+        <a href="index.html#about" data-fr="À propos" data-en="About">À propos</a>
+        <a href="index.html#portfolio" data-fr="Références" data-en="Projects">Références</a>
+        <a href="index.html#domains" data-fr="Domaines" data-en="Fields">Domaines</a>
+        <a href="index.html#contact" data-fr="Nous contacter" data-en="Contact us">Nous contacter</a>
       </nav>
     </div>
   </section>
@@ -94,6 +100,7 @@
   </footer>
 </main>
 
+<script src="js/i18n.js" defer></script>
 <script>
 (function(){
   var dyn=document.getElementById("e404Dyn"); if(!dyn) return;

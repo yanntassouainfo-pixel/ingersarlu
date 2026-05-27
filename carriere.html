@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Carrière · INGER Sarlu — Rejoindre nos équipes</title>
 <meta name="description" content="Rejoignez INGER Sarlu — ingénieurs-conseils à Lomé. Découvrez notre vision, notre culture et nos opportunités, puis déposez votre candidature." />
+<meta name="i18n-page" content="carriere">
+<style>
+/* Lang switch (réutilisé depuis style.css mais sécurisé ici) */
+.cr-nav .lang-switch{display:inline-flex;align-items:center;border:1px solid var(--line-d);border-radius:30px;padding:3px;background:rgba(248,246,240,.7)}
+.cr-nav .lang-opt{font-family:var(--mono);font-size:11px;letter-spacing:.08em;border:none;background:transparent;color:var(--concrete);padding:6px 11px;border-radius:30px;cursor:pointer;transition:all .3s}
+.cr-nav .lang-opt.active{background:var(--ink);color:var(--paper)}
+.cr-nav .lang-sep{width:1px;height:14px;background:var(--line-d);margin:0 2px}
+</style>
 <meta name="robots" content="index, follow" />
 <meta name="theme-color" content="#15171C" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -118,10 +126,15 @@
 <body>
 <main class="cr">
   <header class="cr-nav">
-    <a href="index.html" class="cr-logo"><b>inger</b><span>Ingénieurs &amp; Experts Réunis</span></a>
+    <a href="index.html" class="cr-logo"><b>inger</b><span data-fr="Ingénieurs &amp; Experts Réunis" data-en="Engineers &amp; Experts United">Ingénieurs &amp; Experts Réunis</span></a>
     <div style="display:flex;gap:10px;align-items:center">
-      <a href="index.html" class="btn btn-ghost"><span class="arr">←</span> Retour au site</a>
-      <a href="#postuler" class="btn btn-primary">Postuler <span class="arr">→</span></a>
+      <div class="lang-switch" role="group" aria-label="Langue / Language">
+        <button class="lang-opt active" type="button" data-lang="fr" aria-pressed="true">FR</button>
+        <span class="lang-sep"></span>
+        <button class="lang-opt" type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <a href="index.html" class="btn btn-ghost"><span class="arr">←</span> <span data-fr="Retour au site" data-en="Back to site">Retour au site</span></a>
+      <a href="#postuler" class="btn btn-primary"><span data-fr="Postuler" data-en="Apply">Postuler</span> <span class="arr">→</span></a>
     </div>
   </header>
 
@@ -130,17 +143,17 @@
     <div class="bp"></div><div class="glow"></div>
     <div class="cr-wrap cr-hero-grid">
       <div class="cr-hero-copy">
-        <span class="cr-kick"><span class="d"></span> Carrière · INGER Sarlu</span>
-        <h1 class="cr-h1">Construire l'avenir, <em>ensemble</em></h1>
-        <p class="cr-lead">Depuis 2000, <strong style="font-weight:500;color:var(--ink)"><i>inger</i></strong> réunit ingénieurs et experts autour de projets qui transforment le Togo et l'espace UEMOA. Rejoignez une équipe où l'exigence technique rime avec impact concret.</p>
+        <span class="cr-kick"><span class="d"></span> <span data-fr="Carrière · INGER Sarlu" data-en="Careers · INGER Sarlu">Carrière · INGER Sarlu</span></span>
+        <h1 class="cr-h1"><span data-fr="Construire l'avenir," data-en="Building the future,">Construire l'avenir,</span> <em data-fr="ensemble" data-en="together">ensemble</em></h1>
+        <p class="cr-lead" data-fr="Depuis 2000, &lt;strong style=&quot;font-weight:500;color:var(--ink)&quot;&gt;&lt;i&gt;inger&lt;/i&gt;&lt;/strong&gt; réunit ingénieurs et experts autour de projets qui transforment le Togo et l'espace UEMOA. Rejoignez une équipe où l'exigence technique rime avec impact concret." data-en="Since 2000, &lt;strong style=&quot;font-weight:500;color:var(--ink)&quot;&gt;&lt;i&gt;inger&lt;/i&gt;&lt;/strong&gt; has brought together engineers and experts on projects that transform Togo and the WAEMU region. Join a team where technical rigour meets tangible impact.">Depuis 2000, <strong style="font-weight:500;color:var(--ink)"><i>inger</i></strong> réunit ingénieurs et experts autour de projets qui transforment le Togo et l'espace UEMOA. Rejoignez une équipe où l'exigence technique rime avec impact concret.</p>
         <div class="cr-cta">
-          <a href="#postuler" class="btn btn-primary">Déposer ma candidature <span class="arr">→</span></a>
-          <a href="#decouvrir" class="btn btn-ghost">Découvrir l'environnement</a>
+          <a href="#postuler" class="btn btn-primary"><span data-fr="Déposer ma candidature" data-en="Submit my application">Déposer ma candidature</span> <span class="arr">→</span></a>
+          <a href="#decouvrir" class="btn btn-ghost" data-fr="Découvrir l'environnement" data-en="Discover the workplace">Découvrir l'environnement</a>
         </div>
       </div>
       <figure class="cr-hero-img">
         <img src="images/03-hero-carriere.jpg" alt="Réalisation INGER — bâtiment à Lomé, Togo" loading="lazy">
-        <figcaption>INGER · Lomé, Togo</figcaption>
+        <figcaption data-fr="INGER · Lomé, Togo" data-en="INGER · Lomé, Togo">INGER · Lomé, Togo</figcaption>
       </figure>
     </div>
   </section>
@@ -149,29 +162,29 @@
   <section class="cr-sec" id="decouvrir">
     <div class="cr-wrap">
       <div class="cr-head">
-        <span class="cr-sk">01 · Pourquoi nous rejoindre</span>
-        <h2 class="cr-h2">Un cadre pour <em>grandir</em></h2>
+        <span class="cr-sk" data-fr="01 · Pourquoi nous rejoindre" data-en="01 · Why join us">01 · Pourquoi nous rejoindre</span>
+        <h2 class="cr-h2"><span data-fr="Un cadre pour" data-en="A place to">Un cadre pour</span> <em data-fr="grandir" data-en="grow">grandir</em></h2>
       </div>
       <div class="cr-grid">
         <div class="cr-cardx">
           <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M6 21V8l6-4 6 4v13M10 21v-5h4v5"/></svg>
-          <h3>Projets d'envergure</h3>
-          <p>Bâtiments IGH, routes nationales, ouvrages hydrauliques : des chantiers structurants à fort impact.</p>
+          <h3 data-fr="Projets d'envergure" data-en="Large-scale projects">Projets d'envergure</h3>
+          <p data-fr="Bâtiments IGH, routes nationales, ouvrages hydrauliques : des chantiers structurants à fort impact." data-en="High-rise buildings, national roads, hydraulic works: structuring, high-impact projects.">Bâtiments IGH, routes nationales, ouvrages hydrauliques : des chantiers structurants à fort impact.</p>
         </div>
         <div class="cr-cardx">
           <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4-8 4-8-4 8-4ZM4 11l8 4 8-4M4 15l8 4 8-4"/></svg>
-          <h3>Expertise &amp; mentorat</h3>
-          <p>Progressez aux côtés d'ingénieurs seniors, sur un plateau technique moderne et exigeant.</p>
+          <h3 data-fr="Expertise &amp; mentorat" data-en="Expertise &amp; mentoring">Expertise &amp; mentorat</h3>
+          <p data-fr="Progressez aux côtés d'ingénieurs seniors, sur un plateau technique moderne et exigeant." data-en="Grow alongside senior engineers, with modern and demanding technical resources.">Progressez aux côtés d'ingénieurs seniors, sur un plateau technique moderne et exigeant.</p>
         </div>
         <div class="cr-cardx">
           <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
-          <h3>Rayonnement régional</h3>
-          <p>Des missions au Togo, dans l'UEMOA et à l'international (Bénin, Burkina Faso, et au-delà).</p>
+          <h3 data-fr="Rayonnement régional" data-en="Regional reach">Rayonnement régional</h3>
+          <p data-fr="Des missions au Togo, dans l'UEMOA et à l'international (Bénin, Burkina Faso, et au-delà)." data-en="Assignments in Togo, the WAEMU area and internationally (Benin, Burkina Faso and beyond).">Des missions au Togo, dans l'UEMOA et à l'international (Bénin, Burkina Faso, et au-delà).</p>
         </div>
         <div class="cr-cardx">
           <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 5-3.5 7.5-7 9-3.5-1.5-7-4-7-9V6l7-3Z"/><path d="M9 12l2 2 4-4"/></svg>
-          <h3>Exigence reconnue</h3>
-          <p>Bureau agréé par l'État (Cat. A2), au service de maîtres d'ouvrage publics et de bailleurs internationaux.</p>
+          <h3 data-fr="Exigence reconnue" data-en="Recognised standards">Exigence reconnue</h3>
+          <p data-fr="Bureau agréé par l'État (Cat. A2), au service de maîtres d'ouvrage publics et de bailleurs internationaux." data-en="State-accredited firm (Cat. A2), serving public clients and international funders.">Bureau agréé par l'État (Cat. A2), au service de maîtres d'ouvrage publics et de bailleurs internationaux.</p>
         </div>
       </div>
     </div>
@@ -181,14 +194,14 @@
   <section class="cr-sec">
     <div class="cr-wrap">
       <div class="cr-head">
-        <span class="cr-sk">02 · Notre culture</span>
-        <h2 class="cr-h2">Les valeurs qui nous <em>rassemblent</em></h2>
+        <span class="cr-sk" data-fr="02 · Notre culture" data-en="02 · Our culture">02 · Notre culture</span>
+        <h2 class="cr-h2"><span data-fr="Les valeurs qui nous" data-en="The values that bring us">Les valeurs qui nous</span> <em data-fr="rassemblent" data-en="together">rassemblent</em></h2>
       </div>
       <div class="cr-vals">
-        <div class="cr-val"><div class="n">01</div><h4>Exigence</h4><p>La qualité technique avant tout, sur chaque détail et chaque livrable.</p></div>
-        <div class="cr-val"><div class="n">02</div><h4>Précision</h4><p>Rigueur des études, du contrôle et du suivi, jusqu'à la réception.</p></div>
-        <div class="cr-val"><div class="n">03</div><h4>Esprit d'équipe</h4><p>Un réseau pluridisciplinaire d'ingénieurs et de firmes partenaires.</p></div>
-        <div class="cr-val"><div class="n">04</div><h4>Durabilité</h4><p>Des ouvrages pensés pour durer, intégrés à leur environnement.</p></div>
+        <div class="cr-val"><div class="n">01</div><h4 data-fr="Exigence" data-en="Rigour">Exigence</h4><p data-fr="La qualité technique avant tout, sur chaque détail et chaque livrable." data-en="Technical quality above all, on every detail and every deliverable.">La qualité technique avant tout, sur chaque détail et chaque livrable.</p></div>
+        <div class="cr-val"><div class="n">02</div><h4 data-fr="Précision" data-en="Precision">Précision</h4><p data-fr="Rigueur des études, du contrôle et du suivi, jusqu'à la réception." data-en="Rigour in studies, control and supervision, through to project handover.">Rigueur des études, du contrôle et du suivi, jusqu'à la réception.</p></div>
+        <div class="cr-val"><div class="n">03</div><h4 data-fr="Esprit d'équipe" data-en="Team spirit">Esprit d'équipe</h4><p data-fr="Un réseau pluridisciplinaire d'ingénieurs et de firmes partenaires." data-en="A multidisciplinary network of engineers and partner firms.">Un réseau pluridisciplinaire d'ingénieurs et de firmes partenaires.</p></div>
+        <div class="cr-val"><div class="n">04</div><h4 data-fr="Durabilité" data-en="Sustainability">Durabilité</h4><p data-fr="Des ouvrages pensés pour durer, intégrés à leur environnement." data-en="Works designed to last, integrated into their environment.">Des ouvrages pensés pour durer, intégrés à leur environnement.</p></div>
       </div>
     </div>
   </section>
@@ -197,8 +210,8 @@
   <section class="cr-band" aria-hidden="true">
     <img src="images/04-hero-route.jpg" alt="" loading="lazy">
     <div class="cap">
-      <div class="k">Sur le terrain</div>
-      <h3>Des chantiers qui façonnent la région</h3>
+      <div class="k" data-fr="Sur le terrain" data-en="On the ground">Sur le terrain</div>
+      <h3 data-fr="Des chantiers qui façonnent la région" data-en="Projects shaping the region">Des chantiers qui façonnent la région</h3>
     </div>
   </section>
 
@@ -206,18 +219,18 @@
   <section class="cr-sec">
     <div class="cr-wrap">
       <div class="cr-head">
-        <span class="cr-sk">03 · Opportunités</span>
-        <h2 class="cr-h2">Les profils que nous <em>recherchons</em></h2>
+        <span class="cr-sk" data-fr="03 · Opportunités" data-en="03 · Opportunities">03 · Opportunités</span>
+        <h2 class="cr-h2"><span data-fr="Les profils que nous" data-en="The profiles we are">Les profils que nous</span> <em data-fr="recherchons" data-en="looking for">recherchons</em></h2>
       </div>
       <div class="cr-roles">
-        <div class="cr-role"><h4>Ingénieur structures / bâtiment</h4><span class="tag">Bâtiments</span></div>
-        <div class="cr-role"><h4>Ingénieur routes &amp; VRD</h4><span class="tag">Infrastructures</span></div>
-        <div class="cr-role"><h4>Ingénieur hydraulique &amp; assainissement</h4><span class="tag">Hydraulique</span></div>
-        <div class="cr-role"><h4>Conducteur / contrôleur de travaux</h4><span class="tag">Chantier</span></div>
-        <div class="cr-role"><h4>Projeteur · Dessinateur (DAO / BIM)</h4><span class="tag">Études</span></div>
-        <div class="cr-role"><h4>Stage &amp; alternance</h4><span class="tag">Formation</span></div>
+        <div class="cr-role"><h4 data-fr="Ingénieur structures / bâtiment" data-en="Structural / building engineer">Ingénieur structures / bâtiment</h4><span class="tag" data-fr="Bâtiments" data-en="Buildings">Bâtiments</span></div>
+        <div class="cr-role"><h4 data-fr="Ingénieur routes &amp; VRD" data-en="Roads &amp; earthworks engineer">Ingénieur routes &amp; VRD</h4><span class="tag" data-fr="Infrastructures" data-en="Infrastructure">Infrastructures</span></div>
+        <div class="cr-role"><h4 data-fr="Ingénieur hydraulique &amp; assainissement" data-en="Hydraulics &amp; sanitation engineer">Ingénieur hydraulique &amp; assainissement</h4><span class="tag" data-fr="Hydraulique" data-en="Hydraulics">Hydraulique</span></div>
+        <div class="cr-role"><h4 data-fr="Conducteur / contrôleur de travaux" data-en="Site manager / works supervisor">Conducteur / contrôleur de travaux</h4><span class="tag" data-fr="Chantier" data-en="On-site">Chantier</span></div>
+        <div class="cr-role"><h4 data-fr="Projeteur · Dessinateur (DAO / BIM)" data-en="Draftsperson · Designer (CAD / BIM)">Projeteur · Dessinateur (DAO / BIM)</h4><span class="tag" data-fr="Études" data-en="Studies">Études</span></div>
+        <div class="cr-role"><h4 data-fr="Stage &amp; alternance" data-en="Internship &amp; apprenticeship">Stage &amp; alternance</h4><span class="tag" data-fr="Formation" data-en="Training">Formation</span></div>
       </div>
-      <p class="cr-roles-note">Vous ne trouvez pas votre poste ? La <strong style="font-weight:500;color:var(--ink)">candidature spontanée</strong> est la bienvenue — présentez-nous votre profil ci-dessous.</p>
+      <p class="cr-roles-note" data-fr="Vous ne trouvez pas votre poste ? La &lt;strong style=&quot;font-weight:500;color:var(--ink)&quot;&gt;candidature spontanée&lt;/strong&gt; est la bienvenue — présentez-nous votre profil ci-dessous." data-en="Don't see your role? &lt;strong style=&quot;font-weight:500;color:var(--ink)&quot;&gt;Unsolicited applications&lt;/strong&gt; are welcome — tell us about your profile below.">Vous ne trouvez pas votre poste ? La <strong style="font-weight:500;color:var(--ink)">candidature spontanée</strong> est la bienvenue — présentez-nous votre profil ci-dessous.</p>
     </div>
   </section>
 
@@ -226,11 +239,11 @@
     <div class="cr-wrap">
       <div class="cr-form-wrap">
         <div class="cr-form-intro">
-          <span class="cr-sk">04 · Candidature</span>
-          <h2 class="cr-h2">Parlez-nous de <em>vous</em></h2>
-          <p>Quelques informations suffisent. Notre équipe étudie chaque candidature avec attention et revient vers vous.</p>
+          <span class="cr-sk" data-fr="04 · Candidature" data-en="04 · Apply">04 · Candidature</span>
+          <h2 class="cr-h2"><span data-fr="Parlez-nous de" data-en="Tell us about">Parlez-nous de</span> <em data-fr="vous" data-en="you">vous</em></h2>
+          <p data-fr="Quelques informations suffisent. Notre équipe étudie chaque candidature avec attention et revient vers vous." data-en="A few details are enough. Our team reviews every application carefully and gets back to you.">Quelques informations suffisent. Notre équipe étudie chaque candidature avec attention et revient vers vous.</p>
           <div class="meta">
-            <span>📍 Immeuble inger, Lomé, Togo</span>
+            <span data-fr="📍 Immeuble inger, Lomé, Togo" data-en="📍 inger Building, Lomé, Togo">📍 Immeuble inger, Lomé, Togo</span>
             <span><a href="mailto:ingersarlu@inger.tg">ingersarlu@inger.tg</a></span>
             <span><a href="tel:+22822501730">+228 22 50 17 30</a></span>
           </div>
@@ -242,33 +255,33 @@
           <input type="hidden" name="from_name" value="Carrière INGER Sarlu">
           <input type="checkbox" name="botcheck" class="cr-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
           <div class="cr-frow">
-            <div class="cr-field"><label>Prénom</label><input type="text" name="Prénom" placeholder="Votre prénom" required></div>
-            <div class="cr-field"><label>Nom</label><input type="text" name="Nom" placeholder="Votre nom" required></div>
+            <div class="cr-field"><label data-fr="Prénom" data-en="First name">Prénom</label><input type="text" name="Prénom" placeholder="Votre prénom" data-fr-ph="Votre prénom" data-en-ph="Your first name" required></div>
+            <div class="cr-field"><label data-fr="Nom" data-en="Last name">Nom</label><input type="text" name="Nom" placeholder="Votre nom" data-fr-ph="Votre nom" data-en-ph="Your last name" required></div>
           </div>
           <div class="cr-frow">
-            <div class="cr-field"><label>Email</label><input type="email" name="email" placeholder="vous@email.com" required></div>
-            <div class="cr-field"><label>Téléphone</label><input type="tel" name="Téléphone" placeholder="+228 ..."></div>
+            <div class="cr-field"><label data-fr="Email" data-en="Email">Email</label><input type="email" name="email" placeholder="vous@email.com" data-fr-ph="vous@email.com" data-en-ph="you@email.com" required></div>
+            <div class="cr-field"><label data-fr="Téléphone" data-en="Phone">Téléphone</label><input type="tel" name="Téléphone" placeholder="+228 ..."></div>
           </div>
-          <div class="cr-field"><label>Poste visé</label>
+          <div class="cr-field"><label data-fr="Poste visé" data-en="Position sought">Poste visé</label>
             <select name="Poste visé">
-              <option>Candidature spontanée</option>
-              <option>Ingénieur structures / bâtiment</option>
-              <option>Ingénieur routes &amp; VRD</option>
-              <option>Ingénieur hydraulique &amp; assainissement</option>
-              <option>Conducteur / contrôleur de travaux</option>
-              <option>Projeteur · Dessinateur (DAO / BIM)</option>
-              <option>Stage &amp; alternance</option>
+              <option data-fr="Candidature spontanée" data-en="Unsolicited application">Candidature spontanée</option>
+              <option data-fr="Ingénieur structures / bâtiment" data-en="Structural / building engineer">Ingénieur structures / bâtiment</option>
+              <option data-fr="Ingénieur routes &amp; VRD" data-en="Roads &amp; earthworks engineer">Ingénieur routes &amp; VRD</option>
+              <option data-fr="Ingénieur hydraulique &amp; assainissement" data-en="Hydraulics &amp; sanitation engineer">Ingénieur hydraulique &amp; assainissement</option>
+              <option data-fr="Conducteur / contrôleur de travaux" data-en="Site manager / works supervisor">Conducteur / contrôleur de travaux</option>
+              <option data-fr="Projeteur · Dessinateur (DAO / BIM)" data-en="Draftsperson · Designer (CAD / BIM)">Projeteur · Dessinateur (DAO / BIM)</option>
+              <option data-fr="Stage &amp; alternance" data-en="Internship &amp; apprenticeship">Stage &amp; alternance</option>
             </select>
           </div>
-          <div class="cr-field"><label>Lien portfolio / LinkedIn (optionnel)</label><input type="url" name="Portfolio / LinkedIn" placeholder="https://..."></div>
-          <div class="cr-field cr-file"><label>CV (PDF ou Word)</label><input type="file" name="CV" accept=".pdf,.doc,.docx"></div>
-          <div class="cr-field"><label>Message / motivation</label><textarea name="Message" placeholder="Présentez-vous en quelques lignes : parcours, motivation, disponibilité..."></textarea></div>
+          <div class="cr-field"><label data-fr="Lien portfolio / LinkedIn (optionnel)" data-en="Portfolio / LinkedIn link (optional)">Lien portfolio / LinkedIn (optionnel)</label><input type="url" name="Portfolio / LinkedIn" placeholder="https://..."></div>
+          <div class="cr-field cr-file"><label data-fr="CV (PDF ou Word)" data-en="Resume (PDF or Word)">CV (PDF ou Word)</label><input type="file" name="CV" accept=".pdf,.doc,.docx"></div>
+          <div class="cr-field"><label data-fr="Message / motivation" data-en="Message / motivation">Message / motivation</label><textarea name="Message" placeholder="Présentez-vous en quelques lignes : parcours, motivation, disponibilité..." data-fr-ph="Présentez-vous en quelques lignes : parcours, motivation, disponibilité..." data-en-ph="Tell us briefly about yourself: background, motivation, availability..."></textarea></div>
 
           <div class="cr-privacy">
             <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
-            <span>Vos données et documents sont traités de manière confidentielle, uniquement dans le cadre du recrutement. <a href="politique-confidentialite.html">En savoir plus</a></span>
+            <span data-fr="Vos données et documents sont traités de manière confidentielle, uniquement dans le cadre du recrutement. &lt;a href=&quot;politique-confidentialite.html&quot;&gt;En savoir plus&lt;/a&gt;" data-en="Your data and documents are processed confidentially, solely for recruitment purposes. &lt;a href=&quot;politique-confidentialite.html&quot;&gt;Learn more&lt;/a&gt;">Vos données et documents sont traités de manière confidentielle, uniquement dans le cadre du recrutement. <a href="politique-confidentialite.html">En savoir plus</a></span>
           </div>
-          <button class="btn btn-primary cr-btn-full" type="submit">Envoyer ma candidature <span class="arr">→</span></button>
+          <button class="btn btn-primary cr-btn-full" type="submit"><span data-fr="Envoyer ma candidature" data-en="Send my application">Envoyer ma candidature</span> <span class="arr">→</span></button>
           <div class="cr-status" id="cr-status" role="status" aria-live="polite"></div>
         </form>
       </div>
@@ -276,10 +289,31 @@
   </section>
 
   <footer class="cr-foot">
-    © 2026 INGER Sarlu — Ingénieurs et Experts Réunis · Lomé, Togo · <a href="mailto:ingersarlu@inger.tg">ingersarlu@inger.tg</a>
+    <span data-fr="© 2026 INGER Sarlu — Ingénieurs et Experts Réunis · Lomé, Togo" data-en="© 2026 INGER Sarlu — Engineers &amp; Experts United · Lomé, Togo">© 2026 INGER Sarlu — Ingénieurs et Experts Réunis · Lomé, Togo</span> · <a href="mailto:ingersarlu@inger.tg">ingersarlu@inger.tg</a>
   </footer>
 </main>
 
+<script src="js/i18n.js" defer></script>
+<script>
+/* Placeholders bilingues sur la page Carrière */
+(function(){
+  function applyPh(){
+    var lang = (localStorage.getItem('inger_lang')||document.documentElement.lang||'fr').slice(0,2);
+    document.querySelectorAll('[data-fr-ph][data-en-ph]').forEach(function(e){
+      e.setAttribute('placeholder', lang==='en' ? e.getAttribute('data-en-ph') : e.getAttribute('data-fr-ph'));
+    });
+  }
+  document.addEventListener('DOMContentLoaded', applyPh);
+  document.querySelectorAll('.lang-opt').forEach(function(b){ b.addEventListener('click', function(){ setTimeout(applyPh,0); }); });
+})();
+/* Statut formulaire bilingue */
+(function(){
+  function L(){ return (localStorage.getItem('inger_lang')||'fr').slice(0,2)==='en'
+    ? {sending:'Sending…', ok:'Thank you! Your application has been sent. We will get back to you shortly.', err:'Something went wrong. Please retry or email us at ingersarlu@inger.tg.'}
+    : {sending:'Envoi en cours…', ok:'Merci ! Votre candidature a bien été envoyée. Nous revenons vers vous rapidement.', err:'Une erreur est survenue. Réessayez ou écrivez-nous à ingersarlu@inger.tg.'}; }
+  window.__crLang = L;
+})();
+</script>
 <script>
 (function(){
   "use strict";
@@ -288,15 +322,16 @@
   var btn = f.querySelector('button[type="submit"]');
   f.addEventListener('submit', function(e){
     e.preventDefault();
-    status.className = 'cr-status sending'; status.textContent = 'Envoi en cours…';
+    var M = (window.__crLang||function(){return{sending:'Envoi en cours…',ok:'Merci !',err:'Erreur.'}})();
+    status.className = 'cr-status sending'; status.textContent = M.sending;
     if(btn){ btn.disabled = true; btn.style.opacity = '.7'; }
     fetch('https://api.web3forms.com/submit', { method:'POST', body:new FormData(f), headers:{'Accept':'application/json'} })
       .then(function(r){ return r.json(); })
       .then(function(j){
-        if(j && j.success){ status.className='cr-status ok'; status.textContent='Merci ! Votre candidature a bien été envoyée. Nous revenons vers vous rapidement.'; f.reset(); }
-        else { status.className='cr-status err'; status.textContent='Une erreur est survenue. Réessayez ou écrivez-nous à ingersarlu@inger.tg.'; }
+        if(j && j.success){ status.className='cr-status ok'; status.textContent=M.ok; f.reset(); }
+        else { status.className='cr-status err'; status.textContent=M.err; }
       })
-      .catch(function(){ status.className='cr-status err'; status.textContent='Une erreur est survenue. Réessayez ou écrivez-nous à ingersarlu@inger.tg.'; })
+      .catch(function(){ status.className='cr-status err'; status.textContent=M.err; })
       .then(function(){ if(btn){ btn.disabled=false; btn.style.opacity=''; } });
   });
 })();

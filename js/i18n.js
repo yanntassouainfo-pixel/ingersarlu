@@ -264,7 +264,22 @@
     "Construire l'avenir,": "Building the future,",
     "Ingénieurs, projeteurs, conducteurs de travaux : rejoignez un bureau agréé qui façonne les infrastructures du Togo et de l'espace UEMOA.": "Engineers, designers, site managers: join an accredited firm shaping the infrastructure of Togo and the WAEMU region.",
     "Découvrir nos opportunités": "Explore our opportunities",
-    "Carrière": "Careers"
+    "Carrière": "Careers",
+    // Approche / piliers (textes mis à jour)
+    "qualité, modernité, durabilité, résilience, pérénnité": "quality, modernity, durability, resilience, longevity",
+    "Cinq objectifs, Cinq principes directeurs": "Five objectives, five guiding principles",
+    "Conception subtile, ergonomique et évolutive, orientée équilibre et performance des ouvrages.":
+      "Subtle, ergonomic and scalable design, focused on the balance and performance of every project.",
+    "L'aisance, au bas mot !": "Ease, to say the least!",
+    "Des choix esthètes réalistes associant les contextes historique et local, en phase avec la vision de chaque client.":
+      "Refined, realistic choices blending historical and local context, in tune with each client's vision.",
+    "Le nec plus ultra des réponses structurales éprouvées, pensées pour une solidité et performance intemporelles.":
+      "The very best in proven structural solutions, engineered for timeless strength and performance.",
+    "Optimisation rigoureuse des rapports coût à l'exigence de la qualité et à l'intransigeance des délais des réalisations.":
+      "Rigorous optimisation of cost against the demands of quality and the strictness of project deadlines.",
+    "Approche écologique / environnementale et immersion dans l'énergie renouvelable, pour une intégration harmonieuse dans le tissu urbain et naturel.":
+      "Ecological and environmental approach with a focus on renewable energy, for harmonious integration into the urban and natural fabric.",
+    "Le vivre ensemble, dans la sérénité !": "Living together, in serenity!"
   };
 
   /* ---------- Collecte des nœuds traduisibles ---------- */

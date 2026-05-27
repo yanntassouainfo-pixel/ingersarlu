@@ -55,8 +55,14 @@
 <body>
 <main class="e404">
   <header class="e404-nav">
-    <a href="index.html" class="e404-logo"><b>inger</b><span>Ingénieurs &amp; Experts Réunis</span></a>
-    <a href="https://wa.me/22879790076" class="btn btn-primary">WhatsApp <span class="arr">→</span></a>
+    <a href="index.html" class="e404-logo"><b>inger</b><span data-fr="Ingénieurs &amp; Experts Réunis" data-en="Engineers &amp; Experts United">Ingénieurs &amp; Experts Réunis</span></a>
+    <div style="display:flex;gap:10px;align-items:center">
+      <div class="lang-switch" role="group" aria-label="Langue / Language" style="display:inline-flex;align-items:center;border:1px solid var(--line-d);border-radius:30px;padding:3px;background:rgba(248,246,240,.7)">
+        <button class="lang-opt active" type="button" data-lang="fr" aria-pressed="true" style="font-family:var(--mono);font-size:11px;border:none;background:transparent;color:var(--concrete);padding:6px 11px;border-radius:30px;cursor:pointer">FR</button>
+        <button class="lang-opt" type="button" data-lang="en" aria-pressed="false" style="font-family:var(--mono);font-size:11px;border:none;background:transparent;color:var(--concrete);padding:6px 11px;border-radius:30px;cursor:pointer">EN</button>
+      </div>
+      <a href="https://wa.me/22879790076" class="btn btn-primary">WhatsApp <span class="arr">→</span></a>
+    </div>
   </header>
 
   <section class="e404-main">
@@ -72,18 +78,18 @@
     </div>
 
     <div class="e404-inner">
-      <span class="e404-kick"><span class="d"></span> Erreur 503 · Maintenance en cours</span>
+      <span class="e404-kick"><span class="d"></span> <span data-fr="Erreur 503 · Maintenance en cours" data-en="Error 503 · Scheduled maintenance">Erreur 503 · Maintenance en cours</span></span>
       <div class="e404-num">5<em>0</em>3</div>
-      <h1 class="e404-h">Nous revenons très vite.</h1>
-      <p class="e404-p">Le site fait l'objet d'une maintenance planifiée afin d'améliorer votre expérience. Merci de votre patience — réessayez dans quelques minutes ou contactez-nous directement.</p>
+      <h1 class="e404-h" data-fr="Nous revenons très vite." data-en="We'll be back very soon.">Nous revenons très vite.</h1>
+      <p class="e404-p" data-fr="Le site fait l'objet d'une maintenance planifiée afin d'améliorer votre expérience. Merci de votre patience — réessayez dans quelques minutes ou contactez-nous directement." data-en="The site is undergoing scheduled maintenance to improve your experience. Thank you for your patience — please try again in a few minutes or contact us directly.">Le site fait l'objet d'une maintenance planifiée afin d'améliorer votre expérience. Merci de votre patience — réessayez dans quelques minutes ou contactez-nous directement.</p>
       <div class="e404-cta">
-        <a href="#" class="btn btn-primary" onclick="location.reload();return false;"><span class="arr">↻</span> Réessayer</a>
-        <a href="mailto:ingersarlu@inger.tg" class="btn btn-ghost">Nous écrire</a>
+        <a href="#" class="btn btn-primary" onclick="location.reload();return false;"><span class="arr">↻</span> <span data-fr="Réessayer" data-en="Retry">Réessayer</span></a>
+        <a href="mailto:ingersarlu@inger.tg" class="btn btn-ghost" data-fr="Nous écrire" data-en="Email us">Nous écrire</a>
       </div>
       <nav class="e404-links" aria-label="Nous joindre">
         <a href="tel:+22822501730">+228 22 50 17 30</a>
         <a href="https://wa.me/22879790076">WhatsApp</a>
-        <a href="mailto:ingersarlu@inger.tg">E-mail</a>
+        <a href="mailto:ingersarlu@inger.tg" data-fr="E-mail" data-en="Email">E-mail</a>
       </nav>
     </div>
   </section>
@@ -93,6 +99,7 @@
   </footer>
 </main>
 
+<script src="js/i18n.js" defer></script>
 <script>
 (function(){
   var dyn=document.getElementById("e404Dyn"); if(!dyn) return;

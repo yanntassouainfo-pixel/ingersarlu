@@ -54,8 +54,14 @@
 <body>
 <main class="e404">
   <header class="e404-nav">
-    <a href="index.html" class="e404-logo"><b>inger</b><span>Ingénieurs &amp; Experts Réunis</span></a>
-    <a href="index.html#contact" class="btn btn-primary">Discuter d'un projet <span class="arr">→</span></a>
+    <a href="index.html" class="e404-logo"><b>inger</b><span data-fr="Ingénieurs &amp; Experts Réunis" data-en="Engineers &amp; Experts United">Ingénieurs &amp; Experts Réunis</span></a>
+    <div style="display:flex;gap:10px;align-items:center">
+      <div class="lang-switch" role="group" aria-label="Langue / Language" style="display:inline-flex;align-items:center;border:1px solid var(--line-d);border-radius:30px;padding:3px;background:rgba(248,246,240,.7)">
+        <button class="lang-opt active" type="button" data-lang="fr" aria-pressed="true" style="font-family:var(--mono);font-size:11px;border:none;background:transparent;color:var(--concrete);padding:6px 11px;border-radius:30px;cursor:pointer">FR</button>
+        <button class="lang-opt" type="button" data-lang="en" aria-pressed="false" style="font-family:var(--mono);font-size:11px;border:none;background:transparent;color:var(--concrete);padding:6px 11px;border-radius:30px;cursor:pointer">EN</button>
+      </div>
+      <a href="index.html#contact" class="btn btn-primary"><span data-fr="Discuter d'un projet" data-en="Discuss a project">Discuter d'un projet</span> <span class="arr">→</span></a>
+    </div>
   </header>
 
   <section class="e404-main">
@@ -71,19 +77,19 @@
     </div>
 
     <div class="e404-inner">
-      <span class="e404-kick"><span class="d"></span> Erreur 404 · Page introuvable</span>
+      <span class="e404-kick"><span class="d"></span> <span data-fr="Erreur 404 · Page introuvable" data-en="Error 404 · Page not found">Erreur 404 · Page introuvable</span></span>
       <div class="e404-num">4<em>0</em>4</div>
-      <h1 class="e404-h">Cette page n'existe pas — ou plus.</h1>
-      <p class="e404-p">Le lien est peut-être obsolète ou mal saisi. Revenez à l'accueil ou explorez nos réalisations et nos domaines d'expertise.</p>
+      <h1 class="e404-h" data-fr="Cette page n'existe pas — ou plus." data-en="This page doesn't exist — or no longer does.">Cette page n'existe pas — ou plus.</h1>
+      <p class="e404-p" data-fr="Le lien est peut-être obsolète ou mal saisi. Revenez à l'accueil ou explorez nos réalisations et nos domaines d'expertise." data-en="The link may be outdated or mistyped. Return to the homepage or explore our projects and areas of expertise.">Le lien est peut-être obsolète ou mal saisi. Revenez à l'accueil ou explorez nos réalisations et nos domaines d'expertise.</p>
       <div class="e404-cta">
-        <a href="index.html" class="btn btn-primary"><span class="arr">←</span> Retour à l'accueil</a>
-        <a href="index.html#contact" class="btn btn-ghost">Nous contacter</a>
+        <a href="index.html" class="btn btn-primary"><span class="arr">←</span> <span data-fr="Retour à l'accueil" data-en="Back to home">Retour à l'accueil</span></a>
+        <a href="index.html#contact" class="btn btn-ghost" data-fr="Nous contacter" data-en="Contact us">Nous contacter</a>
       </div>
       <nav class="e404-links" aria-label="Liens rapides">
-        <a href="index.html#about">À propos</a>
-        <a href="index.html#portfolio">Références</a>
-        <a href="index.html#domains">Domaines</a>
-        <a href="index.html#faq">FAQ</a>
+        <a href="index.html#about" data-fr="À propos" data-en="About">À propos</a>
+        <a href="index.html#portfolio" data-fr="Références" data-en="Projects">Références</a>
+        <a href="index.html#domains" data-fr="Domaines" data-en="Fields">Domaines</a>
+        <a href="index.html#faq" data-fr="FAQ" data-en="FAQ">FAQ</a>
       </nav>
     </div>
   </section>
@@ -93,6 +99,7 @@
   </footer>
 </main>
 
+<script src="js/i18n.js" defer></script>
 <script>
 (function(){
   var dyn=document.getElementById("e404Dyn"); if(!dyn) return;

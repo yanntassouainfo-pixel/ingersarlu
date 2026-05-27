@@ -70,33 +70,67 @@
   footer a{color:inherit;text-decoration:none}
   footer a:hover{color:var(--ink)}
 
+  .lang-switch{position:fixed;top:24px;right:24px;z-index:5;display:inline-flex;align-items:center;
+    border:1px solid var(--line);border-radius:30px;padding:3px;background:rgba(248,246,240,.85);
+    -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+  .lang-opt{font-family:var(--mono);font-size:11px;letter-spacing:.08em;border:none;background:transparent;
+    color:var(--concrete);padding:6px 11px;border-radius:30px;cursor:pointer;transition:all .3s}
+  .lang-opt.active{background:var(--ink);color:var(--paper)}
+  @media(max-width:560px){.lang-switch{top:14px;right:14px}.top{padding-top:60px}}
+
   @media(prefers-reduced-motion:reduce){.kick .dot,.bar::after{animation:none}}
 </style>
 </head>
 <body>
   <div class="bg"><div class="glow"></div><div class="grid"></div></div>
 
+  <div class="lang-switch" role="group" aria-label="Langue / Language">
+    <button class="lang-opt active" type="button" data-lang="fr" aria-pressed="true">FR</button>
+    <button class="lang-opt" type="button" data-lang="en" aria-pressed="false">EN</button>
+  </div>
+
   <!-- Logo : remplacez le bloc texte par <img src="..." alt="INGER"> si vous avez un logo -->
   <header class="top">
-    <a class="logo" href="https://www.inger.tg"><b>inger</b><span>Ingénieurs &amp; Experts Réunis</span></a>
+    <a class="logo" href="https://www.inger.tg"><b>inger</b><span data-fr="Ingénieurs &amp; Experts Réunis" data-en="Engineers &amp; Experts United">Ingénieurs &amp; Experts Réunis</span></a>
   </header>
 
   <main>
-    <span class="kick"><span class="dot"></span> Maintenance en cours</span>
-    <h1>Nous revenons <em>très vite</em>.</h1>
-    <p class="lead">Notre site fait l'objet d'une mise à jour afin de vous offrir une meilleure expérience. Merci de votre patience — il sera de nouveau disponible sous peu. Pour toute demande urgente, notre équipe reste joignable.</p>
+    <span class="kick"><span class="dot"></span> <span data-fr="Maintenance en cours" data-en="Maintenance in progress">Maintenance en cours</span></span>
+    <h1><span data-fr="Nous revenons" data-en="We'll be back">Nous revenons</span> <em data-fr="très vite" data-en="very soon">très vite</em>.</h1>
+    <p class="lead" data-fr="Notre site fait l'objet d'une mise à jour afin de vous offrir une meilleure expérience. Merci de votre patience — il sera de nouveau disponible sous peu. Pour toute demande urgente, notre équipe reste joignable." data-en="Our site is being updated to give you a better experience. Thank you for your patience — it will be back online shortly. For urgent matters, our team remains reachable.">Notre site fait l'objet d'une mise à jour afin de vous offrir une meilleure expérience. Merci de votre patience — il sera de nouveau disponible sous peu. Pour toute demande urgente, notre équipe reste joignable.</p>
 
     <div class="bar" aria-hidden="true"></div>
 
     <div class="cta">
       <a class="btn btn-wa" href="https://wa.me/22879790076"><span class="arr">↗</span> WhatsApp</a>
-      <a class="btn btn-primary" href="mailto:ingersarlu@inger.tg">Nous écrire <span class="arr">→</span></a>
+      <a class="btn btn-primary" href="mailto:ingersarlu@inger.tg"><span data-fr="Nous écrire" data-en="Email us">Nous écrire</span> <span class="arr">→</span></a>
       <a class="btn btn-ghost" href="tel:+22822501730">+228 22 50 17 30</a>
     </div>
   </main>
 
   <footer>
-    © 2026 INGER Sarlu — Ingénieurs et Experts Réunis · Lomé, Togo · <a href="mailto:ingersarlu@inger.tg">ingersarlu@inger.tg</a>
+    <span data-fr="© 2026 INGER Sarlu — Ingénieurs et Experts Réunis · Lomé, Togo" data-en="© 2026 INGER Sarlu — Engineers &amp; Experts United · Lomé, Togo">© 2026 INGER Sarlu — Ingénieurs et Experts Réunis · Lomé, Togo</span> · <a href="mailto:ingersarlu@inger.tg">ingersarlu@inger.tg</a>
   </footer>
+
+<script>
+/* i18n autonome (la page ne dépend d'aucun JS externe) */
+(function(){
+  var btns = document.querySelectorAll('.lang-opt');
+  function apply(lang){
+    document.documentElement.setAttribute('lang', lang);
+    document.querySelectorAll('[data-fr][data-en]').forEach(function(e){
+      e.innerHTML = lang==='en' ? e.getAttribute('data-en') : e.getAttribute('data-fr');
+    });
+    btns.forEach(function(b){
+      var on = b.getAttribute('data-lang')===lang;
+      b.classList.toggle('active', on); b.setAttribute('aria-pressed', on?'true':'false');
+    });
+    try{ localStorage.setItem('inger_lang', lang); }catch(e){}
+  }
+  btns.forEach(function(b){ b.addEventListener('click', function(){ apply(b.getAttribute('data-lang')); }); });
+  var saved='fr'; try{ saved = localStorage.getItem('inger_lang')||'fr'; }catch(e){}
+  apply(saved);
+})();
+</script>
 </body>
 </html>

@@ -13,10 +13,15 @@
 <style>
   .lg{background:var(--paper);min-height:100vh;display:flex;flex-direction:column}
   .lg-nav{display:flex;align-items:center;justify-content:space-between;padding:22px clamp(20px,5vw,60px);
-    border-bottom:1px solid var(--line-d)}
+    border-bottom:1px solid var(--line-d);gap:12px;flex-wrap:wrap}
   .lg-logo{line-height:1.1;text-decoration:none}
   .lg-logo b{font-family:var(--serif);font-style:italic;font-weight:600;font-size:21px;color:var(--ink)}
   .lg-logo span{display:block;font-family:var(--mono);font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--concrete);margin-top:3px}
+  .lg-nav-right{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .lg-nav .lang-switch{display:inline-flex;align-items:center;border:1px solid var(--line-d);border-radius:30px;padding:3px;background:rgba(248,246,240,.7)}
+  .lg-nav .lang-opt{font-family:var(--mono);font-size:11px;letter-spacing:.08em;border:none;background:transparent;color:var(--concrete);padding:6px 11px;border-radius:30px;cursor:pointer;transition:all .3s}
+  .lg-nav .lang-opt.active{background:var(--ink);color:var(--paper)}
+  .lg-nav .lang-sep{width:1px;height:14px;background:var(--line-d);margin:0 2px}
   .lg-wrap{flex:1;width:100%;max-width:820px;margin:0 auto;padding:clamp(40px,7vw,90px) clamp(22px,5vw,40px)}
   .lg-kick{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;
     text-transform:uppercase;color:var(--steel-l);border:1px solid var(--line-d);background:var(--paper-2);padding:8px 15px;border-radius:30px}
@@ -44,66 +49,74 @@
 <body>
 <main class="lg">
   <header class="lg-nav">
-    <a href="index.html" class="lg-logo"><b>inger</b><span>Ingénieurs &amp; Experts Réunis</span></a>
-    <a href="index.html" class="btn btn-ghost"><span class="arr">←</span> Retour au site</a>
+    <a href="index.html" class="lg-logo"><b>inger</b><span data-fr="Ingénieurs &amp; Experts Réunis" data-en="Engineers &amp; Experts United">Ingénieurs &amp; Experts Réunis</span></a>
+    <div class="lg-nav-right">
+      <div class="lang-switch" role="group" aria-label="Langue / Language">
+        <button class="lang-opt active" type="button" data-lang="fr" aria-pressed="true">FR</button>
+        <span class="lang-sep"></span>
+        <button class="lang-opt" type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <a href="index.html" class="btn btn-ghost"><span class="arr">←</span> <span data-fr="Retour au site" data-en="Back to site">Retour au site</span></a>
+    </div>
   </header>
 
   <div class="lg-wrap">
-    <span class="lg-kick"><span class="d"></span> Mentions &amp; confidentialité</span>
-    <h1 class="lg-h1">Politique de <em>confidentialité</em></h1>
-    <div class="lg-upd">Dernière mise à jour : 23 mai 2026</div>
+    <span class="lg-kick"><span class="d"></span> <span data-fr="Mentions &amp; confidentialité" data-en="Notices &amp; privacy">Mentions &amp; confidentialité</span></span>
+    <h1 class="lg-h1"><span data-fr="Politique de" data-en="Privacy">Politique de</span> <em data-fr="confidentialité" data-en="policy">confidentialité</em></h1>
+    <div class="lg-upd" data-fr="Dernière mise à jour : 23 mai 2026" data-en="Last updated: 23 May 2026">Dernière mise à jour : 23 mai 2026</div>
 
-    <p>La présente politique décrit comment <strong>INGER Sarlu</strong> — Ingénieurs et Experts Réunis (ci-après « INGER », « nous ») collecte, utilise et protège les données personnelles des visiteurs de son site et des personnes qui la contactent. Nous nous engageons à traiter vos données avec confidentialité, loyauté et transparence.</p>
+    <p data-fr="La présente politique décrit comment &lt;strong&gt;INGER Sarlu&lt;/strong&gt; — Ingénieurs et Experts Réunis (ci-après « INGER », « nous ») collecte, utilise et protège les données personnelles des visiteurs de son site et des personnes qui la contactent. Nous nous engageons à traiter vos données avec confidentialité, loyauté et transparence." data-en="This policy describes how &lt;strong&gt;INGER Sarlu&lt;/strong&gt; — Engineers &amp; Experts United (hereafter “INGER”, “we”) collects, uses and protects the personal data of visitors to its website and of persons who contact it. We are committed to processing your data with confidentiality, fairness and transparency.">La présente politique décrit comment <strong>INGER Sarlu</strong> — Ingénieurs et Experts Réunis (ci-après « INGER », « nous ») collecte, utilise et protège les données personnelles des visiteurs de son site et des personnes qui la contactent. Nous nous engageons à traiter vos données avec confidentialité, loyauté et transparence.</p>
 
-    <h2><span class="nb">01</span>Responsable du traitement</h2>
-    <p>Le responsable du traitement est <strong>INGER Sarlu</strong>, sis Immeuble inger, 402 Rue 129 AFG, Aflao Gakli — MUGET Djidjolé, 02 BP 20 441, Lomé 02, Togo. Pour toute question relative à vos données : <a href="mailto:ingersarlu@inger.tg">ingersarlu@inger.tg</a> · <a href="tel:+22822501730">+228 22 50 17 30</a>.</p>
+    <h2><span class="nb">01</span><span data-fr="Responsable du traitement" data-en="Data controller">Responsable du traitement</span></h2>
+    <p data-fr="Le responsable du traitement est &lt;strong&gt;INGER Sarlu&lt;/strong&gt;, sis Immeuble inger, 402 Rue 129 AFG, Aflao Gakli — MUGET Djidjolé, 02 BP 20 441, Lomé 02, Togo. Pour toute question relative à vos données : &lt;a href=&quot;mailto:ingersarlu@inger.tg&quot;&gt;ingersarlu@inger.tg&lt;/a&gt; · &lt;a href=&quot;tel:+22822501730&quot;&gt;+228 22 50 17 30&lt;/a&gt;." data-en="The data controller is &lt;strong&gt;INGER Sarlu&lt;/strong&gt;, located at Immeuble inger, 402 Rue 129 AFG, Aflao Gakli — MUGET Djidjolé, 02 BP 20 441, Lomé 02, Togo. For any question regarding your data: &lt;a href=&quot;mailto:ingersarlu@inger.tg&quot;&gt;ingersarlu@inger.tg&lt;/a&gt; · &lt;a href=&quot;tel:+22822501730&quot;&gt;+228 22 50 17 30&lt;/a&gt;.">Le responsable du traitement est <strong>INGER Sarlu</strong>, sis Immeuble inger, 402 Rue 129 AFG, Aflao Gakli — MUGET Djidjolé, 02 BP 20 441, Lomé 02, Togo. Pour toute question relative à vos données : <a href="mailto:ingersarlu@inger.tg">ingersarlu@inger.tg</a> · <a href="tel:+22822501730">+228 22 50 17 30</a>.</p>
 
-    <h2><span class="nb">02</span>Données que nous collectons</h2>
-    <p>Nous collectons uniquement les données que vous nous transmettez volontairement, ainsi que des données techniques limitées :</p>
+    <h2><span class="nb">02</span><span data-fr="Données que nous collectons" data-en="Data we collect">Données que nous collectons</span></h2>
+    <p data-fr="Nous collectons uniquement les données que vous nous transmettez volontairement, ainsi que des données techniques limitées :" data-en="We only collect the data you voluntarily provide to us, as well as limited technical data:">Nous collectons uniquement les données que vous nous transmettez volontairement, ainsi que des données techniques limitées :</p>
     <ul>
-      <li><strong>Formulaire de contact &amp; assistant conversationnel :</strong> nom, prénom, organisation, e-mail, téléphone, type de projet et message.</li>
-      <li><strong>Échanges directs :</strong> informations communiquées par e-mail, téléphone ou WhatsApp.</li>
-      <li><strong>Données techniques :</strong> données de navigation strictement nécessaires au fonctionnement du site (préférence de langue, par exemple).</li>
+      <li data-fr="&lt;strong&gt;Formulaire de contact &amp; assistant conversationnel :&lt;/strong&gt; nom, prénom, organisation, e-mail, téléphone, type de projet et message." data-en="&lt;strong&gt;Contact form &amp; chatbot:&lt;/strong&gt; first name, last name, organisation, email, phone, project type and message."><strong>Formulaire de contact &amp; assistant conversationnel :</strong> nom, prénom, organisation, e-mail, téléphone, type de projet et message.</li>
+      <li data-fr="&lt;strong&gt;Échanges directs :&lt;/strong&gt; informations communiquées par e-mail, téléphone ou WhatsApp." data-en="&lt;strong&gt;Direct exchanges:&lt;/strong&gt; information shared by email, phone or WhatsApp."><strong>Échanges directs :</strong> informations communiquées par e-mail, téléphone ou WhatsApp.</li>
+      <li data-fr="&lt;strong&gt;Données techniques :&lt;/strong&gt; données de navigation strictement nécessaires au fonctionnement du site (préférence de langue, par exemple)." data-en="&lt;strong&gt;Technical data:&lt;/strong&gt; browsing data strictly necessary for the site to function (language preference, for example)."><strong>Données techniques :</strong> données de navigation strictement nécessaires au fonctionnement du site (préférence de langue, par exemple).</li>
     </ul>
 
-    <h2><span class="nb">03</span>Finalités &amp; base légale</h2>
-    <p>Vos données sont utilisées pour :</p>
+    <h2><span class="nb">03</span><span data-fr="Finalités &amp; base légale" data-en="Purposes &amp; legal basis">Finalités &amp; base légale</span></h2>
+    <p data-fr="Vos données sont utilisées pour :" data-en="Your data is used to:">Vos données sont utilisées pour :</p>
     <ul>
-      <li>répondre à vos demandes de devis, de renseignement ou de rendez-vous (mesures précontractuelles) ;</li>
-      <li>assurer le suivi de la relation client et de nos missions (intérêt légitime / exécution contractuelle) ;</li>
-      <li>améliorer la qualité de notre site et de nos services (intérêt légitime).</li>
+      <li data-fr="répondre à vos demandes de devis, de renseignement ou de rendez-vous (mesures précontractuelles) ;" data-en="respond to your quote, information or meeting requests (pre-contractual measures);">répondre à vos demandes de devis, de renseignement ou de rendez-vous (mesures précontractuelles) ;</li>
+      <li data-fr="assurer le suivi de la relation client et de nos missions (intérêt légitime / exécution contractuelle) ;" data-en="manage the client relationship and our assignments (legitimate interest / contractual performance);">assurer le suivi de la relation client et de nos missions (intérêt légitime / exécution contractuelle) ;</li>
+      <li data-fr="améliorer la qualité de notre site et de nos services (intérêt légitime)." data-en="improve the quality of our site and services (legitimate interest).">améliorer la qualité de notre site et de nos services (intérêt légitime).</li>
     </ul>
-    <p>Nous ne réalisons aucune vente de données et n'utilisons pas vos informations à des fins publicitaires.</p>
+    <p data-fr="Nous ne réalisons aucune vente de données et n'utilisons pas vos informations à des fins publicitaires." data-en="We do not sell any data and do not use your information for advertising purposes.">Nous ne réalisons aucune vente de données et n'utilisons pas vos informations à des fins publicitaires.</p>
 
-    <h2><span class="nb">04</span>Durée de conservation</h2>
-    <p>Les données des prospects sont conservées le temps nécessaire au traitement de la demande, puis archivées ou supprimées au plus tard <strong>3 ans</strong> après le dernier contact. Les données liées à une mission contractuelle sont conservées pendant la durée légale applicable.</p>
+    <h2><span class="nb">04</span><span data-fr="Durée de conservation" data-en="Retention period">Durée de conservation</span></h2>
+    <p data-fr="Les données des prospects sont conservées le temps nécessaire au traitement de la demande, puis archivées ou supprimées au plus tard &lt;strong&gt;3 ans&lt;/strong&gt; après le dernier contact. Les données liées à une mission contractuelle sont conservées pendant la durée légale applicable." data-en="Prospect data is kept for the time needed to handle the request, then archived or deleted no later than &lt;strong&gt;3 years&lt;/strong&gt; after the last contact. Data related to a contractual assignment is kept for the applicable legal duration.">Les données des prospects sont conservées le temps nécessaire au traitement de la demande, puis archivées ou supprimées au plus tard <strong>3 ans</strong> après le dernier contact. Les données liées à une mission contractuelle sont conservées pendant la durée légale applicable.</p>
 
-    <h2><span class="nb">05</span>Partage des données</h2>
-    <p>Vos données ne sont accessibles qu'aux équipes d'INGER concernées. Elles peuvent être traitées par des prestataires techniques strictement nécessaires (hébergement, service d'envoi de formulaire, messagerie WhatsApp), tenus à la confidentialité et n'agissant que sur nos instructions.</p>
+    <h2><span class="nb">05</span><span data-fr="Partage des données" data-en="Data sharing">Partage des données</span></h2>
+    <p data-fr="Vos données ne sont accessibles qu'aux équipes d'INGER concernées. Elles peuvent être traitées par des prestataires techniques strictement nécessaires (hébergement, service d'envoi de formulaire, messagerie WhatsApp), tenus à la confidentialité et n'agissant que sur nos instructions." data-en="Your data is only accessible to the relevant INGER teams. It may be processed by strictly necessary technical providers (hosting, form submission service, WhatsApp messaging), bound by confidentiality and acting only on our instructions.">Vos données ne sont accessibles qu'aux équipes d'INGER concernées. Elles peuvent être traitées par des prestataires techniques strictement nécessaires (hébergement, service d'envoi de formulaire, messagerie WhatsApp), tenus à la confidentialité et n'agissant que sur nos instructions.</p>
 
-    <h2><span class="nb">06</span>Cookies &amp; traceurs</h2>
-    <p>Le site fonctionne sans cookies publicitaires ni traceurs de suivi tiers. Seul un stockage local technique peut être utilisé pour mémoriser votre préférence de langue. Vous pouvez l'effacer à tout moment via les réglages de votre navigateur.</p>
+    <h2><span class="nb">06</span><span data-fr="Cookies &amp; traceurs" data-en="Cookies &amp; trackers">Cookies &amp; traceurs</span></h2>
+    <p data-fr="Le site fonctionne sans cookies publicitaires ni traceurs de suivi tiers. Seul un stockage local technique peut être utilisé pour mémoriser votre préférence de langue. Vous pouvez l'effacer à tout moment via les réglages de votre navigateur." data-en="The site operates without advertising cookies or third-party tracking. Only technical local storage may be used to remember your language preference. You can clear it at any time via your browser settings.">Le site fonctionne sans cookies publicitaires ni traceurs de suivi tiers. Seul un stockage local technique peut être utilisé pour mémoriser votre préférence de langue. Vous pouvez l'effacer à tout moment via les réglages de votre navigateur.</p>
 
-    <h2><span class="nb">07</span>Vos droits</h2>
-    <p>Conformément à la réglementation applicable, vous disposez d'un droit d'accès, de rectification, d'effacement, d'opposition et de limitation sur vos données. Pour exercer ces droits, contactez-nous à <a href="mailto:ingersarlu@inger.tg">ingersarlu@inger.tg</a>. Nous répondons dans les meilleurs délais.</p>
+    <h2><span class="nb">07</span><span data-fr="Vos droits" data-en="Your rights">Vos droits</span></h2>
+    <p data-fr="Conformément à la réglementation applicable, vous disposez d'un droit d'accès, de rectification, d'effacement, d'opposition et de limitation sur vos données. Pour exercer ces droits, contactez-nous à &lt;a href=&quot;mailto:ingersarlu@inger.tg&quot;&gt;ingersarlu@inger.tg&lt;/a&gt;. Nous répondons dans les meilleurs délais." data-en="In accordance with applicable regulations, you have the rights of access, rectification, erasure, objection and restriction over your data. To exercise these rights, contact us at &lt;a href=&quot;mailto:ingersarlu@inger.tg&quot;&gt;ingersarlu@inger.tg&lt;/a&gt;. We will respond as soon as possible.">Conformément à la réglementation applicable, vous disposez d'un droit d'accès, de rectification, d'effacement, d'opposition et de limitation sur vos données. Pour exercer ces droits, contactez-nous à <a href="mailto:ingersarlu@inger.tg">ingersarlu@inger.tg</a>. Nous répondons dans les meilleurs délais.</p>
 
-    <h2><span class="nb">08</span>Sécurité</h2>
-    <p>Nous mettons en œuvre des mesures techniques et organisationnelles raisonnables afin de protéger vos données contre tout accès, altération ou divulgation non autorisés.</p>
+    <h2><span class="nb">08</span><span data-fr="Sécurité" data-en="Security">Sécurité</span></h2>
+    <p data-fr="Nous mettons en œuvre des mesures techniques et organisationnelles raisonnables afin de protéger vos données contre tout accès, altération ou divulgation non autorisés." data-en="We implement reasonable technical and organisational measures to protect your data against any unauthorised access, alteration or disclosure.">Nous mettons en œuvre des mesures techniques et organisationnelles raisonnables afin de protéger vos données contre tout accès, altération ou divulgation non autorisés.</p>
 
     <div class="lg-card">
-      <h2 style="margin-top:0"><span class="nb">09</span>Contact</h2>
-      <p style="margin-bottom:0">Pour toute question sur cette politique ou le traitement de vos données :<br>
+      <h2 style="margin-top:0"><span class="nb">09</span><span data-fr="Contact" data-en="Contact">Contact</span></h2>
+      <p style="margin-bottom:0" data-fr="Pour toute question sur cette politique ou le traitement de vos données :&lt;br&gt;&lt;strong&gt;INGER Sarlu&lt;/strong&gt; — &lt;a href=&quot;mailto:ingersarlu@inger.tg&quot;&gt;ingersarlu@inger.tg&lt;/a&gt; · &lt;a href=&quot;tel:+22822501730&quot;&gt;+228 22 50 17 30&lt;/a&gt; · &lt;a href=&quot;https://wa.me/22879790076&quot;&gt;WhatsApp&lt;/a&gt;" data-en="For any question regarding this policy or the processing of your data:&lt;br&gt;&lt;strong&gt;INGER Sarlu&lt;/strong&gt; — &lt;a href=&quot;mailto:ingersarlu@inger.tg&quot;&gt;ingersarlu@inger.tg&lt;/a&gt; · &lt;a href=&quot;tel:+22822501730&quot;&gt;+228 22 50 17 30&lt;/a&gt; · &lt;a href=&quot;https://wa.me/22879790076&quot;&gt;WhatsApp&lt;/a&gt;">Pour toute question sur cette politique ou le traitement de vos données :<br>
       <strong>INGER Sarlu</strong> — <a href="mailto:ingersarlu@inger.tg">ingersarlu@inger.tg</a> · <a href="tel:+22822501730">+228 22 50 17 30</a> · <a href="https://wa.me/22879790076">WhatsApp</a></p>
     </div>
 
     <div class="lg-back">
-      <a href="index.html" class="btn btn-primary"><span class="arr">←</span> Retour à l'accueil</a>
+      <a href="index.html" class="btn btn-primary"><span class="arr">←</span> <span data-fr="Retour à l'accueil" data-en="Back to home">Retour à l'accueil</span></a>
     </div>
   </div>
 
   <footer class="lg-foot">
-    © 2026 INGER Sarlu — Ingénieurs et Experts Réunis · Lomé, Togo · <a href="mailto:ingersarlu@inger.tg">ingersarlu@inger.tg</a>
+    <span data-fr="© 2026 INGER Sarlu — Ingénieurs et Experts Réunis · Lomé, Togo" data-en="© 2026 INGER Sarlu — Engineers &amp; Experts United · Lomé, Togo">© 2026 INGER Sarlu — Ingénieurs et Experts Réunis · Lomé, Togo</span> · <a href="mailto:ingersarlu@inger.tg">ingersarlu@inger.tg</a>
   </footer>
 </main>
+<script src="js/i18n.js" defer></script>
 </body>
 </html>
