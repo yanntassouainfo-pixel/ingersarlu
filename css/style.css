@@ -321,6 +321,17 @@ section{position:relative;z-index:2}
 .presta-no{font-family:var(--mono);font-size:13px;color:var(--steel-l);letter-spacing:.05em;flex:none;width:34px}
 .presta-name{font-family:var(--serif);font-weight:400;font-size:clamp(1.25rem,2vw,1.65rem);
   letter-spacing:-.01em;transition:color .4s;line-height:1.15}
+
+/* Séparateur de clôture sous le bloc Prestations (sous 05/06) */
+.presta-end{display:flex;align-items:center;justify-content:center;gap:22px;
+  padding:34px 8px 6px;border-top:1px solid var(--line-d)}
+.presta-end .pe-rule{flex:1;max-width:160px;height:1px;
+  background:linear-gradient(90deg,transparent,var(--line-d) 30%,var(--line-d) 70%,transparent)}
+.presta-end .pe-mark{width:9px;height:9px;border:1px solid var(--steel-l);transform:rotate(45deg);
+  opacity:.7;transition:transform .6s var(--ease),opacity .6s var(--ease),background .6s var(--ease)}
+.presta-end:hover .pe-mark{transform:rotate(225deg);opacity:1;background:rgba(62,92,110,.08)}
+@media(max-width:760px){.presta-end{gap:14px;padding:24px 4px 2px}.presta-end .pe-rule{max-width:90px}}
+@media(prefers-reduced-motion:reduce){.presta-end .pe-mark{transition:none}}
 .presta .arr{margin-left:auto;opacity:0;transform:translateX(-8px);transition:.45s var(--ease);color:var(--steel-l)}
 .presta:hover .arr{opacity:1;transform:none}
 
