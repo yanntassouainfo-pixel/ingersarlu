@@ -279,7 +279,53 @@
       "Rigorous optimisation of cost against the demands of quality and the strictness of project deadlines.",
     "Approche écologique / environnementale et immersion dans l'énergie renouvelable, pour une intégration harmonieuse dans le tissu urbain et naturel.":
       "Ecological and environmental approach with a focus on renewable energy, for harmonious integration into the urban and natural fabric.",
-    "Le vivre ensemble, dans la sérénité !": "Living together, in serenity!"
+    "Le vivre ensemble, dans la sérénité !": "Living together, in serenity!",
+
+    // Portfolio — captions enrichies
+    "Industriel - Port sec · Lomé, TOGO": "Industrial - Dry port · Lomé, TOGO",
+    "Industriel - Alimentaire · Lomé, TOGO": "Industrial - Food · Lomé, TOGO",
+    "Corporate · Lomé, TOGO": "Corporate · Lomé, TOGO",
+    "Hôtellerie · Lomé, TOGO": "Hospitality · Lomé, TOGO",
+    "Hydraulique - AEP · Lomé, TOGO": "Hydraulics - Water supply · Lomé, TOGO",
+    "Conférence · Lomé, TOGO": "Conference · Lomé, TOGO",
+    "Bureau au siège de l'OTR": "Office at OTR headquarters",
+    "Hôtel ★★★★ Laméssin": "★★★★ Laméssin Hotel",
+    "Hôtel ★★★★ Laméssin de l'Hôpital de référence HDL": "★★★★ Laméssin Hotel — HDL Reference Hospital",
+    "Immeubles IGH/ERP — Villas": "High-rise / public buildings — Villas",
+    "Complexe de 03 immeubles — Habitats & Commerces": "03-building complex — Housing & retail",
+
+    // Variantes hydrauliques / domaines
+    "Approvisionement en eau potable & Forages": "Drinking-water supply & boreholes",
+
+    // Identité / footer / hero alternatifs
+    "INGER Sarlu — Ingénieurs & Experts Réunis": "INGER Sarlu — Engineers & Experts United",
+    "INGER Sarlu — Ingénieurs & Experts Réunis · Lomé, TOGO": "INGER Sarlu — Engineers & Experts United · Lomé, TOGO",
+    "INGER · Lomé, TOGO": "INGER · Lomé, TOGO",
+    "Ingénieurs Conseils — Études & Contrôle · Lomé, TOGO": "Consulting Engineers — Studies & Supervision · Lomé, TOGO",
+    "INGER — SARLU,": "INGER — SARLU,",
+    "© 2026 INGER Sarlu — Ingénieurs et Experts Réunis · Lomé, Togo": "© 2026 INGER Sarlu — Engineers & Experts United · Lomé, Togo",
+
+    // FIG / captions techniques
+    "FIG.01 — Bâtiment IGH": "FIG.01 — High-rise building",
+    "FIG.02 — Réseau hydraulique": "FIG.02 — Water network",
+    "FIG.03 — Tracé routier": "FIG.03 — Road alignment",
+
+    // États / pays (UI uniquement, garde les emblèmes de réf intactes)
+    "BÉNIN": "BENIN",
+    "CÔTE D'IVOIRE": "CÔTE D'IVOIRE",
+
+    // Modale / formulaires — variantes
+    "Caisse Nationale de Sécurité Sociale": "National Social Security Fund",
+    "Caisse Nationale de Sécurité Sociale - CNSS": "National Social Security Fund - CNSS",
+    "Cour Constitutionnelle": "Constitutional Court",
+    "Cour Constitutionnelle du TOGO": "Constitutional Court of Togo",
+    "Cour d'Appel de Lomé": "Court of Appeal of Lomé",
+    "Fonds Routier": "Road Fund",
+    "Fonds d'Entretien Routier (actuel SAFER)": "Road Maintenance Fund (now SAFER)",
+    "Direction Générale de la Documentation Nationale – DGDN": "Directorate General of National Documentation – DGDN",
+    "Africaine de Courtage et d'Assurance (ACA-TOGO)": "African Brokerage & Insurance (ACA-TOGO)",
+    "Agence des Travaux d'Infrastructures du Burkina (AGETIB)": "Burkina Infrastructure Works Agency (AGETIB)",
+    "Etude de Maître ASSOGBAVI Notaire à Lomé": "Maître ASSOGBAVI Notary Office, Lomé"
   };
 
   /* ---------- Collecte des nœuds traduisibles ---------- */
