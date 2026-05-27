@@ -76,6 +76,61 @@
   .cr-role .tag{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--concrete);border:1px solid var(--line-d);padding:7px 13px;border-radius:30px;white-space:nowrap}
   .cr-roles-note{margin-top:18px;font-size:.92rem;color:rgba(24,26,31,.6);font-weight:300}
 
+  /* Opportunités v2 — Profils recherchés + Formation */
+  .cr-opp{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2vw,22px);align-items:stretch}
+  @media(max-width:880px){.cr-opp{grid-template-columns:1fr}}
+  .cr-opp-card{background:var(--paper-2);border:1px solid var(--line-d);border-radius:var(--r-lg);
+    padding:clamp(26px,3.4vw,36px);position:relative;overflow:hidden;
+    transition:transform .5s var(--ease),box-shadow .5s var(--ease),border-color .5s var(--ease)}
+  .cr-opp-card:hover{transform:translateY(-3px);box-shadow:0 28px 56px -36px rgba(36,52,68,.32);border-color:rgba(62,92,110,.28)}
+  .cr-opp-num{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--steel-l);
+    border:1px solid var(--line-d);background:rgba(62,92,110,.05);
+    padding:6px 11px;border-radius:30px;display:inline-block}
+  .cr-opp-title{font-family:var(--serif);font-weight:400;font-size:clamp(1.35rem,2.4vw,1.7rem);
+    color:var(--ink);letter-spacing:-.01em;line-height:1.15;margin:14px 0 6px}
+  .cr-opp-title em{font-style:italic;color:var(--steel-l)}
+  .cr-opp-lead{font-size:.95rem;line-height:1.6;color:rgba(24,26,31,.66);font-weight:300;margin:0 0 22px;max-width:36ch}
+
+  .cr-opp-sub{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--concrete);margin:18px 0 12px;
+    display:flex;align-items:center;gap:10px}
+  .cr-opp-sub::before{content:"";flex:none;width:14px;height:1px;background:var(--steel-l);opacity:.6}
+
+  .cr-opp-chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 4px}
+  .cr-opp-chip{font-family:var(--sans);font-size:.92rem;font-weight:400;color:var(--ink);
+    border:1px solid var(--line-d);background:var(--paper);padding:9px 15px;border-radius:30px;
+    transition:all .35s var(--ease);cursor:default;letter-spacing:.005em}
+  .cr-opp-chip:hover{border-color:var(--steel-l);background:rgba(62,92,110,.06);transform:translateY(-1px)}
+
+  .cr-opp-domains{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0}
+  .cr-opp-domain{display:flex;align-items:center;gap:14px;padding:13px 0;border-bottom:1px solid var(--line-d);
+    transition:padding-left .4s var(--ease)}
+  .cr-opp-domain:last-child{border-bottom:none}
+  .cr-opp-domain:hover{padding-left:10px}
+  .cr-opp-domain .d-no{font-family:var(--mono);font-size:10.5px;color:var(--steel-l);letter-spacing:.06em;flex:none;width:22px}
+  .cr-opp-domain .d-name{font-family:var(--serif);font-weight:400;font-size:clamp(1rem,1.6vw,1.15rem);color:var(--ink);line-height:1.25}
+
+  .cr-form-block{margin-top:clamp(22px,3vw,28px);padding:clamp(22px,3vw,28px) clamp(24px,3.4vw,32px);
+    border:1px dashed var(--line-d);border-radius:var(--r-lg);
+    background:linear-gradient(180deg,rgba(62,92,110,.04),transparent);
+    display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+  .cr-form-block .cfb-text{flex:1;min-width:240px}
+  .cr-form-block .cfb-kicker{display:inline-flex;align-items:center;gap:9px;
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--steel-l)}
+  .cr-form-block .cfb-kicker .pulse{width:7px;height:7px;border-radius:50%;background:var(--steel-l);
+    box-shadow:0 0 0 0 rgba(62,92,110,.45);animation:cfbPulse 2.4s infinite}
+  @keyframes cfbPulse{0%{box-shadow:0 0 0 0 rgba(62,92,110,.4)}70%{box-shadow:0 0 0 9px rgba(62,92,110,0)}100%{box-shadow:0 0 0 0 rgba(62,92,110,0)}}
+  .cr-form-block .cfb-title{font-family:var(--serif);font-weight:400;font-size:clamp(1.15rem,2vw,1.4rem);
+    color:var(--ink);letter-spacing:-.01em;margin:8px 0 4px;line-height:1.2}
+  .cr-form-block .cfb-sub{font-size:.94rem;line-height:1.55;color:rgba(24,26,31,.62);font-weight:300;margin:0}
+  .cr-form-block .cfb-tags{display:flex;flex-wrap:wrap;gap:8px}
+  .cr-form-block .cfb-tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--ink);background:var(--paper-2);border:1px solid var(--line-d);padding:8px 14px;border-radius:30px;
+    transition:all .35s var(--ease)}
+  .cr-form-block .cfb-tag:hover{border-color:var(--steel-l);color:var(--steel-glow);transform:translateY(-1px)}
+  @media(max-width:560px){.cr-form-block{flex-direction:column;align-items:flex-start}}
+  @media(prefers-reduced-motion:reduce){.cr-form-block .cfb-kicker .pulse{animation:none}.cr-opp-card,.cr-opp-domain,.cr-opp-chip,.cr-form-block .cfb-tag{transition:none}}
+
   /* Formulaire */
   .cr-apply{background:var(--ink-2)}
   .cr-form-wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(30px,5vw,60px);align-items:start}
@@ -223,14 +278,52 @@
         <span class="cr-sk" data-fr="03 · Opportunités" data-en="03 · Opportunities">03 · Opportunités</span>
         <h2 class="cr-h2"><span data-fr="Les profils que nous" data-en="The profiles we are">Les profils que nous</span> <em data-fr="recherchons" data-en="looking for">recherchons</em></h2>
       </div>
-      <div class="cr-roles">
-        <div class="cr-role"><h4 data-fr="Ingénieur structures / bâtiment" data-en="Structural / building engineer">Ingénieur structures / bâtiment</h4><span class="tag" data-fr="Bâtiments" data-en="Buildings">Bâtiments</span></div>
-        <div class="cr-role"><h4 data-fr="Ingénieur routes &amp; VRD" data-en="Roads &amp; earthworks engineer">Ingénieur routes &amp; VRD</h4><span class="tag" data-fr="Infrastructures" data-en="Infrastructure">Infrastructures</span></div>
-        <div class="cr-role"><h4 data-fr="Ingénieur hydraulique &amp; assainissement" data-en="Hydraulics &amp; sanitation engineer">Ingénieur hydraulique &amp; assainissement</h4><span class="tag" data-fr="Hydraulique" data-en="Hydraulics">Hydraulique</span></div>
-        <div class="cr-role"><h4 data-fr="Conducteur / contrôleur de travaux" data-en="Site manager / works supervisor">Conducteur / contrôleur de travaux</h4><span class="tag" data-fr="Chantier" data-en="On-site">Chantier</span></div>
-        <div class="cr-role"><h4 data-fr="Projeteur · Dessinateur (DAO / BIM)" data-en="Draftsperson · Designer (CAD / BIM)">Projeteur · Dessinateur (DAO / BIM)</h4><span class="tag" data-fr="Études" data-en="Studies">Études</span></div>
-        <div class="cr-role"><h4 data-fr="Stage &amp; alternance" data-en="Internship &amp; apprenticeship">Stage &amp; alternance</h4><span class="tag" data-fr="Formation" data-en="Training">Formation</span></div>
+
+      <div class="cr-opp">
+        <!-- Carte A : Profils -->
+        <article class="cr-opp-card">
+          <span class="cr-opp-num">A</span>
+          <h3 class="cr-opp-title"><span data-fr="Profils" data-en="Profiles">Profils</span> <em data-fr="recherchés" data-en="we seek">recherchés</em></h3>
+          <p class="cr-opp-lead" data-fr="Quatre niveaux d'expertise, mobilisés selon les exigences de chaque mission." data-en="Four levels of expertise, mobilised to meet the demands of each assignment.">Quatre niveaux d'expertise, mobilisés selon les exigences de chaque mission.</p>
+
+          <span class="cr-opp-sub" data-fr="Métiers" data-en="Roles">Métiers</span>
+          <div class="cr-opp-chips">
+            <span class="cr-opp-chip" data-fr="Ingénieurs" data-en="Engineers">Ingénieurs</span>
+            <span class="cr-opp-chip" data-fr="Techniciens supérieurs" data-en="Senior technicians">Techniciens supérieurs</span>
+            <span class="cr-opp-chip" data-fr="Experts" data-en="Experts">Experts</span>
+            <span class="cr-opp-chip" data-fr="Spécialistes" data-en="Specialists">Spécialistes</span>
+          </div>
+        </article>
+
+        <!-- Carte B : Domaines -->
+        <article class="cr-opp-card">
+          <span class="cr-opp-num">B</span>
+          <h3 class="cr-opp-title"><span data-fr="Dans les" data-en="Across our">Dans les</span> <em data-fr="domaines" data-en="fields">domaines</em></h3>
+          <p class="cr-opp-lead" data-fr="Quatre champs d'intervention où s'exerce notre savoir-faire pluridisciplinaire." data-en="Four areas of activity where our multidisciplinary expertise is applied.">Quatre champs d'intervention où s'exerce notre savoir-faire pluridisciplinaire.</p>
+
+          <ul class="cr-opp-domains">
+            <li class="cr-opp-domain"><span class="d-no">01</span><span class="d-name" data-fr="Bâtiments" data-en="Buildings">Bâtiments</span></li>
+            <li class="cr-opp-domain"><span class="d-no">02</span><span class="d-name" data-fr="Routes &amp; ouvrages d'art" data-en="Roads &amp; civil structures">Routes &amp; ouvrages d'art</span></li>
+            <li class="cr-opp-domain"><span class="d-no">03</span><span class="d-name" data-fr="Assainissement &amp; hydraulique" data-en="Sanitation &amp; hydraulics">Assainissement &amp; hydraulique</span></li>
+            <li class="cr-opp-domain"><span class="d-no">04</span><span class="d-name" data-fr="Environnement &amp; développement durable" data-en="Environment &amp; sustainable development">Environnement &amp; développement durable</span></li>
+          </ul>
+        </article>
       </div>
+
+      <!-- Bloc Formation / Insertion -->
+      <div class="cr-form-block">
+        <div class="cfb-text">
+          <span class="cfb-kicker"><span class="pulse"></span> <span data-fr="Formation &amp; insertion professionnelle" data-en="Training &amp; early-career">Formation &amp; insertion professionnelle</span></span>
+          <h3 class="cfb-title" data-fr="Étudiants, jeunes diplômés : un tremplin chez inger" data-en="Students &amp; recent graduates: a launchpad at inger">Étudiants, jeunes diplômés : un tremplin chez inger</h3>
+          <p class="cfb-sub" data-fr="Stage, alternance et premières missions encadrées par nos ingénieurs seniors." data-en="Internships, apprenticeships and first assignments mentored by our senior engineers.">Stage, alternance et premières missions encadrées par nos ingénieurs seniors.</p>
+        </div>
+        <div class="cfb-tags">
+          <span class="cfb-tag" data-fr="Stage" data-en="Internship">Stage</span>
+          <span class="cfb-tag" data-fr="Alternance" data-en="Apprenticeship">Alternance</span>
+          <span class="cfb-tag" data-fr="Premier emploi" data-en="Entry-level">Premier emploi</span>
+        </div>
+      </div>
+
       <p class="cr-roles-note" data-fr="Vous ne trouvez pas votre poste ? La &lt;strong style=&quot;font-weight:500;color:var(--ink)&quot;&gt;candidature spontanée&lt;/strong&gt; est la bienvenue — présentez-nous votre profil ci-dessous." data-en="Don't see your role? &lt;strong style=&quot;font-weight:500;color:var(--ink)&quot;&gt;Unsolicited applications&lt;/strong&gt; are welcome — tell us about your profile below.">Vous ne trouvez pas votre poste ? La <strong style="font-weight:500;color:var(--ink)">candidature spontanée</strong> est la bienvenue — présentez-nous votre profil ci-dessous.</p>
     </div>
   </section>
