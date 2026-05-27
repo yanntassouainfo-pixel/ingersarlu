@@ -337,6 +337,7 @@ section{position:relative;z-index:2}
 
 /* Approche : 5 piliers */
 .pillars{margin-top:clamp(70px,9vw,110px)}
+.pillars-title{margin-top:8px}
 .pillars-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
 @media(max-width:1000px){.pillars-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:520px){.pillars-grid{grid-template-columns:1fr}}

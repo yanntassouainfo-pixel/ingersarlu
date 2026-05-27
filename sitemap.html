@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="index, follow" />
+<title>Plan du site · INGER Sarlu</title>
+<meta name="description" content="Plan du site INGER Sarlu — accédez à toutes les sections : à propos, savoir-faire, domaines, références, expertise, FAQ, contact, carrière et pages légales." />
+<link rel="canonical" href="https://www.inger.tg/sitemap.html" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+<style>
+  .sm{background:var(--paper);min-height:100vh;display:flex;flex-direction:column}
+  .sm-nav{display:flex;align-items:center;justify-content:space-between;padding:22px clamp(20px,5vw,60px);
+    border-bottom:1px solid var(--line-d);gap:12px;flex-wrap:wrap;
+    background:rgba(248,246,240,.85);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+    position:sticky;top:0;z-index:20}
+  .sm-logo{line-height:1.1;text-decoration:none}
+  .sm-logo b{font-family:var(--serif);font-style:italic;font-weight:600;font-size:21px;color:var(--ink)}
+  .sm-logo span{display:block;font-family:var(--mono);font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--concrete);margin-top:3px}
+  .sm-nav-right{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .sm-nav .lang-switch{display:inline-flex;align-items:center;border:1px solid var(--line-d);border-radius:30px;padding:3px;background:rgba(248,246,240,.7)}
+  .sm-nav .lang-opt{font-family:var(--mono);font-size:11px;letter-spacing:.08em;border:none;background:transparent;color:var(--concrete);padding:6px 11px;border-radius:30px;cursor:pointer;transition:all .3s}
+  .sm-nav .lang-opt.active{background:var(--ink);color:var(--paper)}
+  .sm-nav .lang-sep{width:1px;height:14px;background:var(--line-d);margin:0 2px}
+
+  .sm-hero{position:relative;overflow:hidden;padding:clamp(60px,8vw,110px) 0 clamp(34px,4vw,54px)}
+  .sm-hero .bp{position:absolute;inset:0;opacity:.45;z-index:0;pointer-events:none;
+    background-image:linear-gradient(var(--line-d) 1px,transparent 1px),linear-gradient(90deg,var(--line-d) 1px,transparent 1px);
+    background-size:64px 64px;mask-image:radial-gradient(circle at 30% 30%,#000,transparent 70%);-webkit-mask-image:radial-gradient(circle at 30% 30%,#000,transparent 70%)}
+  .sm-wrap{position:relative;z-index:1;width:100%;max-width:1100px;margin:0 auto;padding:0 clamp(22px,5vw,40px)}
+  .sm-kick{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--steel-l);border:1px solid var(--line-d);background:var(--paper-2);padding:8px 15px;border-radius:30px}
+  .sm-kick .d{width:6px;height:6px;border-radius:50%;background:var(--steel-l)}
+  .sm-h1{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,5vw,3.2rem);letter-spacing:-.02em;
+    color:var(--ink);margin:18px 0 8px;line-height:1.05;max-width:18ch}
+  .sm-h1 em{font-style:italic;color:var(--steel-l)}
+  .sm-lead{margin:8px 0 0;max-width:60ch;color:rgba(24,26,31,.65);font-size:1rem;line-height:1.65;font-weight:300}
+  .sm-meta{margin-top:16px;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--concrete)}
+
+  .sm-body{padding:clamp(34px,5vw,60px) 0 clamp(60px,8vw,90px)}
+  .sm-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+
+  .sm-block{background:var(--paper-2);border:1px solid var(--line-d);border-radius:var(--r-lg);
+    padding:clamp(24px,3vw,32px);transition:transform .5s var(--ease),box-shadow .5s var(--ease),border-color .5s var(--ease)}
+  .sm-block:hover{transform:translateY(-3px);box-shadow:0 26px 54px -34px rgba(36,52,68,.32);border-color:rgba(62,92,110,.25)}
+  .sm-block-head{display:flex;align-items:center;gap:12px;margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid var(--line-d)}
+  .sm-block-num{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;color:var(--steel-l);
+    border:1px solid var(--line-d);background:rgba(62,92,110,.05);padding:5px 10px;border-radius:30px}
+  .sm-block-title{font-family:var(--serif);font-weight:400;font-size:1.3rem;color:var(--ink);letter-spacing:-.01em;margin:0;line-height:1.2}
+  .sm-block-title em{font-style:italic;color:var(--steel-l)}
+
+  .sm-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0}
+  .sm-list li{border-bottom:1px solid var(--line-d)}
+  .sm-list li:last-child{border-bottom:none}
+  .sm-list a{display:flex;align-items:center;justify-content:space-between;gap:14px;
+    padding:13px 0;color:var(--ink);text-decoration:none;
+    transition:padding-left .35s var(--ease),color .35s var(--ease)}
+  .sm-list a:hover{padding-left:8px;color:var(--steel-glow)}
+  .sm-list .ln{font-family:var(--sans);font-size:.96rem;font-weight:400;line-height:1.35;flex:1;min-width:0}
+  .sm-list .tag{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--concrete);border:1px solid var(--line-d);padding:5px 9px;border-radius:30px;white-space:nowrap;background:var(--paper)}
+  .sm-list .arr{font-family:var(--mono);color:var(--steel-l);opacity:.5;transition:opacity .35s var(--ease),transform .35s var(--ease)}
+  .sm-list a:hover .arr{opacity:1;transform:translateX(3px)}
+
+  .sm-foot-card{margin-top:clamp(22px,3vw,30px);padding:clamp(22px,3vw,30px);
+    border:1px dashed var(--line-d);border-radius:var(--r-lg);
+    background:linear-gradient(180deg,rgba(62,92,110,.04),transparent);
+    display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+  .sm-foot-card .fc-text{flex:1;min-width:220px}
+  .sm-foot-card .fc-k{display:inline-flex;align-items:center;gap:8px;
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--steel-l)}
+  .sm-foot-card .fc-k .pulse{width:7px;height:7px;border-radius:50%;background:var(--steel-l);
+    box-shadow:0 0 0 0 rgba(62,92,110,.45);animation:smPulse 2.4s infinite}
+  @keyframes smPulse{0%{box-shadow:0 0 0 0 rgba(62,92,110,.4)}70%{box-shadow:0 0 0 9px rgba(62,92,110,0)}100%{box-shadow:0 0 0 0 rgba(62,92,110,0)}}
+  .sm-foot-card .fc-title{font-family:var(--serif);font-weight:400;font-size:1.15rem;color:var(--ink);margin:6px 0 4px;letter-spacing:-.01em}
+  .sm-foot-card .fc-sub{font-size:.92rem;color:rgba(24,26,31,.62);font-weight:300;margin:0;line-height:1.5}
+
+  .sm-foot{text-align:center;font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--concrete);padding:24px;border-top:1px solid var(--line-d)}
+  .sm-foot a{color:inherit;text-decoration:none}
+  .sm-foot a:hover{color:var(--ink)}
+
+  @media(max-width:560px){
+    .sm-foot-card{flex-direction:column;align-items:flex-start}
+  }
+  @media(prefers-reduced-motion:reduce){
+    .sm-block,.sm-list a,.sm-list .arr,.sm-foot-card .fc-k .pulse{transition:none;animation:none}
+  }
+</style>
+</head>
+<body>
+<main class="sm">
+  <header class="sm-nav">
+    <a href="index.html" class="sm-logo"><b>inger</b><span data-fr="Ingénieurs &amp; Experts Réunis" data-en="Engineers &amp; Experts United">Ingénieurs &amp; Experts Réunis</span></a>
+    <div class="sm-nav-right">
+      <div class="lang-switch" role="group" aria-label="Langue / Language">
+        <button class="lang-opt active" type="button" data-lang="fr" aria-pressed="true">FR</button>
+        <span class="lang-sep"></span>
+        <button class="lang-opt" type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <a href="index.html" class="btn btn-ghost"><span class="arr">←</span> <span data-fr="Retour au site" data-en="Back to site">Retour au site</span></a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="sm-hero">
+    <div class="bp"></div>
+    <div class="sm-wrap">
+      <span class="sm-kick"><span class="d"></span> <span data-fr="Plan du site" data-en="Site map">Plan du site</span></span>
+      <h1 class="sm-h1"><span data-fr="Explorez" data-en="Explore">Explorez</span> <em data-fr="tout le site" data-en="the entire site">tout le site</em></h1>
+      <p class="sm-lead" data-fr="Vue d'ensemble de toutes les sections et pages de www.inger.tg. Un accès direct à chaque rubrique, en un coup d'œil." data-en="An overview of every section and page on www.inger.tg. Direct access to each area, at a glance.">Vue d'ensemble de toutes les sections et pages de www.inger.tg. Un accès direct à chaque rubrique, en un coup d'œil.</p>
+      <div class="sm-meta" data-fr="Dernière mise à jour : 27 mai 2026" data-en="Last updated: 27 May 2026">Dernière mise à jour : 27 mai 2026</div>
+    </div>
+  </section>
+
+  <!-- BODY -->
+  <section class="sm-body">
+    <div class="sm-wrap">
+      <div class="sm-grid">
+
+        <!-- BLOC 01 — Page principale -->
+        <article class="sm-block">
+          <header class="sm-block-head">
+            <span class="sm-block-num">01</span>
+            <h2 class="sm-block-title"><span data-fr="Page" data-en="Home">Page</span> <em data-fr="d'accueil" data-en="page">d'accueil</em></h2>
+          </header>
+          <ul class="sm-list">
+            <li><a href="index.html"><span class="ln" data-fr="Accueil — Hero" data-en="Home — Hero">Accueil — Hero</span><span class="arr">→</span></a></li>
+            <li><a href="index.html#about"><span class="ln" data-fr="À propos" data-en="About">À propos</span><span class="tag">01</span></a></li>
+            <li><a href="index.html#skills"><span class="ln" data-fr="Savoir-faire" data-en="Expertise">Savoir-faire</span><span class="tag">02</span></a></li>
+            <li><a href="index.html#domains"><span class="ln" data-fr="Domaines" data-en="Fields">Domaines</span><span class="tag">03</span></a></li>
+            <li><a href="index.html#portfolio"><span class="ln" data-fr="Portfolio" data-en="Portfolio">Portfolio</span><span class="tag">04</span></a></li>
+            <li><a href="index.html#refs"><span class="ln" data-fr="Références" data-en="Projects">Références</span><span class="tag">05</span></a></li>
+            <li><a href="index.html#expertise"><span class="ln" data-fr="Expertise &amp; agréments" data-en="Credentials">Expertise &amp; agréments</span><span class="tag">—</span></a></li>
+            <li><a href="index.html#zone"><span class="ln" data-fr="Zone d'intervention" data-en="Area of operation">Zone d'intervention</span><span class="tag">06</span></a></li>
+            <li><a href="index.html#faq"><span class="ln" data-fr="FAQ" data-en="FAQ">FAQ</span><span class="tag">07</span></a></li>
+            <li><a href="index.html#contact"><span class="ln" data-fr="Contact" data-en="Contact">Contact</span><span class="tag">08</span></a></li>
+          </ul>
+        </article>
+
+        <!-- BLOC 02 — Espaces dédiés -->
+        <article class="sm-block">
+          <header class="sm-block-head">
+            <span class="sm-block-num">02</span>
+            <h2 class="sm-block-title"><span data-fr="Espaces" data-en="Dedicated">Espaces</span> <em data-fr="dédiés" data-en="spaces">dédiés</em></h2>
+          </header>
+          <ul class="sm-list">
+            <li><a href="carriere.html"><span class="ln" data-fr="Carrière — Rejoindre l'équipe" data-en="Careers — Join the team">Carrière — Rejoindre l'équipe</span><span class="arr">→</span></a></li>
+            <li><a href="carriere.html#decouvrir"><span class="ln" data-fr="Pourquoi nous rejoindre" data-en="Why join us">Pourquoi nous rejoindre</span><span class="tag">01</span></a></li>
+            <li><a href="carriere.html#decouvrir"><span class="ln" data-fr="Notre culture &amp; valeurs" data-en="Our culture &amp; values">Notre culture &amp; valeurs</span><span class="tag">02</span></a></li>
+            <li><a href="carriere.html#decouvrir"><span class="ln" data-fr="Opportunités &amp; profils" data-en="Opportunities &amp; profiles">Opportunités &amp; profils</span><span class="tag">03</span></a></li>
+            <li><a href="carriere.html#postuler"><span class="ln" data-fr="Déposer une candidature" data-en="Submit an application">Déposer une candidature</span><span class="tag">04</span></a></li>
+          </ul>
+        </article>
+
+        <!-- BLOC 03 — Légal -->
+        <article class="sm-block">
+          <header class="sm-block-head">
+            <span class="sm-block-num">03</span>
+            <h2 class="sm-block-title"><span data-fr="Informations" data-en="Legal">Informations</span> <em data-fr="légales" data-en="information">légales</em></h2>
+          </header>
+          <ul class="sm-list">
+            <li><a href="mentions-legales.html"><span class="ln" data-fr="Mentions légales" data-en="Legal notice">Mentions légales</span><span class="arr">→</span></a></li>
+            <li><a href="politique-confidentialite.html"><span class="ln" data-fr="Politique de confidentialité" data-en="Privacy policy">Politique de confidentialité</span><span class="arr">→</span></a></li>
+            <li><a href="javascript:typeof window.INGER_openCookiePrefs==='function'?window.INGER_openCookiePrefs():void 0"><span class="ln" data-fr="Préférences cookies" data-en="Cookie preferences">Préférences cookies</span><span class="tag" data-fr="RGPD" data-en="GDPR">RGPD</span></a></li>
+          </ul>
+        </article>
+
+        <!-- BLOC 04 — Ressources techniques -->
+        <article class="sm-block">
+          <header class="sm-block-head">
+            <span class="sm-block-num">04</span>
+            <h2 class="sm-block-title"><span data-fr="Ressources" data-en="Technical">Ressources</span> <em data-fr="techniques" data-en="resources">techniques</em></h2>
+          </header>
+          <ul class="sm-list">
+            <li><a href="sitemap.xml"><span class="ln" data-fr="Sitemap XML (moteurs de recherche)" data-en="XML sitemap (search engines)">Sitemap XML (moteurs de recherche)</span><span class="tag">XML</span></a></li>
+            <li><a href="robots.txt"><span class="ln">robots.txt</span><span class="tag">TXT</span></a></li>
+            <li><a href="404.html"><span class="ln" data-fr="Page 404 — Introuvable" data-en="404 — Not found">Page 404 — Introuvable</span><span class="tag">404</span></a></li>
+            <li><a href="500.html"><span class="ln" data-fr="Page 500 — Erreur serveur" data-en="500 — Server error">Page 500 — Erreur serveur</span><span class="tag">500</span></a></li>
+            <li><a href="503.html"><span class="ln" data-fr="Page 503 — Maintenance" data-en="503 — Maintenance">Page 503 — Maintenance</span><span class="tag">503</span></a></li>
+            <li><a href="maintenance.html"><span class="ln" data-fr="Page Maintenance (autonome)" data-en="Maintenance page (standalone)">Page Maintenance (autonome)</span><span class="tag">SVC</span></a></li>
+          </ul>
+        </article>
+
+      </div>
+
+      <!-- ENCART CONTACT -->
+      <div class="sm-foot-card">
+        <div class="fc-text">
+          <span class="fc-k"><span class="pulse"></span> <span data-fr="Une question ?" data-en="A question?">Une question ?</span></span>
+          <h3 class="fc-title" data-fr="Notre équipe vous répond directement" data-en="Our team replies directly">Notre équipe vous répond directement</h3>
+          <p class="fc-sub" data-fr="Par e-mail, téléphone ou WhatsApp — du lundi au vendredi, 8h–17h30." data-en="By email, phone or WhatsApp — Monday to Friday, 8 AM – 5:30 PM.">Par e-mail, téléphone ou WhatsApp — du lundi au vendredi, 8h–17h30.</p>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a href="index.html#contact" class="btn btn-primary"><span data-fr="Nous contacter" data-en="Contact us">Nous contacter</span> <span class="arr">→</span></a>
+          <a href="https://wa.me/22879790076" class="btn btn-ghost">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="sm-foot">
+    <span data-fr="© 2026 INGER Sarlu — Ingénieurs et Experts Réunis · Lomé, Togo" data-en="© 2026 INGER Sarlu — Engineers &amp; Experts United · Lomé, Togo">© 2026 INGER Sarlu — Ingénieurs et Experts Réunis · Lomé, Togo</span> · <a href="mailto:ingersarlu@inger.tg">ingersarlu@inger.tg</a>
+  </footer>
+</main>
+
+<script src="js/i18n.js" defer></script>
+</body>
+</html>

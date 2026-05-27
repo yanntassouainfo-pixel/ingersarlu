@@ -280,6 +280,8 @@
     "Approche écologique / environnementale et immersion dans l'énergie renouvelable, pour une intégration harmonieuse dans le tissu urbain et naturel.":
       "Ecological and environmental approach with a focus on renewable energy, for harmonious integration into the urban and natural fabric.",
     "Le vivre ensemble, dans la sérénité !": "Living together, in serenity!",
+    "Notre": "Our", "vision": "vision",
+    "Plan du site": "Site map",
 
     // Portfolio — captions enrichies
     "Industriel - Port sec · Lomé, TOGO": "Industrial - Dry port · Lomé, TOGO",

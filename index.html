@@ -26,24 +26,281 @@
 <meta name="twitter:description" content="Études et contrôle technique : bâtiments, routes, hydraulique & assainissement. Agréé État togolais, Cat. A2. Depuis 2000." />
 <meta name="twitter:image" content="https://www.inger.tg/images/01-hero-batiment.webp" />
 
+<!-- JSON-LD : ProfessionalService (entité principale + LocalBusiness) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "INGER Sarlu — Ingénieurs et Experts Réunis",
-  "description": "Ingénieurs-conseils agréés par l'État togolais (Cat. A2) : études et contrôle technique en bâtiments, infrastructures routières, hydraulique et assainissement.",
+  "@type": ["ProfessionalService", "LocalBusiness"],
+  "@id": "https://www.inger.tg/#organization",
+  "name": "INGER Sarlu",
+  "legalName": "INGER Sarlu — Ingénieurs et Experts Réunis",
+  "alternateName": "INGER",
+  "description": "Ingénieurs-conseils agréés par l'État togolais (Cat. A2) : études et contrôle technique en bâtiments, infrastructures routières, hydraulique et assainissement. 25 ans d'expérience, 150+ projets livrés au Togo et dans l'espace UEMOA.",
   "url": "https://www.inger.tg/",
-  "telephone": "+22822501730",
+  "logo": "https://www.inger.tg/images/01-hero-batiment.webp",
+  "image": "https://www.inger.tg/images/01-hero-batiment.webp",
+  "telephone": "+228-22-50-17-30",
   "email": "ingersarlu@inger.tg",
   "foundingDate": "2000",
+  "slogan": "Réaliser, ensemble",
+  "priceRange": "$$$",
+  "currenciesAccepted": "XOF",
+  "paymentAccepted": "Virement bancaire, Chèque",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "402 Rue 129 AFG, Aflao Gakli — MUGET Djidjolé, 02 BP 20 441",
+    "streetAddress": "Immeuble inger, 402 Rue 129 AFG, Aflao Gakli — MUGET Djidjolé",
+    "postOfficeBoxNumber": "02 BP 20 441",
     "addressLocality": "Lomé",
-    "addressCountry": "TG"
+    "addressRegion": "Maritime",
+    "postalCode": "02",
+    "addressCountry": {
+      "@type": "Country",
+      "name": "Togo",
+      "alternateName": "TG"
+    }
   },
-  "areaServed": ["Togo", "UEMOA", "Afrique subsaharienne"],
-  "knowsAbout": ["Bâtiments", "Infrastructures routières", "Hydraulique", "Assainissement", "Génie civil", "Maîtrise d'œuvre"]
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 6.1725,
+    "longitude": 1.2314
+  },
+  "hasMap": "https://maps.google.com/?q=Immeuble+inger+Lome+Togo",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "08:00",
+      "closes": "17:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "08:00",
+      "closes": "12:30"
+    }
+  ],
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+228-22-50-17-30",
+      "contactType": "customer service",
+      "areaServed": ["TG","BJ","BF","CI","ML","NE","SN","GW"],
+      "availableLanguage": ["French","English"]
+    },
+    {
+      "@type": "ContactPoint",
+      "telephone": "+228-72-10-55-55",
+      "contactType": "sales",
+      "availableLanguage": ["French","English"]
+    },
+    {
+      "@type": "ContactPoint",
+      "telephone": "+228-79-79-00-76",
+      "contactType": "customer support",
+      "contactOption": "TollFree",
+      "availableLanguage": ["French","English"]
+    }
+  ],
+  "areaServed": [
+    { "@type": "Country", "name": "Togo" },
+    { "@type": "Country", "name": "Bénin" },
+    { "@type": "Country", "name": "Burkina Faso" },
+    { "@type": "Country", "name": "Côte d'Ivoire" },
+    { "@type": "Country", "name": "Mali" },
+    { "@type": "Country", "name": "Niger" },
+    { "@type": "Country", "name": "Sénégal" },
+    { "@type": "Place", "name": "UEMOA - Union économique et monétaire ouest-africaine" },
+    { "@type": "Place", "name": "Afrique subsaharienne" }
+  ],
+  "knowsAbout": [
+    "Ingénierie civile",
+    "Bâtiments IGH et ERP",
+    "Infrastructures routières",
+    "Ouvrages d'art",
+    "Hydraulique",
+    "Assainissement",
+    "Adduction d'eau potable",
+    "Maîtrise d'œuvre",
+    "Maîtrise d'ouvrage déléguée",
+    "Études de faisabilité",
+    "Contrôle de travaux",
+    "Expertise et évaluation",
+    "Audit technique"
+  ],
+  "award": [
+    "Agrément n° 02 001 · Cat. A2 — Bâtiments",
+    "Agrément n° 04 001 · Cat. A2 — Hydraulique",
+    "Agrément n° 06 001 · Cat. A2 — Routes",
+    "Arrêté interministériel n° 006 / MEF-MTP-CNAEBTP du 20 décembre 2011"
+  ],
+  "memberOf": {
+    "@type": "Organization",
+    "name": "CNAEBTP — Comité National des Agréments des Entreprises du Bâtiment et des Travaux Publics"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Prestations d'ingénierie conseil",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Bâtiments — Études et contrôle",
+          "description": "Études et contrôle d'entretien, d'aménagement, de réhabilitation et de construction de bâtiments (IGH, ERP, hôtellerie, santé, industrie, scolaire/universitaire).",
+          "serviceType": "Civil engineering — Buildings",
+          "provider": { "@id": "https://www.inger.tg/#organization" },
+          "areaServed": "Togo, UEMOA",
+          "category": "Bâtiments Immobiliers"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Infrastructures routières — Études et contrôle",
+          "description": "Études et contrôle de travaux d'infrastructure routière : chaussées, ouvrages d'art, drainage, signalisation, sécurité.",
+          "serviceType": "Civil engineering — Road infrastructure",
+          "provider": { "@id": "https://www.inger.tg/#organization" },
+          "areaServed": "Togo, UEMOA",
+          "category": "Routes & VRD"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Hydraulique & Assainissement",
+          "description": "Études et contrôle d'ouvrages hydrauliques, d'assainissement, d'adduction d'eau potable, châteaux d'eau et hydraulique villageoise.",
+          "serviceType": "Civil engineering — Hydraulics & Sanitation",
+          "provider": { "@id": "https://www.inger.tg/#organization" },
+          "areaServed": "Togo, UEMOA",
+          "category": "Hydraulique & Assainissement"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Maîtrise d'œuvre / d'ouvrage délégué",
+          "provider": { "@id": "https://www.inger.tg/#organization" }
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Conception et Planification",
+          "provider": { "@id": "https://www.inger.tg/#organization" }
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Études de Faisabilité / d'Exécution",
+          "provider": { "@id": "https://www.inger.tg/#organization" }
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Expertise et Évaluation",
+          "provider": { "@id": "https://www.inger.tg/#organization" }
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Audit technique",
+          "provider": { "@id": "https://www.inger.tg/#organization" }
+        }
+      }
+    ]
+  },
+  "sameAs": [
+    "https://wa.me/22879790076"
+  ]
+}
+</script>
+
+<!-- JSON-LD : WebSite + recherche potentielle -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.inger.tg/#website",
+  "url": "https://www.inger.tg/",
+  "name": "INGER Sarlu — Ingénieurs Conseils",
+  "inLanguage": ["fr-TG","en"],
+  "publisher": { "@id": "https://www.inger.tg/#organization" }
+}
+</script>
+
+<!-- JSON-LD : FAQPage (miroir de la section FAQ) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quels types de projets inger peut-il prendre en charge ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "inger intervient sur l'ensemble des projets d'infrastructure : bâtiments (IGH, ERP, sièges administratifs, hôtellerie, santé, industrie, équipements scolaires et universitaires), infrastructures routières (chaussées, ouvrages d'art, drainage) ainsi qu'hydraulique et assainissement (AEP, châteaux d'eau, barrages, hydraulique villageoise)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Intervenez-vous en dehors du Togo ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui. inger est actif au Togo et dans l'espace UEMOA, et développe des partenariats stratégiques pour une présence accrue en Afrique sub-saharienne et un rayonnement à l'international."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment se déroule une mission de contrôle de travaux ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Une mission de contrôle s'articule autour de la vérification de la conformité technique des ouvrages, du suivi de l'avancement et de la qualité d'exécution, du contrôle des décomptes, et de la production de rapports périodiques — jusqu'à la réception des travaux."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Travaillez-vous avec des bailleurs de fonds internationaux ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui. Nos réalisations s'appuient sur des fonds nationaux, régionaux et mondiaux : États, BOAD, BAD, BID, FED-UE, Banque Mondiale, FIDA, GAFSP — dans le respect des procédures propres à chaque institution."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quels logiciels et équipements utilisez-vous ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "inger s'appuie sur un plateau technique et une infrastructure logistique modernes et performants, mobilisés selon les exigences techniques de chaque mission d'étude, de conception et de contrôle."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment soumettre un projet ou demander un devis ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vous pouvez nous transmettre votre projet via le formulaire de contact ci-dessous, ou nous joindre directement par téléphone, WhatsApp ou e-mail. Nous revenons vers vous avec une proposition adaptée à vos besoins."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelles sont vos qualifications officielles ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "inger est agréé par l'État togolais en catégorie A2 sur trois domaines : Bâtiments (n° 02 001), Hydraulique (n° 04 001) et Routes (n° 06 001) — conformément à l'arrêté interministériel n° 006 / MEF-MTP-CNAEBTP du 20 décembre 2011."
+      }
+    }
+  ]
 }
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -230,7 +487,7 @@
 
         <ul class="about-points">
           <li><span class="pn">01</span><span class="pt">Une longue et solide expérience en maîtrise de projets, accumulée depuis l'an 2000.</span></li>
-          <li><span class="pn">02</span><span class="pt">Une expertise efficiente, fondée sur un réseau multidisciplinaire — de professionnels et d'un écosystème engagé — éfficace.</span></li>
+          <li><span class="pn">02</span><span class="pt">Une expertise efficiente, fondée sur un un écosystème efficace de professionnels multidisciplinaire engagé.</span></li>
           <li><span class="pn">03</span><span class="pt">Un plateau technique et une infrastructure logistique modernes et performants.</span></li>
           
           <li><span class="pn">04</span><span class="pt">Plus de 150 projets livrés.</span></li>
@@ -342,16 +599,19 @@
     </div>
 
     <div class="presta-end reveal" aria-hidden="true">
-      <span class="pe-rule"></span>
+      <!--<span class="pe-rule"></span>
       <span class="pe-mark"></span>
-      <span class="pe-rule"></span>
+      <span class="pe-rule"></span>-->
     </div>
 
     <!-- 5 piliers d'approche -->
     <div class="pillars">
       <div class="sec-head reveal" style="margin-bottom:36px">
         <span class="sec-idx">qualité, modernité, durabilité, résilience, pérénnité</span>
-        <div><span class="sec-kicker">Cinq objectifs, Cinq principes directeurs</span></div>
+        <div>
+          <span class="sec-kicker">Cinq objectifs, Cinq principes directeurs</span>
+          <h2 class="sec-title pillars-title">Notre <em>vision</em></h2>
+        </div>
       </div>
       <div class="pillars-grid">
         <div class="pillar glass reveal" data-d="1">
@@ -496,9 +756,9 @@
       <span class="sec-idx">04 / Portfolio</span>
       <div>
         <span class="sec-kicker">Réalisations</span>
-        <h2 class="sec-title">L'étendue d'une <em>activité</em></h2><br>
+        <h2 class="sec-title">Une présence <em>multisectorielle</em></h2><br>
 
-        <p class="reveal" data-d="1" style="max-width:46em;color:rgba(24,26,31,.62);font-weight:300;margin-bottom:46px;line-height:1.7">Des réalisations triées sur le volet qui illustrent le champ riche en diversités de l'expérience active de <strong style="font-weight:500;color:var(--ink)"><i>inger</i></strong> — du complexe industriel multi-filières, au 4/5 toiles; du siège ou villa luxueuse, aux formations socio culturelles; de l'AEP ou de l'assainissement urbain, à l'ouvrage routier d'envergure.</p>
+        <p class="reveal" data-d="1" style="max-width:46em;color:rgba(24,26,31,.62);font-weight:300;margin-bottom:46px;line-height:1.7">Des réalisations triées sur le volet qui illustrent le champ riche en diversités de l'expérience active de <strong style="font-weight:500;color:var(--ink)"><i>inger</i></strong> — du complexe industriel multi-filières, au 4/5 étoiles; du siège IGH ou villa luxueuse, aux formations socio-culturelles; de l'AEP ou de l'assainissement urbain, aux ouvrages routiers d'envergure.</p>
 
       </div>
     </div>
@@ -569,7 +829,7 @@
       <article class="pf-card pf-w3 reveal" data-cursor>
         <div class="pf-vis"><img class="slot-img" src="images/projet-08-marches.webp" alt="Marchés modernes Kara & Dapaong" loading="lazy" /></div>
         <div class="pf-shade"></div><div class="pf-arr">↗</div>
-        <div class="pf-meta"><span class="pf-cat">Équipement public · Dapaong</span><h3 class="pf-name">Marché moderne de Dapaong</h3></div>
+        <div class="pf-meta"><span class="pf-cat">Équipement public · Dapaong, TOGO.</span><h3 class="pf-name">Marché moderne de Dapaong</h3></div>
       </article>
 
 
@@ -577,7 +837,7 @@
       <article class="pf-card pf-w3 reveal" data-d="2" data-cursor>
         <div class="pf-vis"><img class="slot-img" src="images/projet-03-otr.webp" alt="Siège OTR" loading="lazy" /></div>
         <div class="pf-shade"></div><div class="pf-arr">↗</div>
-        <div class="pf-meta"><span class="pf-cat">Institutionnel · Lomé, TOGO</span><h3 class="pf-name">Bureau au siège de l'OTR</h3></div>
+        <div class="pf-meta"><span class="pf-cat">Institutionnel · Lomé, TOGO</span><h3 class="pf-name">Immeuble de bureau au siège de l'OTR</h3></div>
       </article>
 
       <!-- ANGE -->
@@ -650,7 +910,7 @@
       <article class="pf-card pf-w2 reveal" data-cursor>
         <div class="pf-vis"><img class="slot-img" src="images/projet-09-snb.webp" alt="Brasserie SNB" loading="lazy" /></div>
         <div class="pf-shade"></div><div class="pf-arr">↗</div>
-        <div class="pf-meta"><span class="pf-cat">Industriel - Alimentaire · Lomé, TOGO</span><h3 class="pf-name">Brasserie SNB</h3></div>
+        <div class="pf-meta"><span class="pf-cat">Industriel&nbsp;Alimentaire · Lomé, TOGO</span><h3 class="pf-name">Brasserie SNB</h3></div>
       </article>
 
   
@@ -770,7 +1030,7 @@
 
    <div class="ref-row ref-extra" data-cursor>
         <span class="ref-no">07</span>
-        <div class="ref-main"><h4>02 Marchés modernes. Kara et Dapaong TOGO. ERP</h4><span class="ref-client">Ministère de l’Urbanisme, de l’Habitat et de la Réforme Foncière. Projet PIDU.</span></div>
+        <div class="ref-main"><h4>02 Marchés modernes. Kara et Dapaong, TOGO. ERP</h4><span class="ref-client">Ministère de l’Urbanisme, de l’Habitat et de la Réforme Foncière. Projet PIDU.</span></div>
       </div>
 
 
@@ -1498,7 +1758,7 @@ Lomé, Aného, Atakpamé, Sokodé, Kara et Dapaong, TOGO</h4><span class="ref-cl
 <section class="zone">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="sec-idx">06 / Zone d'intervention</span>
+      <span class="sec-idx">06 / Rayon d'action</span>
       <div>
         <span class="sec-kicker">Présence régionale</span>
         <h2 class="sec-title">Une ambition <em>internationale</em></h2>
@@ -1611,13 +1871,13 @@ Lomé, Aného, Atakpamé, Sokodé, Kara et Dapaong, TOGO</h4><span class="ref-cl
 
         <div class="faq-item">
           <button class="faq-q"><span class="qn">03</span> Comment se déroule une mission de contrôle de travaux ? <span class="qi"></span></button>
-          <div class="faq-a"><div class="faq-a-in">Une mission de contrôle s'articule autour de la vérification de la conformité technique des dossiers d’exécution, des travaux et des ouvrages; du suivi de l'avancement par rapport au délai, du contrôle de la qualité d'exécution, du contrôle financier par rapport au budget. Des réunions de gestion et des rapports périodiques rendent compte de la situation évolutive du projet— jusqu'à la réception des travaux. </div></div>
+          <div class="faq-a"><div class="faq-a-in">Une mission de contrôle s'articule autour de la vérification de la conformité technique des dossiers d’exécution, des travaux et des ouvrages; du suivi de l'avancement du projet par rapport au délai, du contrôle de la qualité d'exécution, du contrôle financier par rapport au budget. Des réunions de gestion et des rapports périodiques rendent compte de la situation évolutive du projet— jusqu'à la réception des travaux par le client. </div></div>
         </div>
 
 
         <div class="faq-item">
           <button class="faq-q"><span class="qn">04</span> Travaillez-vous avec des bailleurs de fonds internationaux ? <span class="qi"></span></button>
-          <div class="faq-a"><div class="faq-a-in">Oui. Nos réalisations s'appuient sur des fonds nationaux, régionaux et internationaux : les budget d’investissement des États, la BOAD, la BAD, la BID, le FED-UE, la Banque Mondiale, FIDA, GAFSP, etc. — dans le respect des procédures propres à chaque institution.<br><strong style="font-weight:500;color:var(--ink)"><i>inger</i></strong> accompagne également des initiatives portées par des financements privés, avec la même exigence de qualité, de précision et d’engagement.</div></div>
+          <div class="faq-a"><div class="faq-a-in">Oui. Nos réalisations publiques s'appuient sur des fonds nationaux, régionaux et internationaux — Budget d’investissement des États, BOAD, BAD, BID, FED-UE, Banque Mondiale, FIDA, GAFSP, etc. — dans le respect des procédures propres à chaque institution.<br><strong style="font-weight:500;color:var(--ink)"><i>inger</i></strong> accompagne également des initiatives portées par des financements privés, avec la même exigence de qualité, de précision et d’engagement.</div></div>
         </div>
 
 
@@ -1634,7 +1894,7 @@ Lomé, Aného, Atakpamé, Sokodé, Kara et Dapaong, TOGO</h4><span class="ref-cl
 
         <div class="faq-item">
           <button class="faq-q"><span class="qn">07</span> Quelles sont vos qualifications officielles ? <span class="qi"></span></button>
-          <div class="faq-a"><div class="faq-a-in"><strong style="font-weight:500;color:var(--ink)"><i>inger</i></strong> est agréé par l'État togolais en catégorie A2 sur trois domaines : Bâtiments (n° 02 001), Hydraulique (n° 04 001) et Routes (n° 06 001) — conformément à l'arrêté interministériel n° 006 / MEF-MTP-CNAEBTP du 20 décembre 2011. <strong style="font-weight:500;color:var(--ink)"><i>inger</i></strong> est engagé dans un système de management de la qualité pour une reconnaissance internationale.</div></div>
+          <div class="faq-a"><div class="faq-a-in"><strong style="font-weight:500;color:var(--ink)"><i>inger</i></strong> est agréé par l'État togolais en catégorie A2 sur trois domaines : Bâtiments (n° 02 001), Hydraulique (n° 04 001) et Routes (n° 06 001) — conformément à l'arrêté interministériel n° 006 / MEF-MTP-CNAEBTP du 20 décembre 2011. <strong style="font-weight:500;color:var(--ink)"><i>inger</i></strong> fonctionne conformément à un référentiel international en matière de qualité, notamment la norme ISO 9001-V2015.</div></div>
         </div>
 
 
@@ -1737,8 +1997,8 @@ Lomé, Aného, Atakpamé, Sokodé, Kara et Dapaong, TOGO</h4><span class="ref-cl
     <div class="cc-card glass reveal" data-cursor>
       <div class="cc-tx">
         <span class="sec-kicker">Carrière · INGER</span>
-        <h2 class="cc-title">Construire l'avenir, <em>ensemble</em></h2>
-        <p class="cc-sub">Ingénieurs, projeteurs, conducteurs de travaux : rejoignez un bureau agréé qui façonne les infrastructures du Togo et de l'espace UEMOA.</p>
+        <h2 class="cc-title">Construire l'avenir, <em>avec vous</em></h2>
+        <p class="cc-sub">Ingénieurs, techniciens, projeteurs, professionnels du métier : rejoignez <strong style="font-weight:500;color:var(--ink)"><i>inger</i></strong>, pour contribuer avec nous à l'essor des infrastructures nouvelles, ici et ailleurs.</p>
       </div>
       <a href="carriere.html" class="btn btn-primary" data-cursor>Découvrir nos opportunités <span class="arr">→</span></a>
     </div>
@@ -1790,7 +2050,7 @@ Lomé, Aného, Atakpamé, Sokodé, Kara et Dapaong, TOGO</h4><span class="ref-cl
     <div class="foot-bottom">
       <div>
         <div class="copy">© 2026 INGER Sarlu — Ingénieurs et Experts Réunis — Lomé, Togo</div>
-        <div class="legal">RCCM TG-LOM 2011 M0102 · NIF 1000174294 · Capital social 10 000 000 · <a href="mentions-legales.html">Mentions légales</a> · <a href="politique-confidentialite.html">Politique de confidentialité</a></div>
+        <div class="legal">RCCM TG-LOM 2011 M0102 · NIF 1000174294 · Capital social 10 000 000 · <a href="mentions-legales.html">Mentions légales</a> · <a href="politique-confidentialite.html">Politique de confidentialité</a> · <a href="sitemap.html">Plan du site</a></div>
       </div>
       <a href="#top" class="to-top" data-cursor aria-label="Haut de page">↑</a>
     </div>
@@ -1887,7 +2147,7 @@ Lomé, Aného, Atakpamé, Sokodé, Kara et Dapaong, TOGO</h4><span class="ref-cl
         <div class="pq-num">04</div>
         <div class="pq-card-body">
           <h3 data-fr="Valeurs" data-en="Ethics">Valeurs</h3>
-          <p data-fr="L’exigence, la précision et l’esprit d’équipe au cœur d’une vision durable et tournée vers la prospérité." data-en="Compliance with applicable requirements: legal, regulatory, contractual and normative.">PL’exigence, la précision et l’esprit d’équipe au cœur d’une vision durable et tournée vers la prospérité.</p>
+          <p data-fr="L’exigence du management, la précision du travail accomplit et l’esprit d’équipe fort, au cœur d’une vision de durabilité qui traverse le temps : cap vers la prospérité et la postérité" data-en="Compliance with applicable requirements: legal, regulatory, contractual and normative.">L’exigence du management, la précision du travail accomplit et l’esprit d’équipe fort, au cœur d’une vision de durabilité qui traverse le temps : cap vers la prospérité et la postérité</p>
         </div>
       </article>
 
