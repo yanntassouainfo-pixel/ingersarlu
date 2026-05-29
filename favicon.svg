@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="INGER">
+  <defs>
+    <!-- Volume / profondeur du disque (papier crème inger) -->
+    <radialGradient id="paper" cx="38%" cy="32%" r="78%">
+      <stop offset="0%"  stop-color="#FFFCF3"/>
+      <stop offset="55%" stop-color="#F8F6F0"/>
+      <stop offset="92%" stop-color="#EAE5D9"/>
+      <stop offset="100%" stop-color="#DDD7C8"/>
+    </radialGradient>
+
+    <!-- Anneau d'éclat (highlight haut) -->
+    <linearGradient id="glaze" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"  stop-color="#FFFFFF" stop-opacity=".85"/>
+      <stop offset="55%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Ombre interne bas (volume) -->
+    <radialGradient id="innershade" cx="50%" cy="92%" r="65%">
+      <stop offset="0%"  stop-color="#A89F86" stop-opacity=".42"/>
+      <stop offset="100%" stop-color="#A89F86" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Drop shadow extérieur (flotte) -->
+    <filter id="dropshadow" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="10"/>
+      <feOffset dx="0" dy="8" result="off"/>
+      <feComponentTransfer><feFuncA type="linear" slope=".35"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <!-- Bord interne fin (réalisme) -->
+    <radialGradient id="rim" cx="50%" cy="50%" r="50%">
+      <stop offset="95%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#3D3527" stop-opacity=".25"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Disque principal avec volume -->
+  <g filter="url(#dropshadow)">
+    <circle cx="256" cy="256" r="232" fill="url(#paper)"/>
+    <circle cx="256" cy="256" r="232" fill="url(#innershade)"/>
+    <circle cx="256" cy="256" r="232" fill="url(#rim)"/>
+    <!-- Glaze top -->
+    <ellipse cx="256" cy="140" rx="190" ry="92" fill="url(#glaze)"/>
+    <!-- Fine bordure -->
+    <circle cx="256" cy="256" r="231" fill="none" stroke="#1A1B21" stroke-opacity=".07" stroke-width="2"/>
+  </g>
+
+  <!-- "i" italique Fraunces — dessiné en path pour autonomie totale -->
+  <!-- Couleur encre inger -->
+  <g fill="#15171C">
+    <!-- Point sup. -->
+    <ellipse cx="296" cy="146" rx="28" ry="29" transform="rotate(-8 296 146)"/>
+    <!-- Tige italique avec empattements serif -->
+    <path d="
+      M 282 200
+      C 282 205, 280 213, 277 222
+      L 244 360
+      C 240 376, 238 386, 238 392
+      C 238 400, 244 405, 256 405
+      C 268 405, 280 397, 294 380
+      C 304 368, 314 354, 322 340
+      L 332 348
+      C 318 374, 300 396, 280 410
+      C 264 421, 248 426, 232 426
+      C 211 426, 200 414, 200 391
+      C 200 382, 203 369, 208 351
+      L 240 220
+      C 242 213, 243 207, 243 203
+      C 243 196, 239 192, 226 191
+      L 212 190
+      L 215 178
+      C 240 178, 262 175, 282 170
+      Z
+    "/>
+  </g>
+</svg>

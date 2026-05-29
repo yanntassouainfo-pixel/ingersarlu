@@ -1,0 +1,17 @@
+{
+  "name": "INGER Sarlu — Ingénieurs et Experts Réunis",
+  "short_name": "INGER",
+  "description": "Ingénieurs-conseils agréés A2 — Bâtiments, Routes, Hydraulique & Assainissement · Lomé, Togo.",
+  "lang": "fr",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#F8F6F0",
+  "theme_color": "#F8F6F0",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/favicon.svg",  "sizes": "any",     "type": "image/svg+xml" }
+  ]
+}

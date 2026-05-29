@@ -155,7 +155,7 @@
     "06 / Zone d'intervention": "06 / Area of operation", "Présence régionale": "Regional presence",
     "Une ambition": "An international", "internationale": "ambition",
     "Actif au Togo et dans l'espace UEMOA,": "Active in Togo and across the WAEMU area,",
-    "développe des partenariats stratégiques pour une présence accrue en Afrique sub-saharienne et un rayonnement à l'international.":
+    "développe des partenariats stratégiques pour une présence accrue en Afrique subsaharienne et un rayonnement à l'international.":
       "develops strategic partnerships for a stronger presence in sub-Saharan Africa and international reach.",
     "Réalisations sur fonds d'investissement nationaux, régionaux et mondiaux.":
       "Projects funded by national, regional and global investment.",
@@ -171,7 +171,7 @@
     "inger intervient sur l'ensemble des projets d'infrastructure : bâtiments (IGH, ERP, sièges administratifs, hôtellerie, santé, industrie, équipements scolaires et universitaires), infrastructures routières (chaussées, ouvrages d'art, drainage) ainsi qu'hydraulique et assainissement (AEP, châteaux d'eau, barrages, hydraulique villageoise).":
       "inger covers the full range of infrastructure projects: buildings (high-rise, public-access, head offices, hospitality, healthcare, industry, schools and universities), road infrastructure (carriageways, bridges, drainage), and hydraulics & sanitation (water supply, water towers, dams, rural water supply).",
     "Intervenez-vous en dehors du Togo ?": "Do you work outside Togo?",
-    "Oui. inger est actif au Togo et dans l'espace UEMOA, et développe des partenariats stratégiques pour une présence accrue en Afrique sub-saharienne et un rayonnement à l'international.":
+    "Oui. inger est actif au Togo et dans l'espace UEMOA, et développe des partenariats stratégiques pour une présence accrue en Afrique subsaharienne et un rayonnement à l'international.":
       "Yes. inger is active in Togo and across the WAEMU area, and builds strategic partnerships for a stronger presence in sub-Saharan Africa and international reach.",
     "Comment se déroule une mission de contrôle de travaux ?": "How does a works-supervision assignment work?",
     "Une mission de contrôle s'articule autour de la vérification de la conformité technique des ouvrages, du suivi de l'avancement et de la qualité d'exécution, du contrôle des décomptes, et de la production de rapports périodiques — jusqu'à la réception des travaux.":
@@ -232,7 +232,7 @@
     "Hydraulique": "Hydraulics",
     "Eau · Énergie": "Water · Energy",
     "Réseaux secs/humides — Réseaux d'assainissement": "Wet/dry networks — sanitation networks",
-    "Approvisionement en eau potable & Forage": "Drinking-water supply & boreholes",
+    "Approvisionnement en eau potable & Forage": "Drinking-water supply & boreholes",
     "Retenues d'eau/Barrages": "Reservoirs & dams",
     "Canalisations de transport — Équipements": "Transport pipelines — equipment",
     "L'étendue d'une": "The breadth of",
@@ -266,7 +266,7 @@
     "Découvrir nos opportunités": "Explore our opportunities",
     "Carrière": "Careers",
     // Approche / piliers (textes mis à jour)
-    "qualité, modernité, durabilité, résilience, pérénnité": "quality, modernity, durability, resilience, longevity",
+    "qualité, modernité, durabilité, résilience, pérennité": "quality, modernity, durability, resilience, longevity",
     "Cinq objectifs, Cinq principes directeurs": "Five objectives, five guiding principles",
     "Conception subtile, ergonomique et évolutive, orientée équilibre et performance des ouvrages.":
       "Subtle, ergonomic and scalable design, focused on the balance and performance of every project.",
@@ -277,7 +277,7 @@
       "The very best in proven structural solutions, engineered for timeless strength and performance.",
     "Optimisation rigoureuse des rapports coût à l'exigence de la qualité et à l'intransigeance des délais des réalisations.":
       "Rigorous optimisation of cost against the demands of quality and the strictness of project deadlines.",
-    "Approche écologique / environnementale et immersion dans l'énergie renouvelable, pour une intégration harmonieuse dans le tissu urbain et naturel.":
+    "Approche écologique-environnementale et immersion dans l'énergie renouvelable, pour une intégration harmonieuse dans le tissu urbain et naturel.":
       "Ecological and environmental approach with a focus on renewable energy, for harmonious integration into the urban and natural fabric.",
     "Le vivre ensemble, dans la sérénité !": "Living together, in serenity!",
     "Notre": "Our", "vision": "vision",
@@ -297,7 +297,7 @@
     "Complexe de 03 immeubles — Habitats & Commerces": "03-building complex — Housing & retail",
 
     // Variantes hydrauliques / domaines
-    "Approvisionement en eau potable & Forages": "Drinking-water supply & boreholes",
+    "Approvisionnement en eau potable & Forages": "Drinking-water supply & boreholes",
 
     // Identité / footer / hero alternatifs
     "INGER Sarlu — Ingénieurs & Experts Réunis": "INGER Sarlu — Engineers & Experts United",

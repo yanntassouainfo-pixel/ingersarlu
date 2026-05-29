@@ -4,8 +4,8 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="robots" content="noindex, nofollow" />
-<title>Maintenance · INGER Sarlu</title>
-<meta name="description" content="Le site d'INGER Sarlu est temporairement en maintenance. Nous revenons très vite." />
+<title>Hors ligne · INGER Sarlu</title>
+<meta name="description" content="Vous êtes actuellement hors ligne. Le site INGER Sarlu sera de nouveau disponible dès le rétablissement de votre connexion." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -24,7 +24,7 @@
     display:flex;flex-direction:column;min-height:100vh;position:relative;overflow-x:hidden}
 
   .bg{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none}
-  .bg .grid{position:absolute;inset:0;opacity:.5;
+  .bg .grid{position:absolute;inset:0;opacity:.45;
     background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
     background-size:64px 64px;-webkit-mask-image:radial-gradient(circle at 50% 38%,#000,transparent 72%);mask-image:radial-gradient(circle at 50% 38%,#000,transparent 72%)}
   .bg .glow{position:absolute;width:60vw;height:60vw;top:-22%;left:50%;transform:translateX(-50%);border-radius:50%;
@@ -40,45 +40,41 @@
   .kick{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:11px;letter-spacing:.16em;
     text-transform:uppercase;color:var(--steel-l);border:1px solid var(--line);background:rgba(248,246,240,.7);
     padding:9px 16px;border-radius:30px}
-  .kick .dot{width:7px;height:7px;border-radius:50%;background:var(--steel-l);
-    box-shadow:0 0 0 0 rgba(62,92,110,.5);animation:pulse 2.4s infinite}
-  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(62,92,110,.45)}70%{box-shadow:0 0 0 11px rgba(62,92,110,0)}100%{box-shadow:0 0 0 0 rgba(62,92,110,0)}}
+  .kick .dot{width:7px;height:7px;border-radius:50%;background:#C0552F;
+    box-shadow:0 0 0 0 rgba(192,85,47,.5);animation:pulse 2.4s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(192,85,47,.45)}70%{box-shadow:0 0 0 11px rgba(192,85,47,0)}100%{box-shadow:0 0 0 0 rgba(192,85,47,0)}}
 
   h1{font-family:var(--serif);font-weight:400;font-size:clamp(2.4rem,7vw,4.6rem);line-height:1;letter-spacing:-.025em;
     color:var(--ink);margin:24px 0 0;max-width:16ch}
   h1 em{font-style:italic;color:var(--steel-l)}
-  .lead{margin:22px auto 0;max-width:52ch;font-size:clamp(1rem,1.6vw,1.18rem);line-height:1.7;color:rgba(24,26,31,.66);font-weight:300}
+  .lead{margin:22px auto 0;max-width:54ch;font-size:clamp(1rem,1.6vw,1.18rem);line-height:1.7;color:rgba(24,26,31,.66);font-weight:300}
 
-  .bar{margin:34px auto 0;width:min(280px,70vw);height:3px;border-radius:3px;background:var(--line);overflow:hidden;position:relative}
-  .bar::after{content:"";position:absolute;top:0;left:-40%;width:40%;height:100%;border-radius:3px;
-    background:linear-gradient(90deg,transparent,var(--steel),transparent);animation:slide 1.9s var(--ease) infinite}
-  @keyframes slide{0%{left:-40%}100%{left:100%}}
+  .status{margin-top:24px;display:inline-flex;align-items:center;gap:10px;
+    font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--concrete);
+    border:1px dashed var(--line);padding:9px 16px;border-radius:30px}
+  .status .net{width:8px;height:8px;border-radius:50%;background:#C0552F;transition:background .4s}
+  .status.online .net{background:#1a8a45}
 
   .cta{margin-top:34px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
-  .btn{display:inline-flex;align-items:center;gap:9px;font-size:14px;text-decoration:none;cursor:pointer;
+  .btn{display:inline-flex;align-items:center;gap:9px;font-size:14px;text-decoration:none;cursor:pointer;font-family:inherit;
     padding:14px 24px;border-radius:40px;border:1px solid var(--line);transition:all .35s var(--ease)}
   .btn .arr{font-family:var(--mono)}
   .btn-primary{background:var(--ink);color:var(--paper);border-color:var(--ink)}
   .btn-primary:hover{background:var(--steel-glow);border-color:var(--steel-glow);transform:translateY(-2px)}
   .btn-ghost{background:transparent;color:var(--ink)}
   .btn-ghost:hover{border-color:var(--ink);transform:translateY(-2px)}
-  .btn-wa{border-color:#25D366;color:#1a8a45}
-  .btn-wa:hover{background:#25D366;color:#fff;border-color:#25D366;transform:translateY(-2px)}
+
+  .links{margin-top:30px;display:flex;gap:8px;flex-wrap:wrap;justify-content:center;max-width:520px}
+  .links a{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--steel-glow);
+    text-decoration:none;border:1px solid var(--line);padding:7px 13px;border-radius:30px;transition:all .3s var(--ease)}
+  .links a:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 
   footer{position:relative;z-index:1;text-align:center;font-family:var(--mono);font-size:10px;letter-spacing:.08em;
     text-transform:uppercase;color:var(--concrete);padding:22px;border-top:1px solid var(--line)}
   footer a{color:inherit;text-decoration:none}
   footer a:hover{color:var(--ink)}
 
-  .lang-switch{position:fixed;top:24px;right:24px;z-index:5;display:inline-flex;align-items:center;
-    border:1px solid var(--line);border-radius:30px;padding:3px;background:rgba(248,246,240,.85);
-    -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
-  .lang-opt{font-family:var(--mono);font-size:11px;letter-spacing:.08em;border:none;background:transparent;
-    color:var(--concrete);padding:6px 11px;border-radius:30px;cursor:pointer;transition:all .3s}
-  .lang-opt.active{background:var(--ink);color:var(--paper)}
-  @media(max-width:560px){.lang-switch{top:14px;right:14px}.top{padding-top:60px}}
-
-  @media(prefers-reduced-motion:reduce){.kick .dot,.bar::after{animation:none}}
+  @media(prefers-reduced-motion:reduce){.kick .dot{animation:none}}
 </style>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
@@ -90,52 +86,69 @@
 <body>
   <div class="bg"><div class="glow"></div><div class="grid"></div></div>
 
-  <div class="lang-switch" role="group" aria-label="Langue / Language">
-    <button class="lang-opt active" type="button" data-lang="fr" aria-pressed="true">FR</button>
-    <button class="lang-opt" type="button" data-lang="en" aria-pressed="false">EN</button>
-  </div>
-
-  <!-- Logo : remplacez le bloc texte par <img src="..." alt="INGER"> si vous avez un logo -->
   <header class="top">
-    <a class="logo" href="https://www.inger.tg"><b>inger</b><span data-fr="Ingénieurs &amp; Experts Réunis" data-en="Engineers &amp; Experts United">Ingénieurs &amp; Experts Réunis</span></a>
+    <a class="logo" href="./"><b>inger</b><span>Ingénieurs &amp; Experts Réunis</span></a>
   </header>
 
   <main>
-    <span class="kick"><span class="dot"></span> <span data-fr="Maintenance en cours" data-en="Maintenance in progress">Maintenance en cours</span></span>
-    <h1><span data-fr="Nous revenons" data-en="We'll be back">Nous revenons</span> <em data-fr="très vite" data-en="very soon">très vite</em>.</h1>
-    <p class="lead" data-fr="Notre site fait l'objet d'une mise à jour afin de vous offrir une meilleure expérience. Merci de votre patience — il sera de nouveau disponible sous peu. Pour toute demande urgente, notre équipe reste joignable." data-en="Our site is being updated to give you a better experience. Thank you for your patience — it will be back online shortly. For urgent matters, our team remains reachable.">Notre site fait l'objet d'une mise à jour afin de vous offrir une meilleure expérience. Merci de votre patience — il sera de nouveau disponible sous peu. Pour toute demande urgente, notre équipe reste joignable.</p>
+    <span class="kick"><span class="dot"></span> <span data-fr="Connexion perdue" data-en="Connection lost">Connexion perdue</span></span>
+    <h1><span data-fr="Vous êtes" data-en="You're">Vous êtes</span> <em data-fr="hors ligne" data-en="offline">hors ligne</em>.</h1>
+    <p class="lead" data-fr="Cette page nécessite une connexion Internet. Vérifiez votre réseau et réessayez — les pages déjà consultées restent disponibles depuis votre cache." data-en="This page requires an internet connection. Check your network and retry — pages you've already visited remain available from your cache.">Cette page nécessite une connexion Internet. Vérifiez votre réseau et réessayez — les pages déjà consultées restent disponibles depuis votre cache.</p>
 
-    <div class="bar" aria-hidden="true"></div>
+    <div class="status" id="status">
+      <span class="net"></span>
+      <span id="status-txt" data-fr="Statut : hors ligne" data-en="Status: offline">Statut : hors ligne</span>
+    </div>
 
     <div class="cta">
-      <a class="btn btn-wa" href="https://wa.me/22879790076"><span class="arr">↗</span> WhatsApp</a>
-      <a class="btn btn-primary" href="mailto:ingersarlu@inger.tg"><span data-fr="Nous écrire" data-en="Email us">Nous écrire</span> <span class="arr">→</span></a>
-      <a class="btn btn-ghost" href="tel:+22822501730">+228 22 50 17 30</a>
+      <a class="btn btn-primary" href="javascript:void(0)" onclick="location.reload();return false;"><span class="arr">↻</span> <span data-fr="Réessayer" data-en="Retry">Réessayer</span></a>
+      <a class="btn btn-ghost" href="./" data-fr="Retour à l'accueil" data-en="Back to home">Retour à l'accueil</a>
     </div>
+
+    <nav class="links" aria-label="Pages mises en cache">
+      <a href="./index.html" data-fr="Accueil" data-en="Home">Accueil</a>
+      <a href="./carriere.html" data-fr="Carrière" data-en="Careers">Carrière</a>
+      <a href="./mentions-legales.html" data-fr="Mentions légales" data-en="Legal">Mentions légales</a>
+      <a href="./politique-confidentialite.html" data-fr="Confidentialité" data-en="Privacy">Confidentialité</a>
+      <a href="./sitemap.html" data-fr="Plan du site" data-en="Site map">Plan du site</a>
+    </nav>
   </main>
 
   <footer>
-    <span data-fr="© 2026 INGER Sarlu — Ingénieurs et Experts Réunis · Lomé, Togo" data-en="© 2026 INGER Sarlu — Engineers &amp; Experts United · Lomé, Togo">© 2026 INGER Sarlu — Ingénieurs et Experts Réunis · Lomé, Togo</span> · <a href="mailto:ingersarlu@inger.tg">ingersarlu@inger.tg</a>
+    <span data-fr="© 2026 INGER Sarlu — Ingénieurs et Experts Réunis · Lomé, Togo" data-en="© 2026 INGER Sarlu — Engineers &amp; Experts United · Lomé, Togo">© 2026 INGER Sarlu — Ingénieurs et Experts Réunis · Lomé, Togo</span>
   </footer>
 
 <script>
-/* i18n autonome (la page ne dépend d'aucun JS externe) */
+/* i18n autonome (la page peut être servie sans JS externe) */
 (function(){
-  var btns = document.querySelectorAll('.lang-opt');
   function apply(lang){
     document.documentElement.setAttribute('lang', lang);
     document.querySelectorAll('[data-fr][data-en]').forEach(function(e){
       e.innerHTML = lang==='en' ? e.getAttribute('data-en') : e.getAttribute('data-fr');
     });
-    btns.forEach(function(b){
-      var on = b.getAttribute('data-lang')===lang;
-      b.classList.toggle('active', on); b.setAttribute('aria-pressed', on?'true':'false');
-    });
     try{ localStorage.setItem('inger_lang', lang); }catch(e){}
   }
-  btns.forEach(function(b){ b.addEventListener('click', function(){ apply(b.getAttribute('data-lang')); }); });
   var saved='fr'; try{ saved = localStorage.getItem('inger_lang')||'fr'; }catch(e){}
   apply(saved);
+})();
+
+/* Indicateur réseau en temps réel + reload auto au retour online */
+(function(){
+  var s = document.getElementById('status');
+  var t = document.getElementById('status-txt');
+  function update(){
+    var on = navigator.onLine;
+    s.classList.toggle('online', on);
+    if (on) {
+      t.textContent = (localStorage.getItem('inger_lang')||'fr')==='en' ? 'Status: back online — reloading…' : 'Statut : reconnecté — rechargement…';
+      setTimeout(function(){ location.reload(); }, 800);
+    } else {
+      t.textContent = (localStorage.getItem('inger_lang')||'fr')==='en' ? 'Status: offline' : 'Statut : hors ligne';
+    }
+  }
+  window.addEventListener('online', update);
+  window.addEventListener('offline', update);
+  update();
 })();
 </script>
 </body>

@@ -8,7 +8,7 @@
   "use strict";
   if (window.__ingerGA) return; window.__ingerGA = true;
 
-  var ID = "G-08DF2X8Q1H";
+  var ID = "G-QXKBEN20QZ";
   var loaded = false;
 
   function loadGA(){
