@@ -283,6 +283,107 @@
     "Notre": "Our", "vision": "vision",
     "Plan du site": "Site map",
 
+    // === COMPLÉMENTS — textes édités sans MAJ DICT ===
+
+    // Hero — phrase ISO 9001
+    "fonctionne conformément à un référentiel international en matière de qualité, notamment la Norme ISO 9001:V2015.":
+      "operates in accordance with an international quality framework, including the ISO 9001:V2015 standard.",
+    "fonctionne conformément à un référentiel international en matière de la qualité notamment la Norme ISO 9001:V2015.":
+      "operates in accordance with an international quality framework, including the ISO 9001:V2015 standard.",
+
+    // À propos — lead réécrit
+    "a du métier en maturation et réalisation de projets et possède une expertise de haut niveau pour mener à bien les vôtres.":
+      "brings seasoned project-maturation and delivery know-how, with high-level expertise to bring yours to success.",
+    "Un savoir faire efficient, fondé sur un écosystème efficace de professionnels multidisciplinaires engagés.":
+      "Efficient know-how, built on an effective ecosystem of committed multidisciplinary professionals.",
+    "inger sarlu": "inger sarlu",
+
+    // Savoir-faire — kicker et h2 mis à jour
+    "02 / champs d’exécution": "02 / Execution scope",
+    "02 / Champs d'exécution": "02 / Execution scope",
+    "Notre compétence": "Our competence",
+    "Un savoir-faire": "Multidisciplinary",
+    "pluridisciplinaire": "expertise",
+    "Maîtrise d'ouvrage délégué / d'œuvre": "Delegated project & works management",
+
+    // Approche — sec-idx « Cinq objectifs »
+    "Cinq objectifs": "Five objectives",
+    "Cinq principes directeurs": "Five guiding principles",
+
+    // Domaines — h2 et kicker mis à jour
+    "Les grands domaines d'interventions": "Our key areas of intervention",
+    "Trois pôles,": "Three fields,",
+    "une exigence": "one standard",
+    " de qualité": " of quality",
+    "de qualité": "of quality",
+
+    // Portfolio — h2 et lead mis à jour
+    "Une présence": "A",
+    "multisectorielle": "multi-sector presence",
+    "Réalisations": "Projects",
+    "Des réalisations triées sur le volet, qui illustrent le champ riche en diversités de l'expérience active de":
+      "A handpicked selection of projects, illustrating the rich diversity of",
+    "— du complexe industriel multi-filières, au 4/5 étoiles; du siège IGH ou villa luxueuse, aux formations socio-culturelles; de l'AEP ou de l'assainissement urbain, aux ouvrages routiers d'envergure.":
+      "'s active experience — from multi-sector industrial complexes to 4/5-star hotels; from high-rise headquarters and luxury villas to socio-cultural facilities; from drinking-water supply and urban sanitation to major road works.",
+
+    // Portfolio cards — catégories
+    "Industriel - Port sec · Lomé, TOGO": "Industrial - Dry port · Lomé, TOGO",
+    "Résidentiel · Lomé, TOGO": "Residential · Lomé, TOGO",
+    "Hydraulique - AEP · Lomé, TOGO": "Hydraulics - Water supply · Lomé, TOGO",
+    "Ouvrage d'Art  · Lomé, TOGO": "Civil structure · Lomé, TOGO",
+    "Ouvrage d'Art · Lomé, TOGO": "Civil structure · Lomé, TOGO",
+    "Universitaire · Lomé, TOGO": "University · Lomé, TOGO",
+    "Universitaire · Kara, TOGO": "University · Kara, TOGO",
+    "Corporate · Lomé, TOGO": "Corporate · Lomé, TOGO",
+    "Équipement public · Dapaong, TOGO.": "Public facility · Dapaong, TOGO.",
+    "Équipement public · Kara, TOGO": "Public facility · Kara, TOGO",
+    "Institutionnel · Lomé, TOGO": "Institutional · Lomé, TOGO",
+    "Institutionnel · Lomé": "Institutional · Lomé",
+    "Hôtellerie · Lomé, TOGO": "Hospitality · Lomé, TOGO",
+    "Monument · Lomé, TOGO": "Monument · Lomé, TOGO",
+    "Industriel Alimentaire · Lomé, TOGO": "Industrial  Food · Lomé, TOGO",
+    "Industriel Alimentaire · Lomé, TOGO": "Industrial Food · Lomé, TOGO",
+    "Multifonctionnel · Lomé, TOGO": "Multi-purpose · Lomé, TOGO",
+    "Conférence · Lomé, TOGO": "Conference · Lomé, TOGO",
+
+    // Portfolio cards — noms
+    "Bâtiment Administration - PIA": "PIA — Administration Building",
+    "Villas de très haut standing": "Ultra-high-end villas",
+    "Châteaux d'eau duo": "Twin water towers",
+    "Pont en béton précontraint": "Prestressed concrete bridge",
+    "Présidence de l’Université de Lomé": "Lomé University Presidency",
+    "Siège TOGOTELECOM": "TOGOTELECOM Headquarters",
+    "Marché moderne de Dapaong": "Dapaong Modern Market",
+    "Marché moderne de Kara": "Kara Modern Market",
+    "Immeuble de bureau au siège de l'OTR": "OTR Headquarters Office Building",
+    "Siège de l'ANGE": "ANGE Headquarters",
+    "Siège (ANGE) — R+10": "ANGE Headquarters — R+10",
+    "Hôtel ★★★★ Laméssin de l'Hôpital de référence HDL": "★★★★ Laméssin Hotel — HDL Reference Hospital",
+    "Hôtel ★★★★ Laméssin": "★★★★ Laméssin Hotel",
+    "Place de l'Indépendance": "Independence Square",
+    "Brasserie SNB": "SNB Brewery",
+    "Bloc pédagogique — Université de Kara": "Teaching block — University of Kara",
+    "Complexe de 03 immeubles — Habitats & Commerces": "03-building complex — Housing & retail",
+    "Complexe de 03 immeubles — Habitats &amp; Commerces": "03-building complex — Housing & retail",
+    "Palais des Congrès": "Congress Palace",
+
+    // Refs — kicker
+    "Nos Clients": "Our clients",
+
+    // Zone — kicker
+    "06 / Rayon d'action": "06 / Operating range",
+
+    // Expertise — kicker bas
+    "L'exigence comme référence": "Excellence as a standard",
+
+    // FAQ — texte mis à jour (bailleurs)
+    "Oui. Nos réalisations publiques s'appuient sur des fonds nationaux, régionaux et internationaux — Budget d’investissement des États, BOAD, BAD, BID, FED-UE, Banque Mondiale, FIDA, GAFSP, etc. — dans le respect des procédures propres à chaque institution.":
+      "Yes. Our public-sector projects draw on national, regional and international funding — State investment budgets, BOAD, AfDB, IsDB, EU-EDF, World Bank, IFAD, GAFSP, etc. — in line with each institution's own procedures.",
+    "accompagne également des initiatives portées par des financements privés, avec la même exigence de qualité, de précision et d’engagement.":
+      "also supports initiatives funded by private capital, with the same standards of quality, precision and commitment.",
+    "est agréé par l'État togolais en catégorie A2 sur trois domaines : Bâtiments (n° 02 001), Hydraulique & Assainissement (n° 04 001) et Infrastructures routières (n° 06 001), conformément à l'arrêté interministériel n° 006 / MEF-MTP-CNAEBTP du 20 décembre 2011.":
+      "is accredited by the Togolese State in category A2 across three fields: Buildings (No. 02 001), Hydraulics & Sanitation (No. 04 001) and Road Infrastructure (No. 06 001), under interministerial order No. 006 / MEF-MTP-CNAEBTP of 20 December 2011.",
+
     // Portfolio — captions enrichies
     "Industriel - Port sec · Lomé, TOGO": "Industrial - Dry port · Lomé, TOGO",
     "Industriel - Alimentaire · Lomé, TOGO": "Industrial - Food · Lomé, TOGO",
